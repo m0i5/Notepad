@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Notepad</title <!-- CSS only -->
+  <link rel="icon" href="Images/icons88.png" type="image/x-icon">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+  <!-- CSS only -->
+
+
+lkj
+
+</head>
+
+<body>
+
+  <section class="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Notizbuch Web</a>
+        <a class="navbar-brand" href="">Development Kurs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer69">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer69">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Dan Eidenbenz</h1>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="features">
+
+    <div class="row">
+      <div class="feature-box col-lg-4">
+        <p><i class="fa-brands border-solid fa-html5 fa-5x feature-icons"></i></p>
+        <h3 class="features-heading">HTML Notes</h3>
+        <p>Beschreibt und definiert den Inhalt einer Webseite zusammen mit dem grundlegenden Layout der Webseite</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <p><i class="fa-brands fa-css3 fa-5x feature-icons"></i></p>
+        <h3 class="features-heading">CSS Notes</h3>
+        <p>Stylesheet-Sprache für elektronische Dokumente und zusammen mit HTML und JavaScript eine der Kernsprachen des World Wide Webs.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <p><i class="fa-brands fa-square-js fa-5x feature-icons"></i></p>
+        <h3 class="features-heading">Javascript Notes</h3>
+        <p>eine Programmiersprache, mit der man interaktive Inhalte zu einer Webseite hinzufügen kann (z.B: Eingaben in Formulare, dynamisches Aussehen, Animationen, usw.).</p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section class="HTML">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i> HTML Notes</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction - Intermediate HTML</h3>
+          <div class="collaps-section">
+            <button type="button" class="collapsible">
+              <h3>Headings </h3>
+            </button>
+            <div class="content">
+              <p>Headings werden mit H1 - H6 definiert und müssen geschlossen werden:
+                Öffnen < formel>
+                  Schliessen < / formel>
+                    <h1>Heading level 1</h1>
+                    <h2>Heading level 2</h2>
+                    <h3>Heading level 3</h3>
+                    <h4>Heading level 4</h4>
+                    <h5>Heading level 5</h5>
+                    <h6>Heading level 6</h6>
+                    Abstand = BR
+                    Linien = HR
+              </p>
+            </div>
+
+            <button type="button" class="collapsible">
+              <h3>Boilerplates </h3>
+            </button>
+            <div class="content">
+              <p>Im Atom lassen sich sogenannte Boilerplates automatisch einfügen, welche als Template für den weiteren Aufbau genutzt werden können.<br /> In der ersten Linie wird der Document-Typ definiert. Danach wird zwischen dem Head und Body
+                unterschieden.
+                Head: Alle Informationen über die Seite und wie der Browser mit den Informationen umgehen muss, z.B. "Title" oder Charset (characters), "utf-8" ist bei HTML die Standard- Zeichenliste. Infos über Zeichen unter unicode-table.com. Im
+                Head sind aber auch alle weiteren Metadaten festgelegt (für Suchmaschinen Keywords, Beschreibung, Author etc ). Beispiel mit Mozilla Website: Meta/Name/Description welche dann auf Google folglich die Beschreibung unter dem Titel ist.
+                <br />Body = Inhalt
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Listen</h3>
+            </button>
+            <div class="content">
+              <p>
+              <h4>Unordered list = bullet points mit "ul" öffnen und mit "li" und schliessen</h4>
+              <ul>
+                <li> dan1
+                <li> dan2
+                <li> dan3
+              </ul>
+              <h4> Ordered list = mit Zahlen 1,2,3,4. Tags: "ol" und "li"</h4>
+              <ol>
+                <li> dan1
+                <li> dan2
+                <li> dan3
+              </ol>
+              <h4> Description list = mit Beschreibungen. Tags: dl, dt, dd</h4>
+              <dl>
+                <dt> Liste von Dan </dt>
+                <dt> - Brot</dt>
+                <dd> (mit Sesam)</dd>
+              </dl>
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Images & Links</h3>
+            </button>
+            <div class="content">
+              <p>Bilder können im Atom mit .img mit der richtigen Quelle eingefügt werden. z.B. Als Bildadresse aus dem Internet oder als Pfad der Lokal gespeichert ist.
+                <br /> Links (anchors) können mit "a" eingefügt werden und dann nach "href" verlinkt werden. Titel wird zwischen den Klammern eingefügt. <br /> Man kann auch einen Link auf eine Zweite Page weiterleiten: Neues Projekt im Ordner machen
+                und HTML
+                Boilerplate auswählen mit Titel z.B. "Education.html" und mit "a" im Index darauf verlinken.
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Tables</h3>
+            </button>
+            <div class="content">
+              <p>Mit Headers "thead" oder Body "tbody" oder footer "tfoot" für späteres stiling wichtig.<br />
+                <img src="https://dotnettutorials.net/wp-content/uploads/2021/11/word-image-533-768x438.png" alt="Bild">
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Forms</h3>
+            </button>
+            <div class="content">
+              Mit Inputs <u>"label"</u> den Namen oder <u>"Input"</u> den Input definieren</li>
+              <br />
+              <br />
+              <ul>
+                <li>
+                  <p> Beispiel untent:<br>
+                    [form] <br>
+                    [label] Name: [/label] <br>
+                    [input type="text"] <br>
+                    [input type="submit"] <br>
+                    [/form]
+              </ul>
+              </p>
+              <form>
+                <label>Name:</label>
+                <input type="text">
+                <input type="submit">
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <section class="CSS Notes">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands fa-css3 fa-1x feature-icons"></i> CSS Notes</h1>
+
+        </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction - Intermediate CSS</h3>
+          <div class="collaps-section">
+            <button type="button" class="collapsible">
+              <h3>Intro</h3>
+            </button>
+            <div class="content">
+              <p>
+              <ul>
+                <li> Cascading Style Sheets, meistens als CSS abgekürzt, ist eine Beschreibungssprache, die das Erscheinungsbild einer in HTML oder XML formatierten Datei (inklusive verschiedener XML-Sprachen wie SVG oder XHTML (en-US)) festlegt. CSS
+                  beschreibt, wie ein strukturiertes Element am Bildschirm, auf Papier, in Sprache oder anderen Medien dargestellt wird.
+                  <br>
+                  <br>
+                <li> <strong>Kursübung:</strong> Wir haben einen neuen Ordner erstellt (external-css) mit einem neuen Sheet, dass styles.css heisst. In diesem Sheet werden alle Elemente wie z.B. body, hr, h1-h6 etc. definiert. CSS Code kann aber auch
+                  direkt in HTML geschrieben werden (internal-css), ist jedoch fehleranfällig und man muss jeden Bereich einzeln definieren.
+                  <br>
+                  <br>
+                <li><strong> Beispiel:</strong> HR's sollten zentriert als Punkte angezeigt werden.
+                  <ol>
+                    <li>Google: HR styling css
+                    <li>border-top: 1px dotted color.
+                    <li> border-style auf "none" setzen
+                    <li> width in % definieren
+                    <li> farben definieren
+                  </ol>
+                  <br />
+                  <p><strong> Oder:</strong>
+                  <ol>
+                    <li> Border style auf "dotted wechseln"
+                    <li> Border height auf "0" setzen, dann wird es aber immer noch einen Rahmen haben
+                    <li> Sobald man aber im "border-style" mehrere Werte einfügt, werden diese auch übernommen
+                    <li> Also: border-style: doted none none;
+                    <li> Zum Schluss noch width definieren et voila
+              </ul>
+              <strong>Wichtig: </strong> Im Header vom Index muss dieses File als "link" richtig verknüpft werden, damit die Änderungen auch übernommen werden.
+              </p>
+            </div>
+
+            <button type="button" class="collapsible">
+              <h3>Syntax</h3>
+            </button>
+            <div class="content">
+              <p><img class="csssyntax" src="https://wiki.selfhtml.org/images/thumb/b/b5/CSS-Regelsatz.svg/600px-CSS-Regelsatz.svg.png" alt="css-syntax">
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Selectors</h3>
+            </button>
+            <div class="content">
+              <p>
+              <dl>
+                <dt>Man kann Elemente durch die folgenden selectors definieren:
+                <dd>- <strong> Tags, </strong> z.B. H1, p, img etc.
+                <dd> - <strong> Klassen </strong> class="bacon" / .bacon
+                <dd> - <strong> Pseudo selectors </strong> wie :hover
+                <dd> - oder <strong>ID's</strong> id="heading" / #heading
+              </dl>
+              <br>
+              <strong>Wichtig: </strong> ID's können nur ein mal für ein Element genutzt werden, wobei Klassen mehrmals in einem Tag vorkommen können.
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Divs</h3>
+            </button>
+            <div class="content">
+              <p>Divs sind eig. Boxen, die im CSS definiert werden können. Als Beispiel: div class="randomcontainer" der danach mit Inhalten gefüllt wird (Titel/Bilder etc) Und dann im CSS als .randomcontainer gestylt wird-
+              <div class="randomcontainer">
+                Hi! My name is Dan.
+              </div>
+              <p>
+                randomcontainer { <br />
+                text-align: center; <br />
+                width: 100px; <br />
+                height: 100px; <br />
+                background-color: #E4DCCF; <br />
+                padding: 10px; <br />
+                margin: 0px; <br />
+                border: solid 10px; <br />
+              </p>
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Containers</h3>
+            </button>
+            <div class="content">
+              <p><img class="containers" src="https://wiki.selfhtml.org/images/thumb/f/f3/Box-Modell.svg/512px-Box-Modell.svg.png" alt="css-syntax"><br /> <br />
+                Beispiel mit den 3 Containern (200px) (top/middle und bottom) die nebeneinander platziert werden, wobei man Margin/Padding/Border und Size berechnen musste für die Anordnung.
+                Wichtig: Web-Developer Tool nutzen um Margin/Padding/Border zu visualisieren und dann in den Code kopieren. <br />
+
+                Span Element: Kann genutzt werden um z.B. in einem Paragraph nur einen Teil des Text zu bearbeiten.<br />
+              <p> I'm a [span class="Brand"] Brand [/span] Manager.</p>
+              <p>.Brand [
+                text-decoration: underline;
+                ] </p>
+              <p> I'm a <span class="Brand">Brand</span> Manager</p>
+              </p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Display</h3>
+            </button>
+            <div class="content">
+              Inline Elements können nicht in der Grösse angepasst werden wie Block-Elements (z.B. ein Paragraph). Man kann jedoch mit "display" im CSS auf inline wechseln und somit die Block Properties übernehmen.
+              Am besten ist es jedoch, die Properties der Element auf "inline-block" zu ändern, wie es Foto als default hat. Es ist somit ein Block, der sich verändern lässt.
+              <br />
+              <br />
+              <ul>
+                <li><strong> Inline:</strong>
+                <li> Anchors "a>
+                <li> Images "img>
+                <li> Spans "span>
+                  <br>
+                  <br>
+                <li><strong> Block: </strong>
+                <li>Paragraph
+                  <br>
+                  <br>
+                <li> <strong>Inline-Block:</strong>
+                <li> Images
+              </ul>
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Positioning</h3>
+            </button>
+            <div class="content">
+              <p> <strong>"Relative Positioning"</strong> heisst, die Position relativ zur ursprünglichen Position. Deshalb "position: relative;" und dann mit top/bottom/left/right definieren. </p>
+              <p> Mit <strong>"Absolute Positioning"</strong> wird das Element aus dem Flow des Dokuments genommen, das heisst, dass andere Elemente es überdecken können oder ineinander verschmelzen</p>
+              <p><strong> Wichtig:</strong> Wenn die Elemente in einem Parent sind, z.B. "Body", verhalten sie sich auch dementsprechend nur im Body.</p>
+              <p>Das "fixed" Element fixiert Elemente auch wenn man scrollt.</p>
+              <p>Guter Artikel: https://css-tricks.com/absolute-positioning-inside-relative-positioning/ </p>
+              <br />
+              <br />
+              <ul>
+                <li><strong> Inline:</strong>
+                <li> Anchors "a>
+                <li> Images "img>
+                <li> Spans "span>
+                  <br>
+                  <br>
+                <li><strong> Block: </strong>
+                <li>Paragraph
+                  <br>
+                  <br>
+                <li> <strong>Inline-Block:</strong>
+                <li> Images
+              </ul>
+              <div class="float1">
+              </div>
+                  <p> Wird bei einem Element float:right; gesetzt, wird z.B. der Text rechts um das Element, z.B. ein Bild floaten. Mit Clear kann ein Teil des Textes davon befreit werden.<br />
+                  <strong> Achtung: Dies sollte wirklich nur für Text und Bilder genutzt werden, NICHT für das restliche Positioning.
+                    <p class="float2-clear">Beim Positioning sollte immer mit divs. und absolute/relative/padding/margin etc gearbeitet werden. </strong></p>
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Fonts</h3>
+            </button>
+            <div class="content">
+              <p>Fonts werden mit font-family definiert. Dabei sollten mehrere, ähnliche Font-Familien nacheinander aufgelistet werden, falls der Browser die definierte Font-Familie nicht anzeigen kann.
+                <br>
+                <strong> Zum Beispiel: </strong> font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              <ul>
+                <li> https://www.cssfontstack.com/
+                <li> fonts.google.com
+              </ul>
+              <p> Fonts z.B. auf Google auswählen, Link in den Header des Dokuments kopieren und Fontfamilien im CSS definieren. Boom.
+              <p> <strong> Wichtig:</strong> Bei der font-size aufpassen wenn sie in <strong>em oder % </strong> angegeben werden, da die durch den Parent beeinflusst werden, wenn zB. im Body-Parent bereits font-size 200% definiert ist. Bei
+                Pixelangaben werden die Inhalte nicht durch den Parent beeinflusst, da diese Angabe "static" ist. </p>
+              <p> <strong> 1em = 16px = 100% </strong> </p>
+              <p> <strong> rem = root em, total unabhängig vom Parent und wird dementsprechend nicht beeinflusst. </strong></p>
+              <br />
+              <br />
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h3>Bootstrap</h3>
+            </button>
+            <div class="content">
+              <p> Bootstrap ist eine riesen Bibliothek mit Gestaltungsvorlagen für Typografie, formulare, Buttons, Tabellen, Grid-Systeme, Navigations- und andere Oberflächengestaltungselemente sowie zusätzliche, optionale JavaScript-Erweiterungen. </p>
+              <p> Es gibt 3 Wege wie man Bootstrap installiert: </p>
+                <ul>
+                  <li> index.html erstellen und Bootstrap's CSS und JS kopieren
+                    <li> CDN links einfügen
+                      <li> oder downloaden und im Projektordner verlinken (schlechteste Option wegen Cache)
+                  </li>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="JavaScript-Notes">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands fa-square-js fa-1x"></i> JavaScript Notes</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction</h3>
+          <div class="collaps-section">
+            <button type="button" class="collapsible">
+              <h3>Intro</h3>
+            </button>
+            <div class="content">
+<p> JavaScript ist eine Skriptsprache, die ursprünglich 1995 von Netscape für dynamisches HTML in Webbrowsern entwickelt wurde, um Benutzerinteraktionen auszuwerten, Inhalte zu verändern, nachzuladen oder zu generieren und so die Möglichkeiten von HTML zu erweitern. </p>
+Erste Versuche im Kurs: <br />
+alert ("Hello"); <br />
+Multi-line (shift-enter) <br />
+alert ("Hello");
+alert ("World"); <br />
+<br />
+Zum testen: Dev Tool > Sources > New Snippet <br />
+            </div>
+
+            <button type="button" class="collapsible">
+              <h3>Data Types</h3>
+            </button>
+            <div class="content">
+<p> Beispiel mit:</p>
+<p> alert ("Hello"); </p>
+<br />
+"Hello" ist in diesem Beispiel ein «String» und wird deshalb aus dem Code genommen und als Text interpretiert. Wichtig, dass diese Definitionen stimmen, asonsten funktioniert der Code nicht richtig.
+<br /> <br /> Andere Data Types:
+<ul>
+  <li>Numbers, 1 2 3</li>
+  <li>Boolean, true or false</li>
+</ul>
+<p>typeof(23); = "number"</p>
+<p>typeof ("Dan"; = "string"</p>
+<p>typeof ("true"); = "boolean"</p>
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Variables</h3>
+            </button>
+            <div class="content">
+            Beispiel mit prompt ("What is your name?"); <br />
+            Öffnet ein Fenster wo man den Namen eintippen kann. Diese Information wird jedoch nicht gespeichert. <br />
+            <br />
+            <p>
+              Wenn man jedoch ein Variable mit myName = "Dan" definiert, also: <br />
+              var myName = "Dan"; <br />
+              ..kann man die Information ("Dan") durch die Variable "myName" abrufen.
+            </p>
+
+            <p>
+              var- keyword / myName- Name des Keywords / = "Dan"- gleicher Wert wie myName
+            </p>
+            <p>
+              Das Keyword (var) braucht man jedoch nur, wenn man die Variable erstellt. Wenn man z.B. myName ändern will, kann myName = "Friedo" auch einfach überschrieben werden.
+            </p>
+            <p>
+              zB.: var gameLevel = 1; <br />
+              gameLevel = 2; <br />
+              gameLevel = 3; <br />
+              alert ("Your level is currently: " + gameLevel); <br />
+              Your level is currently: 3
+            </p>
+            <hr />
+            <p>
+              Aufgabe: <br />
+              var myName = "Dan"; <br />
+              alert("Hi, " + myName + "!" + " How are you doing?");
+            </p>
+<br />
+<p> var yourName = prompt("What is your name?");</p>
+<p>
+  alert ("My name is, " + myName + ", welcome to my Page  " + yourName + "!");
+</p>
+
+
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Images & Links</h3>
+            </button>
+            <div class="content">
+
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Tables</h3>
+            </button>
+            <div class="content">
+
+
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Forms</h3>
+            </button>
+            <div class="content">
+
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="testimonials">
+
+    <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
+  Ende des Body platziert werden! -->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+  </section>
+
+
+
+  <!-- Pricing -->
+
+  <section class="pricing">
+    <div class="pricing-header">
+      <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
+      <p>Simple and affordable price plans for your and your dog.</p>
+    </div>
+
+    <div class="row">
+      <div class="pricing-col col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pricing-box-title">Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn5 btn btn-lg btn-outline-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-col col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pricing-box-title">Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$49 / mo</h2>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn5 btn btn-lg btn-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-col col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pricing-box-title">Mastiff</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn5 btn btn-lg btn-block btn-dark">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <div id="footer69">
+    <div class="row footer-row">
+      <div class="col-lg-12">
+        <h1 class="big-heading">Find the True Love of Your Dog's Life Today.</h1>
+        <button type="button" class="btn btn-dark btn-lg download-button3"><i class="fa-brands fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-light btn-lg download-button3"><i class="fa-brands fa-google-play"></i> Download</button>
+      </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="row real-footer">
+      <div class="col-lg-12">
+        <i class="fa-brands fa-twitter icons5"></i>
+        <i class="fa-brands fa-facebook-f icons5"></i>
+        <i class="fa-brands fa-instagram icons5"></i>
+        <i class="fa-solid fa-envelope icons5"></i>
+      </div>
+      <p class="Copyright">© Copyright TinDog</p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+
+
+</body>
+
+</html>

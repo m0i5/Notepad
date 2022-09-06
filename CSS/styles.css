@@ -1,0 +1,282 @@
+body {
+  font-family: 'Montserrat',sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ----------- Headings ----------*/
+.big-heading {
+font-family: 'Montserrat' sans-serif;
+font-size: 3rem;
+line-height: 1.5;
+font-weight: 600;
+color: #fff;
+}
+
+.section-heading {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+
+/******* Class Selectors ***********/
+/* Navigation Bar */
+.nav-item {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3rem;
+  padding: 0 18px;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  display: block;
+}
+
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+/* ---------- Navbar & Title ---------- */
+.title {
+  background: linear-gradient(#FF8FB1, #C6DCE4);
+  display: block;
+  text-align: left;
+}
+
+.container-fluid {
+  padding: 3% 5% 5%;
+
+}
+
+.iphone-parent {
+  position: relative;
+}
+
+@media (min-width: 570px) and (max-width: 1028px) {
+  .title .navbar-brand {
+    text-align: center;
+  }
+
+  .iphone6 {
+    position: static;
+    transform: rotate(0);
+    margin: 30px 0 0;
+  }
+}
+
+/* ---------- Features ---------- */
+.features {
+  padding: 2% 20%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+
+}
+
+.feature-box {
+
+  padding: 4%;
+  color: #8f8f8f;
+
+
+}
+
+.features-heading {
+  padding-top: 7%;
+  font-size: 1.75rem;
+  color: #8f8f8f;
+  font-weight: 500;
+
+}
+
+.fa-heart {
+  color: #ef8172;
+}
+
+.fa-heart:hover {
+  color: #ff4c68;
+}
+
+.fa-bullseye {
+  color: #ef8172;
+}
+
+.fa-bullseye:hover {
+  color: #ff4c68;
+}
+
+.fa-circle-check {
+  color: #ef8172;
+}
+
+.fa-circle-check:hover {
+  color: #ff4c68;
+}
+
+/* ------------ HTML SECTION ----------- */
+.HTML {
+  background-color: #C6DCE4;
+}
+.note-title, .note-title-small {
+  text-align: left;
+  font-family: 'Montserrat' sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.note-title-small {
+  font-size: 1.5rem;
+}
+
+.collaps-section {
+  text-align: left;
+}
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 18px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* ------------ CSS SECTION ----------- */
+.randomcontainer {
+  text-align: center;
+width: 100px;
+height: 100px;
+background-color: #E4DCCF;
+}
+
+.Brand {
+  text-decoration: underline;
+}
+
+.float1 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  float: left;
+  margin-right: 30px;
+}
+.float2-clear {
+  clear:left;
+}
+
+
+/* ----------- Javascript Section ------------ */
+
+.JavaScript-Notes {
+  background-color: #C6DCE4;
+}
+
+
+
+/* ---------- Testimonials Section ---------- */
+.testimonials {
+  background-color: #ef8172;
+  color: #fff;
+}
+
+.testimonial-text {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* ---------- Press section ---------- */
+.press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-images {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/* ---------- Pricing Sections ---------- */
+
+.price-text {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.pricing-col {
+  padding: 3% 2% 8% 2%;
+}
+
+.pricing-header {
+  padding: 5% 0 0 0;
+}
+
+.pricing-box-title {
+  font-weight: bold;
+}
+
+.btn5 {
+  width: 100%;
+}
+
+/* ---------- Footer section ---------- */
+
+.footer-row {
+  background-color: #ff4c68;
+  padding: 3% 10%;
+}
+
+.download-button3 {
+  margin: 3% 1%;
+}
+
+
+
+
+.real-footer {
+  padding: 3% 5% 0;
+}
+
+.Copyright {
+  color: grey;
+  padding-top: 1%;
+}
+
+.icons5 {
+  padding: 0 1%;
+}
