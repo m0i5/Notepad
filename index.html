@@ -222,199 +222,204 @@
 
         </div>
 
-      <div class="row-html">
-        <div class="col-lg-12">
-          <h3 class="note-title-small">Introduction - Intermediate CSS</h3>
-          <div class="collaps-section">
-            <button type="button" class="collapsible">
-              <h3>Intro</h3>
-            </button>
-            <div class="content">
-              <p>
-              <ul>
-                <li> Cascading Style Sheets, meistens als CSS abgekürzt, ist eine Beschreibungssprache, die das Erscheinungsbild einer in HTML oder XML formatierten Datei (inklusive verschiedener XML-Sprachen wie SVG oder XHTML (en-US)) festlegt. CSS
-                  beschreibt, wie ein strukturiertes Element am Bildschirm, auf Papier, in Sprache oder anderen Medien dargestellt wird.
-                  <br>
-                  <br>
-                <li> <strong>Kursübung:</strong> Wir haben einen neuen Ordner erstellt (external-css) mit einem neuen Sheet, dass styles.css heisst. In diesem Sheet werden alle Elemente wie z.B. body, hr, h1-h6 etc. definiert. CSS Code kann aber auch
-                  direkt in HTML geschrieben werden (internal-css), ist jedoch fehleranfällig und man muss jeden Bereich einzeln definieren.
-                  <br>
-                  <br>
-                <li><strong> Beispiel:</strong> HR's sollten zentriert als Punkte angezeigt werden.
-                  <ol>
-                    <li>Google: HR styling css
-                    <li>border-top: 1px dotted color.
-                    <li> border-style auf "none" setzen
-                    <li> width in % definieren
-                    <li> farben definieren
-                  </ol>
-                  <br />
-                  <p><strong> Oder:</strong>
-                  <ol>
-                    <li> Border style auf "dotted wechseln"
-                    <li> Border height auf "0" setzen, dann wird es aber immer noch einen Rahmen haben
-                    <li> Sobald man aber im "border-style" mehrere Werte einfügt, werden diese auch übernommen
-                    <li> Also: border-style: doted none none;
-                    <li> Zum Schluss noch width definieren et voila
-              </ul>
-              <strong>Wichtig: </strong> Im Header vom Index muss dieses File als "link" richtig verknüpft werden, damit die Änderungen auch übernommen werden.
-              </p>
-            </div>
-
-            <button type="button" class="collapsible">
-              <h3>Syntax</h3>
-            </button>
-            <div class="content">
-              <p><img class="csssyntax" src="https://wiki.selfhtml.org/images/thumb/b/b5/CSS-Regelsatz.svg/600px-CSS-Regelsatz.svg.png" alt="css-syntax">
-              </p>
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Selectors</h3>
-            </button>
-            <div class="content">
-              <p>
-              <dl>
-                <dt>Man kann Elemente durch die folgenden selectors definieren:
-                <dd>- <strong> Tags, </strong> z.B. H1, p, img etc.
-                <dd> - <strong> Klassen </strong> class="bacon" / .bacon
-                <dd> - <strong> Pseudo selectors </strong> wie :hover
-                <dd> - oder <strong>ID's</strong> id="heading" / #heading
-              </dl>
-              <br>
-              <strong>Wichtig: </strong> ID's können nur ein mal für ein Element genutzt werden, wobei Klassen mehrmals in einem Tag vorkommen können.
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Divs</h3>
-            </button>
-            <div class="content">
-              <p>Divs sind eig. Boxen, die im CSS definiert werden können. Als Beispiel: div class="randomcontainer" der danach mit Inhalten gefüllt wird (Titel/Bilder etc) Und dann im CSS als .randomcontainer gestylt wird-
-              <div class="randomcontainer">
-                Hi! My name is Dan.
+        <div class="row-html">
+          <div class="col-lg-12">
+            <h3 class="note-title-small">Introduction - Intermediate CSS</h3>
+            <div class="collaps-section">
+              <button type="button" class="collapsible">
+                <h3>Intro</h3>
+              </button>
+              <div class="content">
+                <p>
+                <ul>
+                  <li> Cascading Style Sheets, meistens als CSS abgekürzt, ist eine Beschreibungssprache, die das Erscheinungsbild einer in HTML oder XML formatierten Datei (inklusive verschiedener XML-Sprachen wie SVG oder XHTML (en-US)) festlegt.
+                    CSS
+                    beschreibt, wie ein strukturiertes Element am Bildschirm, auf Papier, in Sprache oder anderen Medien dargestellt wird.
+                    <br>
+                    <br>
+                  <li> <strong>Kursübung:</strong> Wir haben einen neuen Ordner erstellt (external-css) mit einem neuen Sheet, dass styles.css heisst. In diesem Sheet werden alle Elemente wie z.B. body, hr, h1-h6 etc. definiert. CSS Code kann aber
+                    auch
+                    direkt in HTML geschrieben werden (internal-css), ist jedoch fehleranfällig und man muss jeden Bereich einzeln definieren.
+                    <br>
+                    <br>
+                  <li><strong> Beispiel:</strong> HR's sollten zentriert als Punkte angezeigt werden.
+                    <ol>
+                      <li>Google: HR styling css
+                      <li>border-top: 1px dotted color.
+                      <li> border-style auf "none" setzen
+                      <li> width in % definieren
+                      <li> farben definieren
+                    </ol>
+                    <br />
+                    <p><strong> Oder:</strong>
+                    <ol>
+                      <li> Border style auf "dotted wechseln"
+                      <li> Border height auf "0" setzen, dann wird es aber immer noch einen Rahmen haben
+                      <li> Sobald man aber im "border-style" mehrere Werte einfügt, werden diese auch übernommen
+                      <li> Also: border-style: doted none none;
+                      <li> Zum Schluss noch width definieren et voila
+                </ul>
+                <strong>Wichtig: </strong> Im Header vom Index muss dieses File als "link" richtig verknüpft werden, damit die Änderungen auch übernommen werden.
+                </p>
               </div>
-              <p>
-                randomcontainer { <br />
-                text-align: center; <br />
-                width: 100px; <br />
-                height: 100px; <br />
-                background-color: #E4DCCF; <br />
-                padding: 10px; <br />
-                margin: 0px; <br />
-                border: solid 10px; <br />
-              </p>
-              </p>
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Containers</h3>
-            </button>
-            <div class="content">
-              <p><img class="containers" src="https://wiki.selfhtml.org/images/thumb/f/f3/Box-Modell.svg/512px-Box-Modell.svg.png" alt="css-syntax"><br /> <br />
-                Beispiel mit den 3 Containern (200px) (top/middle und bottom) die nebeneinander platziert werden, wobei man Margin/Padding/Border und Size berechnen musste für die Anordnung.
-                Wichtig: Web-Developer Tool nutzen um Margin/Padding/Border zu visualisieren und dann in den Code kopieren. <br />
 
-                Span Element: Kann genutzt werden um z.B. in einem Paragraph nur einen Teil des Text zu bearbeiten.<br />
-              <p> I'm a [span class="Brand"] Brand [/span] Manager.</p>
-              <p>.Brand [
-                text-decoration: underline;
-                ] </p>
-              <p> I'm a <span class="Brand">Brand</span> Manager</p>
-              </p>
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Display</h3>
-            </button>
-            <div class="content">
-              Inline Elements können nicht in der Grösse angepasst werden wie Block-Elements (z.B. ein Paragraph). Man kann jedoch mit "display" im CSS auf inline wechseln und somit die Block Properties übernehmen.
-              Am besten ist es jedoch, die Properties der Element auf "inline-block" zu ändern, wie es Foto als default hat. Es ist somit ein Block, der sich verändern lässt.
-              <br />
-              <br />
-              <ul>
-                <li><strong> Inline:</strong>
-                <li> Anchors "a>
-                <li> Images "img>
-                <li> Spans "span>
-                  <br>
-                  <br>
-                <li><strong> Block: </strong>
-                <li>Paragraph
-                  <br>
-                  <br>
-                <li> <strong>Inline-Block:</strong>
-                <li> Images
-              </ul>
-
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Positioning</h3>
-            </button>
-            <div class="content">
-              <p> <strong>"Relative Positioning"</strong> heisst, die Position relativ zur ursprünglichen Position. Deshalb "position: relative;" und dann mit top/bottom/left/right definieren. </p>
-              <p> Mit <strong>"Absolute Positioning"</strong> wird das Element aus dem Flow des Dokuments genommen, das heisst, dass andere Elemente es überdecken können oder ineinander verschmelzen</p>
-              <p><strong> Wichtig:</strong> Wenn die Elemente in einem Parent sind, z.B. "Body", verhalten sie sich auch dementsprechend nur im Body.</p>
-              <p>Das "fixed" Element fixiert Elemente auch wenn man scrollt.</p>
-              <p>Guter Artikel: https://css-tricks.com/absolute-positioning-inside-relative-positioning/ </p>
-              <br />
-              <br />
-              <ul>
-                <li><strong> Inline:</strong>
-                <li> Anchors "a>
-                <li> Images "img>
-                <li> Spans "span>
-                  <br>
-                  <br>
-                <li><strong> Block: </strong>
-                <li>Paragraph
-                  <br>
-                  <br>
-                <li> <strong>Inline-Block:</strong>
-                <li> Images
-              </ul>
-              <div class="float1">
+              <button type="button" class="collapsible">
+                <h3>Syntax</h3>
+              </button>
+              <div class="content">
+                <p><img class="csssyntax" src="https://wiki.selfhtml.org/images/thumb/b/b5/CSS-Regelsatz.svg/600px-CSS-Regelsatz.svg.png" alt="css-syntax">
+                </p>
               </div>
-                  <p> Wird bei einem Element float:right; gesetzt, wird z.B. der Text rechts um das Element, z.B. ein Bild floaten. Mit Clear kann ein Teil des Textes davon befreit werden.<br />
-                  <strong> Achtung: Dies sollte wirklich nur für Text und Bilder genutzt werden, NICHT für das restliche Positioning.
-                    <p class="float2-clear">Beim Positioning sollte immer mit divs. und absolute/relative/padding/margin etc gearbeitet werden. </strong></p>
-
-
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Fonts</h3>
-            </button>
-            <div class="content">
-              <p>Fonts werden mit font-family definiert. Dabei sollten mehrere, ähnliche Font-Familien nacheinander aufgelistet werden, falls der Browser die definierte Font-Familie nicht anzeigen kann.
+              <button type="button" class="collapsible">
+                <h3>Selectors</h3>
+              </button>
+              <div class="content">
+                <p>
+                <dl>
+                  <dt>Man kann Elemente durch die folgenden selectors definieren:
+                  <dd>- <strong> Tags, </strong> z.B. H1, p, img etc.
+                  <dd> - <strong> Klassen </strong> class="bacon" / .bacon
+                  <dd> - <strong> Pseudo selectors </strong> wie :hover
+                  <dd> - oder <strong>ID's</strong> id="heading" / #heading
+                </dl>
                 <br>
-                <strong> Zum Beispiel: </strong> font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-              <ul>
-                <li> https://www.cssfontstack.com/
-                <li> fonts.google.com
-              </ul>
-              <p> Fonts z.B. auf Google auswählen, Link in den Header des Dokuments kopieren und Fontfamilien im CSS definieren. Boom.
-              <p> <strong> Wichtig:</strong> Bei der font-size aufpassen wenn sie in <strong>em oder % </strong> angegeben werden, da die durch den Parent beeinflusst werden, wenn zB. im Body-Parent bereits font-size 200% definiert ist. Bei
-                Pixelangaben werden die Inhalte nicht durch den Parent beeinflusst, da diese Angabe "static" ist. </p>
-              <p> <strong> 1em = 16px = 100% </strong> </p>
-              <p> <strong> rem = root em, total unabhängig vom Parent und wird dementsprechend nicht beeinflusst. </strong></p>
-              <br />
-              <br />
-            </div>
+                <strong>Wichtig: </strong> ID's können nur ein mal für ein Element genutzt werden, wobei Klassen mehrmals in einem Tag vorkommen können.
+              </div>
+              <button type="button" class="collapsible">
+                <h3>Divs</h3>
+              </button>
+              <div class="content">
+                <p>Divs sind eig. Boxen, die im CSS definiert werden können. Als Beispiel: div class="randomcontainer" der danach mit Inhalten gefüllt wird (Titel/Bilder etc) Und dann im CSS als .randomcontainer gestylt wird-
+                <div class="randomcontainer">
+                  Hi! My name is Dan.
+                </div>
+                <p>
+                  randomcontainer { <br />
+                  text-align: center; <br />
+                  width: 100px; <br />
+                  height: 100px; <br />
+                  background-color: #E4DCCF; <br />
+                  padding: 10px; <br />
+                  margin: 0px; <br />
+                  border: solid 10px; <br />
+                </p>
+                </p>
+              </div>
+              <button type="button" class="collapsible">
+                <h3>Containers</h3>
+              </button>
+              <div class="content">
+                <p><img class="containers" src="https://wiki.selfhtml.org/images/thumb/f/f3/Box-Modell.svg/512px-Box-Modell.svg.png" alt="css-syntax"><br /> <br />
+                  Beispiel mit den 3 Containern (200px) (top/middle und bottom) die nebeneinander platziert werden, wobei man Margin/Padding/Border und Size berechnen musste für die Anordnung.
+                  Wichtig: Web-Developer Tool nutzen um Margin/Padding/Border zu visualisieren und dann in den Code kopieren. <br />
+
+                  Span Element: Kann genutzt werden um z.B. in einem Paragraph nur einen Teil des Text zu bearbeiten.<br />
+                <p> I'm a [span class="Brand"] Brand [/span] Manager.</p>
+                <p>.Brand [
+                  text-decoration: underline;
+                  ] </p>
+                <p> I'm a <span class="Brand">Brand</span> Manager</p>
+                </p>
+              </div>
+              <button type="button" class="collapsible">
+                <h3>Display</h3>
+              </button>
+              <div class="content">
+                Inline Elements können nicht in der Grösse angepasst werden wie Block-Elements (z.B. ein Paragraph). Man kann jedoch mit "display" im CSS auf inline wechseln und somit die Block Properties übernehmen.
+                Am besten ist es jedoch, die Properties der Element auf "inline-block" zu ändern, wie es Foto als default hat. Es ist somit ein Block, der sich verändern lässt.
+                <br />
+                <br />
+                <ul>
+                  <li><strong> Inline:</strong>
+                  <li> Anchors "a>
+                  <li> Images "img>
+                  <li> Spans "span>
+                    <br>
+                    <br>
+                  <li><strong> Block: </strong>
+                  <li>Paragraph
+                    <br>
+                    <br>
+                  <li> <strong>Inline-Block:</strong>
+                  <li> Images
+                </ul>
+
+              </div>
+              <button type="button" class="collapsible">
+                <h3>Positioning</h3>
+              </button>
+              <div class="content">
+                <p> <strong>"Relative Positioning"</strong> heisst, die Position relativ zur ursprünglichen Position. Deshalb "position: relative;" und dann mit top/bottom/left/right definieren. </p>
+                <p> Mit <strong>"Absolute Positioning"</strong> wird das Element aus dem Flow des Dokuments genommen, das heisst, dass andere Elemente es überdecken können oder ineinander verschmelzen</p>
+                <p><strong> Wichtig:</strong> Wenn die Elemente in einem Parent sind, z.B. "Body", verhalten sie sich auch dementsprechend nur im Body.</p>
+                <p>Das "fixed" Element fixiert Elemente auch wenn man scrollt.</p>
+                <p>Guter Artikel: https://css-tricks.com/absolute-positioning-inside-relative-positioning/ </p>
+                <br />
+                <br />
+                <ul>
+                  <li><strong> Inline:</strong>
+                  <li> Anchors "a>
+                  <li> Images "img>
+                  <li> Spans "span>
+                    <br>
+                    <br>
+                  <li><strong> Block: </strong>
+                  <li>Paragraph
+                    <br>
+                    <br>
+                  <li> <strong>Inline-Block:</strong>
+                  <li> Images
+                </ul>
+                <div class="float1">
+                </div>
+                <p> Wird bei einem Element float:right; gesetzt, wird z.B. der Text rechts um das Element, z.B. ein Bild floaten. Mit Clear kann ein Teil des Textes davon befreit werden.<br />
+                  <strong> Achtung: Dies sollte wirklich nur für Text und Bilder genutzt werden, NICHT für das restliche Positioning.
+                    <p class="float2-clear">Beim Positioning sollte immer mit divs. und absolute/relative/padding/margin etc gearbeitet werden.
+                  </strong>
+                </p>
 
 
-            <button type="button" class="collapsible">
-              <h3>Bootstrap</h3>
-            </button>
-            <div class="content">
-              <p> Bootstrap ist eine riesen Bibliothek mit Gestaltungsvorlagen für Typografie, formulare, Buttons, Tabellen, Grid-Systeme, Navigations- und andere Oberflächengestaltungselemente sowie zusätzliche, optionale JavaScript-Erweiterungen. </p>
-              <p> Es gibt 3 Wege wie man Bootstrap installiert: </p>
+              </div>
+              <button type="button" class="collapsible">
+                <h3>Fonts</h3>
+              </button>
+              <div class="content">
+                <p>Fonts werden mit font-family definiert. Dabei sollten mehrere, ähnliche Font-Familien nacheinander aufgelistet werden, falls der Browser die definierte Font-Familie nicht anzeigen kann.
+                  <br>
+                  <strong> Zum Beispiel: </strong> font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                <ul>
+                  <li> https://www.cssfontstack.com/
+                  <li> fonts.google.com
+                </ul>
+                <p> Fonts z.B. auf Google auswählen, Link in den Header des Dokuments kopieren und Fontfamilien im CSS definieren. Boom.
+                <p> <strong> Wichtig:</strong> Bei der font-size aufpassen wenn sie in <strong>em oder % </strong> angegeben werden, da die durch den Parent beeinflusst werden, wenn zB. im Body-Parent bereits font-size 200% definiert ist. Bei
+                  Pixelangaben werden die Inhalte nicht durch den Parent beeinflusst, da diese Angabe "static" ist. </p>
+                <p> <strong> 1em = 16px = 100% </strong> </p>
+                <p> <strong> rem = root em, total unabhängig vom Parent und wird dementsprechend nicht beeinflusst. </strong></p>
+                <br />
+                <br />
+              </div>
+
+
+              <button type="button" class="collapsible">
+                <h3>Bootstrap</h3>
+              </button>
+              <div class="content">
+                <p> Bootstrap ist eine riesen Bibliothek mit Gestaltungsvorlagen für Typografie, formulare, Buttons, Tabellen, Grid-Systeme, Navigations- und andere Oberflächengestaltungselemente sowie zusätzliche, optionale JavaScript-Erweiterungen.
+                </p>
+                <p> Es gibt 3 Wege wie man Bootstrap installiert: </p>
                 <ul>
                   <li> index.html erstellen und Bootstrap's CSS und JS kopieren
-                    <li> CDN links einfügen
-                      <li> oder downloaden und im Projektordner verlinken (schlechteste Option wegen Cache)
+                  <li> CDN links einfügen
+                  <li> oder downloaden und im Projektordner verlinken (schlechteste Option wegen Cache)
                   </li>
-              <br />
-              <br />
+                  <br />
+                  <br />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
 
@@ -435,94 +440,237 @@
               <h3>Intro</h3>
             </button>
             <div class="content">
-<p> JavaScript ist eine Skriptsprache, die ursprünglich 1995 von Netscape für dynamisches HTML in Webbrowsern entwickelt wurde, um Benutzerinteraktionen auszuwerten, Inhalte zu verändern, nachzuladen oder zu generieren und so die Möglichkeiten von HTML zu erweitern. </p>
-Erste Versuche im Kurs: <br />
-alert ("Hello"); <br />
-Multi-line (shift-enter) <br />
-alert ("Hello");
-alert ("World"); <br />
-<br />
-Zum testen: Dev Tool > Sources > New Snippet <br />
+              <p> JavaScript ist eine Skriptsprache, die ursprünglich 1995 von Netscape für dynamisches HTML in Webbrowsern entwickelt wurde, um Benutzerinteraktionen auszuwerten, Inhalte zu verändern, nachzuladen oder zu generieren und so die
+                Möglichkeiten von HTML zu erweitern. </p>
+              Erste Versuche im Kurs: <br />
+              alert ("Hello"); <br />
+              Multi-line (shift-enter) <br />
+              alert ("Hello");
+              alert ("World"); <br />
+              <br />
+              Zum testen: Dev Tool > Sources > New Snippet <br />
             </div>
 
             <button type="button" class="collapsible">
               <h3>Data Types</h3>
             </button>
             <div class="content">
-<p> Beispiel mit:</p>
-<p> alert ("Hello"); </p>
-<br />
-"Hello" ist in diesem Beispiel ein «String» und wird deshalb aus dem Code genommen und als Text interpretiert. Wichtig, dass diese Definitionen stimmen, asonsten funktioniert der Code nicht richtig.
-<br /> <br /> Andere Data Types:
-<ul>
-  <li>Numbers, 1 2 3</li>
-  <li>Boolean, true or false</li>
-</ul>
-<p>typeof(23); = "number"</p>
-<p>typeof ("Dan"; = "string"</p>
-<p>typeof ("true"); = "boolean"</p>
+              <p> Beispiel mit:</p>
+              <p> alert ("Hello"); </p>
+              <br />
+              "Hello" ist in diesem Beispiel ein «String» und wird deshalb aus dem Code genommen und als Text interpretiert. Wichtig, dass diese Definitionen stimmen, asonsten funktioniert der Code nicht richtig.
+              <br /> <br /> Andere Data Types:
+              <ul>
+                <li>Numbers, 1 2 3</li>
+                <li>Boolean, true or false</li>
+              </ul>
+              <p>typeof(23); = "number"</p>
+              <p>typeof ("Dan"; = "string"</p>
+              <p>typeof ("true"); = "boolean"</p>
             </div>
             <button type="button" class="collapsible">
               <h3>Variables</h3>
             </button>
             <div class="content">
-            Beispiel mit prompt ("What is your name?"); <br />
-            Öffnet ein Fenster wo man den Namen eintippen kann. Diese Information wird jedoch nicht gespeichert. <br />
-            <br />
-            <p>
-              Wenn man jedoch ein Variable mit myName = "Dan" definiert, also: <br />
-              var myName = "Dan"; <br />
-              ..kann man die Information ("Dan") durch die Variable "myName" abrufen.
-            </p>
+              Beispiel mit prompt ("What is your name?"); <br />
+              Öffnet ein Fenster wo man den Namen eintippen kann. Diese Information wird jedoch nicht gespeichert. <br />
+              <br />
+              <p>
+                Wenn man jedoch ein Variable mit myName = "Dan" definiert, also: <br />
+                var myName = "Dan"; <br />
+                ..kann man die Information ("Dan") durch die Variable "myName" abrufen.
+              </p>
 
-            <p>
-              var- keyword / myName- Name des Keywords / = "Dan"- gleicher Wert wie myName
-            </p>
-            <p>
-              Das Keyword (var) braucht man jedoch nur, wenn man die Variable erstellt. Wenn man z.B. myName ändern will, kann myName = "Friedo" auch einfach überschrieben werden.
-            </p>
-            <p>
-              zB.: var gameLevel = 1; <br />
-              gameLevel = 2; <br />
-              gameLevel = 3; <br />
-              alert ("Your level is currently: " + gameLevel); <br />
-              Your level is currently: 3
-            </p>
-            <hr />
-            <p>
-              Aufgabe: <br />
-              var myName = "Dan"; <br />
-              alert("Hi, " + myName + "!" + " How are you doing?");
-            </p>
+              <p>
+                var- keyword / myName- Name des Keywords / = "Dan"- gleicher Wert wie myName
+              </p>
+              <p>
+                Das Keyword (var) braucht man jedoch nur, wenn man die Variable erstellt. Wenn man z.B. myName ändern will, kann myName = "Friedo" auch einfach überschrieben werden.
+              </p>
+              <p>
+                zB.: var gameLevel = 1; <br />
+                gameLevel = 2; <br />
+                gameLevel = 3; <br />
+                alert ("Your level is currently: " + gameLevel); <br />
+                Your level is currently: 3
+              </p>
+              <hr />
+              <p>
+                Aufgabe: <br />
+                var myName = "Dan"; <br />
+                alert("Hi, " + myName + "!" + " How are you doing?");
+              </p>
+              <br />
+              <p> var yourName = prompt("What is your name?");</p>
+              <p>
+                alert ("My name is, " + myName + ", welcome to my Page " + yourName + "!");
+              </p>
+
+
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Strings</h3>
+            </button>
+            <div class="content">
+              Man kann Strings kombinieren (Concatenation): <br />
+              <p>"a" + "b" = "ab" </p>
+              <p>alert("Hello" + "World") = HelloWorld</p>
+              <p>alert("Hello" + " " +World) = Hello World</p>
+              <br />
+              <hr />
+              <p>
+                Greeting Alert mit den Variablen «Message» und «Name»
+              </p>
+              <p>
+                var message = "Hey there,"; <br />
+                var name = "Dan";
+              </p>
+              <p>
+                alert(message + dan);
+              </p>
+              = Hey there, Dan
+              <hr />
+              <br />
+              <p>Man kann die Anzahl Characters in einem String mit .length anzeigen. </p>
+              <p>Challenge: Prompt erstellen wo man einen «Tweet» schreiben kann. Alert gibt mir danach Informationen wieviele Characters geschrieben wurden und wie viele noch übrig sind.</p>
+              <br />
+              var tweetChar = prompt("Tweet something:") <br />
+              alert("You have written " + tweetChar.length + ", and have" + (180 - tweetChar.length) + " left");
+              <hr />
+              <br />
+              <b>Slicing Beispiel:</b> <br />
+              var name = "Nutella"; <br />
+              name.slice(0,4); <br />
+              = Nute <br />
+              Programmierer zählen immer ab 0. <br />
+              <br />
+              <br />
+
+              <p><b>Challenge Tweet mit nur 140 Chars:</b></p>
+              <p>var Tweet = prompt("Tweet something");
+                alert(Tweet.slice(0,140)); </p>
+              <hr />
+              <p><b>Challenge Tweet erster Character "toUpperCase" und Rest "toLowerCase":</b></p>
+              <p>var name = prompt("What is your name?");</p>
+              <p>var firstChar = name.slice(0,1);</p>
+              <p>var upperCaseFirstChar = firstChar.toUpperCase();</p>
+              <p>var restOfName = name.slice(1,name.length);</p>
+              <p>restOfName = restOfName.toLowerCase();</p>
+              <p>var capitalisedName = upperCaseFirstChar + restOfName;</p>
+              <br />
+              <p>alert("Hello, " + capitalisedName);</p>
+              <hr />
+
+
+
+
+            </div>
+            <button type="button" class="collapsible">
+              <h3>Basic Arithmetic and the Modulo Operator</h3>
+            </button>
+            <div class="content">
+              Simple: <br />
+              <p>Addition: a = 2 + 3; //5
+              <p>Subtraction: var b = 10 - 2; // 8 </p>
+              <p>Multiplaction: var c = 3 * 3; // 9</p>
+              <p>Divison: d = 6 / 2; //3</p>
+              <br />
+
+              <p>Modulo:</p>
+              <p>var e = 9%6; //3 (remainder of)</p>
+              <p>var f = 6%4; // 2</p>
+              <br />
+              <p>Remainder with positive dividend:</p>
+              <p>
+                13 % 5 // 3 <br />
+                1 % -2 // 1 <br />
+                1 % 2 // 1 <br />
+                2 % 3 // 2 <br />
+                5.5 % 2 // 1.5 <br />
+              </p>
+              <br />
+              <p>Remainder with negative dividend:</p>
+              <p>
+                -13 % 5 // -3 <br />
+                -1 % 2 // -1 <br />
+                -4 % 2 // -0 <br />
+              </p>
 <br />
-<p> var yourName = prompt("What is your name?");</p>
+<hr />
+<br />
+<p>Dog Age to Human Age Converter:</p>
+<p>Formula: humanAge = (dogAge - 2) x 4 + 21;</p>
 <p>
-  alert ("My name is, " + myName + ", welcome to my Page  " + yourName + "!");
+  var dogAge = prompt("Hi, how old is your dog?);
+</p>
+<p>
+humanAge = ((dogAge - 2) x4) + 21;
+</p>
+<p>
+  alert("Your dog is " + humanAge + " years old in human years.")
+</p>
+<br />
+<hr />
+<br />
+<p>Increment and Decrement Expressions:</p>
+
+<p>Increment: <br />
+var x = 5 <br />
+  x = x + 1; //6 <br />
+  <b>oder: x++ //6</b>
+
+  <br />
+  Decrement: <br />
+  var x = 5; <br />
+  <b>x--; //4</b> <br />
+<br />
+  Mit + oder - wird nur jeweils 1 gerechnet. Mann kann jedoch auch mit Variabeln und anderen Kombinationen arbeiten: <br />
+  z.B.: <br />
+  var x = 5; <br />
+  x+=2; // 7 <br />
+  <br />
+  oder:<br />
+  var x = 5; <br />
+  var y = 3; <br />
+  x+=y; // 8; <br />
+</p>
+<br />
+<hr />
+<br />
+Quiz Frage 3: What does «y» equal?
+<p>
+var x = 3; <br />
+var y = x++; <br />
+y += 1; <br />
+<br />
+<p>Auch wenn man dem Kurs aufmerksam folgt, konnte man noch nicht wissen dass es <b>Post- und Prefix increments gibt:</b><br />
+Postfix increment: <br />
+let x = 3; <br />
+y = x++; <br />
+// y = 3 <br />
+// x = 4 <br />
+<br />
+let a = 2; <br />
+b = ++a; <br />
+//a = 3 <br />
+//b = 3 <br />
+<br />
+Deshalb ist y = 4 und <b> nicht 5!</b>
+<hr />
+<br />
+
 </p>
 
 
 
 
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Images & Links</h3>
-            </button>
-            <div class="content">
-
 
 
             </div>
             <button type="button" class="collapsible">
-              <h3>Tables</h3>
-            </button>
-            <div class="content">
-
-
-
-
-            </div>
-            <button type="button" class="collapsible">
-              <h3>Forms</h3>
+              <h3>Functions:</h3>
             </button>
             <div class="content">
 
@@ -558,30 +706,30 @@ Zum testen: Dev Tool > Sources > New Snippet <br />
           <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
           <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
           <em>H.P. Baxxter</em>
-</div>
-          <div class="carousel-item">
-            <h2 class="testimonial-text">«How much is the fish?»</h2>
-            <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
-            <em>H.P. Baxxter</em>
-          </div>
-
-            <div class="carousel-item">
-              <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
-              <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-              <em>H.P. Baxxter</em>
-            </div>
-
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«How much is the fish?»</h2>
+          <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
+          <em>H.P. Baxxter</em>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
+          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
+
       </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
 
   </section>
@@ -662,7 +810,7 @@ Zum testen: Dev Tool > Sources > New Snippet <br />
 
     <!-- Footer -->
 
-    <!-- <div class="row real-footer">
+  <!-- <div class="row real-footer">
       <div class="col-lg-12">
         <i class="fa-brands fa-twitter icons5"></i>
         <i class="fa-brands fa-facebook-f icons5"></i>
@@ -673,29 +821,29 @@ Zum testen: Dev Tool > Sources > New Snippet <br />
     </div> -->
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-    </script>
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 
 
 
