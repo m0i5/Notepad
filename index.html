@@ -597,71 +597,71 @@
                 -1 % 2 // -1 <br />
                 -4 % 2 // -0 <br />
               </p>
-<br />
-<hr />
-<br />
-<p>Dog Age to Human Age Converter:</p>
-<p>Formula: humanAge = (dogAge - 2) x 4 + 21;</p>
-<p>
-  var dogAge = prompt("Hi, how old is your dog?);
-</p>
-<p>
-humanAge = ((dogAge - 2) x4) + 21;
-</p>
-<p>
-  alert("Your dog is " + humanAge + " years old in human years.")
-</p>
-<br />
-<hr />
-<br />
-<p>Increment and Decrement Expressions:</p>
+              <br />
+              <hr />
+              <br />
+              <p>Dog Age to Human Age Converter:</p>
+              <p>Formula: humanAge = (dogAge - 2) x 4 + 21;</p>
+              <p>
+                var dogAge = prompt("Hi, how old is your dog?);
+              </p>
+              <p>
+                humanAge = ((dogAge - 2) x4) + 21;
+              </p>
+              <p>
+                alert("Your dog is " + humanAge + " years old in human years.")
+              </p>
+              <br />
+              <hr />
+              <br />
+              <p>Increment and Decrement Expressions:</p>
 
-<p>Increment: <br />
-var x = 5 <br />
-  x = x + 1; //6 <br />
-  <b>oder: x++ //6</b>
+              <p>Increment: <br />
+                var x = 5 <br />
+                x = x + 1; //6 <br />
+                <b>oder: x++ //6</b>
 
-  <br />
-  Decrement: <br />
-  var x = 5; <br />
-  <b>x--; //4</b> <br />
-<br />
-  Mit + oder - wird nur jeweils 1 gerechnet. Mann kann jedoch auch mit Variabeln und anderen Kombinationen arbeiten: <br />
-  z.B.: <br />
-  var x = 5; <br />
-  x+=2; // 7 <br />
-  <br />
-  oder:<br />
-  var x = 5; <br />
-  var y = 3; <br />
-  x+=y; // 8; <br />
-</p>
-<br />
-<hr />
-<br />
-Quiz Frage 3: What does «y» equal?
-<p>
-var x = 3; <br />
-var y = x++; <br />
-y += 1; <br />
-<br />
-<p>Auch wenn man dem Kurs aufmerksam folgt, konnte man noch nicht wissen dass es <b>Post- und Prefix increments gibt:</b><br />
-Postfix increment: <br />
-let x = 3; <br />
-y = x++; <br />
-// y = 3 <br />
-// x = 4 <br />
-<br />
-let a = 2; <br />
-b = ++a; <br />
-//a = 3 <br />
-//b = 3 <br />
-<br />
-Deshalb ist y = 4 und <b> nicht 5!</b>
-<hr />
-<br />
+                <br />
+                Decrement: <br />
+                var x = 5; <br />
+                <b>x--; //4</b> <br />
+                <br />
+                Mit + oder - wird nur jeweils 1 gerechnet. Mann kann jedoch auch mit Variabeln und anderen Kombinationen arbeiten: <br />
+                z.B.: <br />
+                var x = 5; <br />
+                x+=2; // 7 <br />
+                <br />
+                oder:<br />
+                var x = 5; <br />
+                var y = 3; <br />
+                x+=y; // 8; <br />
+              </p>
+              <br />
+              <hr />
+              <br />
+              Quiz Frage 3: What does «y» equal?
+              <p>
+                var x = 3; <br />
+                var y = x++; <br />
+                y += 1; <br />
+                <br />
+              <p>Auch wenn man dem Kurs aufmerksam folgt, konnte man noch nicht wissen dass es <b>Post- und Prefix increments gibt:</b><br />
+                Postfix increment: <br />
+                let x = 3; <br />
+                y = x++; <br />
+                // y = 3 <br />
+                // x = 4 <br />
+                <br />
+                let a = 2; <br />
+                b = ++a; <br />
+                //a = 3 <br />
+                //b = 3 <br />
+                <br />
+                Deshalb ist y = 4 und <b> nicht 5!</b>
+                <hr />
+                <br />
 
-</p>
+              </p>
 
 
 
@@ -673,6 +673,36 @@ Deshalb ist y = 4 und <b> nicht 5!</b>
               <h3>Functions:</h3>
             </button>
             <div class="content">
+              <p>«Function» mit dem Roboter Beispiel. Alle «actions» in der «function» verpackt.</p>
+              <p>z.B. function getMilk(){
+
+                };</p>
+              <p>Die Function kann dann mit getMilk(); einfach ausgelöst werden, bzw. alle Actions werden aktiviert.</p>
+              <p>
+                Im Developer-tool z.B. «alert» zu «console.log» tauschen, damit der Code in der Console angezeigt wird und man nicht durch jeden alert klicken muss zum etwas testen. <br /></p>
+              <br />
+              <p>
+                function getMilk (bottles) { <br />
+                var cost = bottles * 1.5; <br />
+                } <br />
+                (Do something with cost) <br />
+                Calling: <b>getMilk(2)</b> --> Roboter holt zwei Flaschen für je 1.5.-
+              </p>
+              <br />
+              <hr />
+              <p>
+                Aufgabe: Geld für Anzahl Flaschen:
+              </p>
+              <p>
+
+                function getMilk (money) { <br />
+                var numberOfBottles = Math.floor(money / 1.5 ); <br />
+                console.log ("buy " numberOfBottles + " bottles of milk" ); <br />
+                } </p>
+
+              <p>Die Funktion Math.floor rundet auf. </p>
+
+
 
 
 
