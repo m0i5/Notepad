@@ -661,14 +661,10 @@
                 <hr />
                 <br />
 
-              </p>
+              </p> </div>
 
 
-
-
-
-
-            </div>
+              
             <button type="button" class="collapsible">
               <h3>Functions:</h3>
             </button>
@@ -700,12 +696,11 @@
                 console.log ("buy " + numberOfBottles + " bottles of milk" ); <br />
                 } </p>
 
-<<<<<<< HEAD
-              <p>Die Funktion Math.floor rundet auf.  </p>
+              <p>Die Funktion Math.floor rundet auf. </p>
 
-=======
+
               <p>Die Funktion Math.floor rundet ab. </p>
->>>>>>> d8bb8de5de194f596b0c006ace1f56d6213e16e3
+
               <hr />
               <p>Life in Weeks Coding Exercise:<br />
                 In this challenge, you are going to create a function that tells us how many days, weeks and months we have left if we live until 90 years old. <br />
@@ -720,95 +715,93 @@
 
               lifeInWeeks(56);
 
-<<<<<<< HEAD
+
               <br />
-=======
-<br />
->>>>>>> d8bb8de5de194f596b0c006ace1f56d6213e16e3
-<hr />
-<b>Function inside a function:</b> <br />
-Outputs von functions in einer weiteren function nutzen: <br />
-<p>Überkomplizierte Lektion 121 step by step:</p>
-<p>
-  <i>function getMilk (money) { <br />
-    var numBottles = money / 1.5; <br />
-alert("buy" + numBottles + " bottles of Milk"); <br />
-return money % 1.5; <br /></i>
-} <br />
-</p>
-Der Output dieser Function ist «return money % 1.5;», also das Wechselgeld. <br />
-Wenn also der Input getMilk(4); ist, wird der Output 1 sein, da 4 % 1.5 = 1 ergibt. <br />
-<br />
-In einem nächsten Schritt kann diesem Output eine Variable zugeordnet werden: <br />
-<i>var change = getMilk(4) //change = 1 <br /></i>
-Und somit ist var «change» der Output des function-calls «getMilk(x)»
-<br />
-<br />
-Wenn man also <b>«console.log (change);»</b> callt, wird der Output wie folgt aussehen: <br />
-<i>"buy 2 bottles of Milk" <br />
-"1"</i> //<b>Wichtig:</b> das Return-Statement spielt hier eine wichtige Rolle. <br />
-<br />
-<br />
-Im nächsten Schritt erstellt sie für <br />
-<i>«var numberOfBottles = Math.floor(money / 1.5);» <br />
-«console.log("buy " + numberOfBottles + " bottles of milk");»</i>
-<br />
-Eine eigene function «calcBottles», die wie folgt aussieht: <br />
-<br />
-<i>function calcBottles (startingMoney, costPerBottle) { <br />
-  var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
-  return numberOfBottles; <br />
-}</i> <br />
-<br />
-Auch hier ist der «return numberOfBottles» sehr wichtig, da dieser jetzt in getMilk(x) eingebaut werden kann. <br />
-Das sieht dann so aus: <br />
-<br />
-<i>console.log("buy " + calcBottles(money, 1.5) + " bottles of milk");</i> <br />
-Das mag verwirren, aber «money» wird bei getMilk(money) definiert und ist in calcBottles als «startingMoney» definiert. <br />
-Die 1.5 sind als «costPerBottle» in der function «calcBottles» definiert. <br />
-<br />
-Das verwirrende ist, dass «numberOfBottles» jetzt durch «calcBottles» ersetzt wird, da es nun der Output der function «calcBottles» ist. <br />
-Also der return «numberOfBottles» = calcBottles! <br />
-<br />
-Sie geht noch einen Schritt weiter und verschachtelt <i>«return money % 1.5;»</i> in einer function: <br />
-<br />
-<i>function calcChange(startingAmount, costPerBottle) { <br />
-  var change = staringAmount % costPerBottle; <br />
-  return change; <br />
-}</i> <br />
-<br />
-Und dann kann wie im ersten Beispiel «return money % 1.5;» mit return calcChange(money, 1.5) ersetzt werden. <br />
-Schlussendlich ist <b>« return calcChange(money, 1.5)»</b> der Output von getMilk(x) <br />
-<br />
-Und zum Schluss räumt sie den Code noch auf, indem sie «getMilk(money)» in «getMilk(money, costPerBottle)» umwandelt. <br />
-Dazu müssen aber auch die Zahlen im oberen console.log durch «costPerBottle» ersetzt werden. <br />
-<br />
-Der fertige Code sieht dann wie folgt aus (am besten in die Console kopieren, damit es übersichtlich ist): <br />
-<br />
-<i>
-  function getMilk(money, costPerBottle) { <br />
-<br />
-console.log("buy " + calcBottles(money, costPerBottle) + " bottles of milk"); <br />
-<br />
-return calcChange(money, costPerBottle); <br />
-} <br />
-<br />
-<br />
-function calcBottles(startingMoney, costPerBottle) { <br />
-  var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
-  return numberOfBottles; <br />
-} <br />
-<br />
-<br />
-function calcChange(startingAmount, costPerBottle) { <br />
-  var change = startingAmount % costPerBottle; <br />
-  return change; <br />
-} <br />
-<br />
-<br />
-console.log ("Hello, here's your " + getMilk(4, 1.5) + ".- of change"); <br />
-</i> <br />
-<hr />
+              <br />
+              <hr />
+              <b>Function inside a function:</b> <br />
+              Outputs von functions in einer weiteren function nutzen: <br />
+              <p>Überkomplizierte Lektion 121 step by step:</p>
+              <p>
+                <i>function getMilk (money) { <br />
+                  var numBottles = money / 1.5; <br />
+                  alert("buy" + numBottles + " bottles of Milk"); <br />
+                  return money % 1.5; <br /></i>
+                } <br />
+              </p>
+              Der Output dieser Function ist «return money % 1.5;», also das Wechselgeld. <br />
+              Wenn also der Input getMilk(4); ist, wird der Output 1 sein, da 4 % 1.5 = 1 ergibt. <br />
+              <br />
+              In einem nächsten Schritt kann diesem Output eine Variable zugeordnet werden: <br />
+              <i>var change = getMilk(4) //change = 1 <br /></i>
+              Und somit ist var «change» der Output des function-calls «getMilk(x)»
+              <br />
+              <br />
+              Wenn man also <b>«console.log (change);»</b> callt, wird der Output wie folgt aussehen: <br />
+              <i>"buy 2 bottles of Milk" <br />
+                "1"</i> //<b>Wichtig:</b> das Return-Statement spielt hier eine wichtige Rolle. <br />
+              <br />
+              <br />
+              Im nächsten Schritt erstellt sie für <br />
+              <i>«var numberOfBottles = Math.floor(money / 1.5);» <br />
+                «console.log("buy " + numberOfBottles + " bottles of milk");»</i>
+              <br />
+              Eine eigene function «calcBottles», die wie folgt aussieht: <br />
+              <br />
+              <i>function calcBottles (startingMoney, costPerBottle) { <br />
+                var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
+                return numberOfBottles; <br />
+                }</i> <br />
+              <br />
+              Auch hier ist der «return numberOfBottles» sehr wichtig, da dieser jetzt in getMilk(x) eingebaut werden kann. <br />
+              Das sieht dann so aus: <br />
+              <br />
+              <i>console.log("buy " + calcBottles(money, 1.5) + " bottles of milk");</i> <br />
+              Das mag verwirren, aber «money» wird bei getMilk(money) definiert und ist in calcBottles als «startingMoney» definiert. <br />
+              Die 1.5 sind als «costPerBottle» in der function «calcBottles» definiert. <br />
+              <br />
+              Das verwirrende ist, dass «numberOfBottles» jetzt durch «calcBottles» ersetzt wird, da es nun der Output der function «calcBottles» ist. <br />
+              Also der return «numberOfBottles» = calcBottles! <br />
+              <br />
+              Sie geht noch einen Schritt weiter und verschachtelt <i>«return money % 1.5;»</i> in einer function: <br />
+              <br />
+              <i>function calcChange(startingAmount, costPerBottle) { <br />
+                var change = staringAmount % costPerBottle; <br />
+                return change; <br />
+                }</i> <br />
+              <br />
+              Und dann kann wie im ersten Beispiel «return money % 1.5;» mit return calcChange(money, 1.5) ersetzt werden. <br />
+              Schlussendlich ist <b>« return calcChange(money, 1.5)»</b> der Output von getMilk(x) <br />
+              <br />
+              Und zum Schluss räumt sie den Code noch auf, indem sie «getMilk(money)» in «getMilk(money, costPerBottle)» umwandelt. <br />
+              Dazu müssen aber auch die Zahlen im oberen console.log durch «costPerBottle» ersetzt werden. <br />
+              <br />
+              Der fertige Code sieht dann wie folgt aus (am besten in die Console kopieren, damit es übersichtlich ist): <br />
+              <br />
+              <i>
+                function getMilk(money, costPerBottle) { <br />
+                <br />
+                console.log("buy " + calcBottles(money, costPerBottle) + " bottles of milk"); <br />
+                <br />
+                return calcChange(money, costPerBottle); <br />
+                } <br />
+                <br />
+                <br />
+                function calcBottles(startingMoney, costPerBottle) { <br />
+                var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
+                return numberOfBottles; <br />
+                } <br />
+                <br />
+                <br />
+                function calcChange(startingAmount, costPerBottle) { <br />
+                var change = startingAmount % costPerBottle; <br />
+                return change; <br />
+                } <br />
+                <br />
+                <br />
+                console.log ("Hello, here's your " + getMilk(4, 1.5) + ".- of change"); <br />
+              </i> <br />
+              <hr />
 
 
 
