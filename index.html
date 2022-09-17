@@ -661,12 +661,13 @@
                 <hr />
                 <br />
 
-              </p> </div>
+              </p>
+            </div>
 
 
-              
+
             <button type="button" class="collapsible">
-              <h3>Functions:</h3>
+              <h3>Functions</h3>
             </button>
             <div class="content">
               <p>«Function» mit dem Roboter Beispiel. Alle «actions» in der «function» verpackt.</p>
@@ -802,12 +803,62 @@
                 console.log ("Hello, here's your " + getMilk(4, 1.5) + ".- of change"); <br />
               </i> <br />
               <hr />
+            </div>
 
 
 
+            <button type="button" class="collapsible">
+              <h3>Random Number Generator</h3>
+            </button>
+            <div class="content">
+              <br />
+              Mit der Funktion Math.random() können Pseudo-Zufallszahlen, die grösser oder gleich 0, und kleiner als 1 erstellt werden. <br />
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?retiredLocale=de" target="_blank"> Mehr dazu </a><br />
+              <br />
+              0 - 0.9999999999999999
+              <br />
+              <br />
+
+              Beispiel von einem Nr-Generator von 1-100:
+              < <br />
+              var nrGen = Math.random() * 100; <br />
+              nrGen =Math.floor(nrGen)+1; <br />
+              <br />
+              Das +1 braucht es, weil es sonst nur bis 100 erreicht. <br />
+              Math.floor rundet das ganze ab. <br />
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h3>If-Else Conditionals</h3>
+            </button>
+            <div class="content">
+              <br />
+              <i>Beispiel mit dem Zug: <br />
+                if (track === "clear"){goStraight();}<br />
+                else {turnRight();}<br /></i>
+              <br />
+
+
+              Beispiel mit Random Nr-Generator: <br />
+              <br />
+              <i>
+                var nrGen = Math.random() *100; <br />
+                nrGen = Math.floor(nrGen)+1; <br />
+                <br />
+                if (nrGen > 70) { <br />
+                alert("You got: " + nrGen + "Big number, big win. Wow."); <br />
+                } else { <br />
+                alert("You got:" + nrGen + "Low number, meh.");
+                }
+              </i>
+              <br />
+              <br />
+              === is equal to
 
 
             </div>
+
           </div>
 
         </div>
