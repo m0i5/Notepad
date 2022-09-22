@@ -189,6 +189,14 @@ background-color: #E4DCCF;
   clear:left;
 }
 
+.leapYear {
+float:left;
+width: 20rem;
+}
+
+.nonFloat {
+  clear:left;
+}
 
 /* ----------- Javascript Section ------------ */
 
@@ -215,6 +223,14 @@ background-color: #E4DCCF;
   border-radius: 100%;
   margin: 20px;
 }
+
+
+/* ---------- IMAGES ------------*/
+.leapYearCalc {
+  width: 20rem;
+  float:left;
+}
+
 
 /* ---------- Press section ---------- */
 .press {
