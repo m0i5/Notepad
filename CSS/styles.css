@@ -10,18 +10,23 @@ font-family: 'Montserrat', sans-serif;
 
 /* ----------- Headings ----------*/
 .big-heading {
-font-family: 'Montserrat' sans-serif;
-font-size: 3rem;
 line-height: 1.5;
 font-weight: 600;
 color: #fff;
 }
 
-.section-heading {
-  font-weight: bold;
-  font-size: 3rem;
+.note-title, .note-title-small {
+  text-align: left;
+  font-family: 'Montserrat' sans-serif;
+  font-size: 2rem;
   line-height: 1.5;
 }
+.note-title-small {
+  font-size: 1rem;
+}
+
+
+
 
 
 /******* Class Selectors ***********/
@@ -57,14 +62,12 @@ color: #fff;
 
 .container-fluid {
   padding: 3% 5% 5%;
+  text-align: left;
 
 }
 
-.iphone-parent {
-  position: relative;
-}
 
-@media (min-width: 570px) and (max-width: 1028px) {
+/*@media (min-width: 570px) and (max-width: 1028px) {
   .title .navbar-brand {
     text-align: center;
   }
@@ -75,6 +78,8 @@ color: #fff;
     margin: 30px 0 0;
   }
 }
+*/
+
 
 /* ---------- Features ---------- */
 .features {
@@ -86,7 +91,6 @@ color: #fff;
 }
 
 .feature-box {
-
   padding: 4%;
   color: #8f8f8f;
 
@@ -100,15 +104,7 @@ color: #fff;
   font-weight: 500;
 
 }
-
-.fa-heart {
-  color: #ef8172;
-}
-
-.fa-heart:hover {
-  color: #ff4c68;
-}
-
+/* For hover-over icon effect
 .fa-bullseye {
   color: #ef8172;
 }
@@ -116,33 +112,15 @@ color: #fff;
 .fa-bullseye:hover {
   color: #ff4c68;
 }
+*/
 
-.fa-circle-check {
-  color: #ef8172;
-}
 
-.fa-circle-check:hover {
-  color: #ff4c68;
-}
 
-/* ------------ HTML SECTION ----------- */
+
+/* ------------ HTML Notes SECTION ----------- */
 .HTML {
   background-color: #C6DCE4;
 }
-.note-title, .note-title-small {
-  text-align: left;
-  font-family: 'Montserrat' sans-serif;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-.note-title-small {
-  font-size: 1.5rem;
-}
-
-.collaps-section {
-  text-align: left;
-}
-
 
 .collapsible {
   background-color: #777;
@@ -154,7 +132,6 @@ color: #fff;
   text-align: left;
   font-size: 15px;
 }
-
 .active, .collapsible:hover {
   background-color: #555;
 }
@@ -189,14 +166,7 @@ background-color: #E4DCCF;
   clear:left;
 }
 
-.leapYear {
-float:left;
-width: 20rem;
-}
 
-.nonFloat {
-  clear:left;
-}
 
 /* ----------- Javascript Section ------------ */
 
@@ -204,6 +174,18 @@ width: 20rem;
   background-color: #C6DCE4;
 }
 
+.leapYear {
+float:left;
+width: 25rem;
+}
+
+.leapYearCalc {
+  padding-left: 1rem;
+}
+
+.nonFloat {
+  clear:left;
+}
 
 
 /* ---------- Testimonials Section ---------- */
@@ -232,11 +214,7 @@ width: 20rem;
 }
 
 
-/* ---------- Press section ---------- */
-.press {
-  background-color: #ef8172;
-  padding-bottom: 3%;
-}
+/* ---------- Karussell ---------- */
 
 .active, .testimonials{
   background: linear-gradient(#C6DCE4, #FF8FB1);
@@ -248,54 +226,4 @@ width: 20rem;
 
 .carousel-item {
   padding: 7% 15%;
-}
-
-/* ---------- Pricing Sections ---------- */
-
-.price-text {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-.pricing-col {
-  padding: 3% 2% 8% 2%;
-}
-
-.pricing-header {
-  padding: 5% 0 0 0;
-}
-
-.pricing-box-title {
-  font-weight: bold;
-}
-
-.btn5 {
-  width: 100%;
-}
-
-/* ---------- Footer section ---------- */
-
-.footer-row {
-  background-color: #ff4c68;
-  padding: 3% 10%;
-}
-
-.download-button3 {
-  margin: 3% 1%;
-}
-
-
-
-
-.real-footer {
-  padding: 3% 5% 0;
-}
-
-.Copyright {
-  color: grey;
-  padding-top: 1%;
-}
-
-.icons5 {
-  padding: 0 1%;
 }

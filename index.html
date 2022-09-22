@@ -45,12 +45,19 @@
             <li class="nav-item">
               <a class="nav-link" href=""></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#HPQuotes">Amazing H.P. Baxxter Quotes</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Scrolla Dropdaun
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#htmlSection">HTML Notes</a>
+                <a class="dropdown-item" href="#cssSection">CSS Notes</a>
+                <a class="dropdown-item" href="#jsNotes">JS Notes</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#HPQuotes">Amazing H.P. Baxxter Quotes</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"></a>
-            </li>
+
           </ul>
         </div>
       </nav>
@@ -69,7 +76,7 @@
   </section>
 
 
-  <!-- Features -->
+  <!--- HTML Notes ---------->
 
   <section class="features">
 
@@ -97,7 +104,7 @@
 
 
 
-  <section class="HTML">
+  <section class="HTML" id="htmlSection">
     <div class="container-fluid">
 
       <div class="row">
@@ -111,7 +118,7 @@
           <h3 class="note-title-small">Introduction - Intermediate HTML</h3>
           <div class="collaps-section">
             <button type="button" class="collapsible">
-              <h3>Headings </h3>
+              <h4>Headings</h4>
             </button>
             <div class="content">
               <p>Headings werden mit H1 - H6 definiert und müssen geschlossen werden:
@@ -129,7 +136,7 @@
             </div>
 
             <button type="button" class="collapsible">
-              <h3>Boilerplates </h3>
+              <h4>Boilerplates </h4>
             </button>
             <div class="content">
               <p>Im Atom lassen sich sogenannte Boilerplates automatisch einfügen, welche als Template für den weiteren Aufbau genutzt werden können.<br /> In der ersten Linie wird der Document-Typ definiert. Danach wird zwischen dem Head und Body
@@ -140,23 +147,23 @@
               </p>
             </div>
             <button type="button" class="collapsible">
-              <h3>Listen</h3>
+              <h4>Listen</h4>
             </button>
             <div class="content">
               <p>
-              <h4>Unordered list = bullet points mit "ul" öffnen und mit "li" und schliessen</h4>
+                Unordered list = bullet points mit "ul" öffnen und mit "li" und schliessen
               <ul>
                 <li> dan1
                 <li> dan2
                 <li> dan3
               </ul>
-              <h4> Ordered list = mit Zahlen 1,2,3,4. Tags: "ol" und "li"</h4>
+              Ordered list = mit Zahlen 1,2,3,4. Tags: "ol" und "li"
               <ol>
                 <li> dan1
                 <li> dan2
                 <li> dan3
               </ol>
-              <h4> Description list = mit Beschreibungen. Tags: dl, dt, dd</h4>
+              Description list = mit Beschreibungen. Tags: dl, dt, dd
               <dl>
                 <dt> Liste von Dan </dt>
                 <dt> - Brot</dt>
@@ -165,7 +172,7 @@
               </p>
             </div>
             <button type="button" class="collapsible">
-              <h3>Images & Links</h3>
+              <h4>Images & Links</h4>
             </button>
             <div class="content">
               <p>Bilder können im Atom mit .img mit der richtigen Quelle eingefügt werden. z.B. Als Bildadresse aus dem Internet oder als Pfad der Lokal gespeichert ist.
@@ -175,7 +182,7 @@
               </p>
             </div>
             <button type="button" class="collapsible">
-              <h3>Tables</h3>
+              <h4>Tables</h4>
             </button>
             <div class="content">
               <p>Mit Headers "thead" oder Body "tbody" oder footer "tfoot" für späteres stiling wichtig.<br />
@@ -183,7 +190,7 @@
               </p>
             </div>
             <button type="button" class="collapsible">
-              <h3>Forms</h3>
+              <h4>Forms</h4>
             </button>
             <div class="content">
               Mit Inputs <u>"label"</u> den Namen oder <u>"Input"</u> den Input definieren</li>
@@ -212,8 +219,11 @@
     </div>
 
 
+
+
+    <!--- CSS Notes ---------->
   </section>
-  <section class="CSS Notes">
+  <section class="CSS Notes" id="cssSection">
     <div class="container-fluid">
 
       <div class="row">
@@ -227,7 +237,7 @@
             <h3 class="note-title-small">Introduction - Intermediate CSS</h3>
             <div class="collaps-section">
               <button type="button" class="collapsible">
-                <h3>Intro</h3>
+                <h4>Intro</h4>
               </button>
               <div class="content">
                 <p>
@@ -264,14 +274,14 @@
               </div>
 
               <button type="button" class="collapsible">
-                <h3>Syntax</h3>
+                <h4>Syntax</h4>
               </button>
               <div class="content">
                 <p><img class="csssyntax" src="https://wiki.selfhtml.org/images/thumb/b/b5/CSS-Regelsatz.svg/600px-CSS-Regelsatz.svg.png" alt="css-syntax">
                 </p>
               </div>
               <button type="button" class="collapsible">
-                <h3>Selectors</h3>
+                <h4>Selectors</h4>
               </button>
               <div class="content">
                 <p>
@@ -286,7 +296,7 @@
                 <strong>Wichtig: </strong> ID's können nur ein mal für ein Element genutzt werden, wobei Klassen mehrmals in einem Tag vorkommen können.
               </div>
               <button type="button" class="collapsible">
-                <h3>Divs</h3>
+                <h4>Divs</h4>
               </button>
               <div class="content">
                 <p>Divs sind eig. Boxen, die im CSS definiert werden können. Als Beispiel: div class="randomcontainer" der danach mit Inhalten gefüllt wird (Titel/Bilder etc) Und dann im CSS als .randomcontainer gestylt wird-
@@ -306,7 +316,7 @@
                 </p>
               </div>
               <button type="button" class="collapsible">
-                <h3>Containers</h3>
+                <h4>Containers</h4>
               </button>
               <div class="content">
                 <p><img class="containers" src="https://wiki.selfhtml.org/images/thumb/f/f3/Box-Modell.svg/512px-Box-Modell.svg.png" alt="css-syntax"><br /> <br />
@@ -322,7 +332,7 @@
                 </p>
               </div>
               <button type="button" class="collapsible">
-                <h3>Display</h3>
+                <h4>Display</h4>
               </button>
               <div class="content">
                 Inline Elements können nicht in der Grösse angepasst werden wie Block-Elements (z.B. ein Paragraph). Man kann jedoch mit "display" im CSS auf inline wechseln und somit die Block Properties übernehmen.
@@ -346,7 +356,7 @@
 
               </div>
               <button type="button" class="collapsible">
-                <h3>Positioning</h3>
+                <h4>Positioning</h4>
               </button>
               <div class="content">
                 <p> <strong>"Relative Positioning"</strong> heisst, die Position relativ zur ursprünglichen Position. Deshalb "position: relative;" und dann mit top/bottom/left/right definieren. </p>
@@ -381,7 +391,7 @@
 
               </div>
               <button type="button" class="collapsible">
-                <h3>Fonts</h3>
+                <h4>Fonts</h4>
               </button>
               <div class="content">
                 <p>Fonts werden mit font-family definiert. Dabei sollten mehrere, ähnliche Font-Familien nacheinander aufgelistet werden, falls der Browser die definierte Font-Familie nicht anzeigen kann.
@@ -402,7 +412,7 @@
 
 
               <button type="button" class="collapsible">
-                <h3>Bootstrap</h3>
+                <h4>Bootstrap</h4>
               </button>
               <div class="content">
                 <p> Bootstrap ist eine riesen Bibliothek mit Gestaltungsvorlagen für Typografie, formulare, Buttons, Tabellen, Grid-Systeme, Navigations- und andere Oberflächengestaltungselemente sowie zusätzliche, optionale JavaScript-Erweiterungen.
@@ -423,7 +433,12 @@
   </section>
 
 
-  <section class="JavaScript-Notes">
+
+
+
+  <!--- Javascript Notes ---------->
+
+  <section class="JavaScript-Notes" id="jsSection">
     <div class="container-fluid">
 
       <div class="row">
@@ -437,7 +452,7 @@
           <h3 class="note-title-small">Introduction</h3>
           <div class="collaps-section">
             <button type="button" class="collapsible">
-              <h3>Intro</h3>
+              <h4>Intro</h4>
             </button>
             <div class="content">
               <p> JavaScript ist eine Skriptsprache, die ursprünglich 1995 von Netscape für dynamisches HTML in Webbrowsern entwickelt wurde, um Benutzerinteraktionen auszuwerten, Inhalte zu verändern, nachzuladen oder zu generieren und so die
@@ -452,7 +467,7 @@
             </div>
 
             <button type="button" class="collapsible">
-              <h3>Data Types</h3>
+              <h4>Data Types</h4>
             </button>
             <div class="content">
               <p> Beispiel mit:</p>
@@ -469,7 +484,7 @@
               <p>typeof ("true"); = "boolean"</p>
             </div>
             <button type="button" class="collapsible">
-              <h3>Variables</h3>
+              <h4>Variables</h4>
             </button>
             <div class="content">
               Beispiel mit prompt ("What is your name?"); <br />
@@ -511,7 +526,7 @@
 
             </div>
             <button type="button" class="collapsible">
-              <h3>Strings</h3>
+              <h4>Strings</h4>
             </button>
             <div class="content">
               Man kann Strings kombinieren (Concatenation): <br />
@@ -568,7 +583,7 @@
 
             </div>
             <button type="button" class="collapsible">
-              <h3>Basic Arithmetic and the Modulo Operator</h3>
+              <h4>Basic Arithmetic and the Modulo Operator</h4>
             </button>
             <div class="content">
               Simple: <br />
@@ -667,7 +682,7 @@
 
 
             <button type="button" class="collapsible">
-              <h3>Functions</h3>
+              <h4>Functions</h4>
             </button>
             <div class="content">
               <p>«Function» mit dem Roboter Beispiel. Alle «actions» in der «function» verpackt.</p>
@@ -808,7 +823,7 @@
 
 
             <button type="button" class="collapsible">
-              <h3>Random Number Generator</h3>
+              <h4>Random Number Generator</h4>
             </button>
             <div class="content">
               <br />
@@ -830,42 +845,55 @@
             </div>
 
             <button type="button" class="collapsible">
-              <h3>If-Else Conditionals</h3>
+              <h4>If-Else Conditionals</h4>
             </button>
             <div class="content">
-<img class=leapYear src="Images/LeapYearCalc1.png" Beispiel mit Random Nr-Generator: <br />
+              <img class=leapYear src="Images/LeapYearCalc1.png" Beispiel mit Random Nr-Generator: <br />
               <div class="leapYearCalc">
-TEST <br />TEST <br /> TEST
+                A year is a leap year if it is evenly <b>divisible by 4</b> ; <br />
 
-</div>
+                except if that year is also evenly divisible by 100; <br />
 
-<br />
-
-<div class="nonFloat">
-
-              <i>
-                var nrGen = Math.random() *100; <br />
-                nrGen = Math.floor(nrGen)+1; <br />
+                unless that year is also evenly divisible by 400. <br />
                 <br />
-                if (nrGen > 70) { <br />
-                alert("You got: " + nrGen + "Big number, big win. Wow."); <br />
-                } else { <br />
-                alert("You got:" + nrGen + "Low number, meh.");
-                }
-              </i>
+                <br />
+                <i>e.g. Is the year 2000 a leap year?: <br />
 
-              <br />
-              <br />
-              === is equal to
+                  2000 ÷ 4 = 500 (Leap) <br />
 
+                  2000 ÷ 100 = 20 (Not Leap) <br />
+
+                  2000 ÷ 400 = 5 (Leap!) <br /></i>
+                <br />
+                So the year 2000 is a leap year. <br />
+              </div>
+
+              <div class="nonFloat">
+                <br />
+                <br />
+                <i>
+                  var nrGen = Math.random() *100; <br />
+                  nrGen = Math.floor(nrGen)+1; <br />
+                  <br />
+                  if (nrGen > 70) { <br />
+                  alert("You got: " + nrGen + "Big number, big win. Wow."); <br />
+                  } else { <br />
+                  alert("You got:" + nrGen + "Low number, meh.");
+                  }
+                </i>
+
+                <br />
+                <br />
+                === is equal to
+
+
+              </div>
 
             </div>
 
           </div>
-
         </div>
       </div>
-    </div>
 
 
   </section>
@@ -920,89 +948,7 @@ TEST <br />TEST <br /> TEST
 
 
 
-  <!-- Pricing -->
 
-  <!-- <section class="pricing">
-    <div class="pricing-header">
-      <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
-      <p>Simple and affordable price plans for your and your dog.</p>
-    </div>
-
-    <div class="row">
-      <div class="pricing-col col-md-6 col-lg-4">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="pricing-box-title">Chihuahua</h3>
-          </div>
-          <div class="card-body">
-            <h2 class="price-text">Free</h2>
-            <p>5 Matches Per Day</p>
-            <p>10 Messages Per Day</p>
-            <p>Unlimited App Usage</p>
-            <button type="button" class="btn5 btn btn-lg btn-outline-dark">Sign Up</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing-col col-md-6 col-lg-4">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="pricing-box-title">Labrador</h3>
-          </div>
-          <div class="card-body">
-            <h2 class="price-text">$49 / mo</h2>
-            <p>Unlimited Matches</p>
-            <p>Unlimited Messages</p>
-            <p>Unlimited App Usage</p>
-            <button type="button" class="btn5 btn btn-lg btn-dark">Sign Up</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing-col col-lg-4">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="pricing-box-title">Mastiff</h3>
-          </div>
-          <div class="card-body">
-            <h2 class="price-text">$99 / mo</h2>
-            <p>Pirority Listing</p>
-            <p>Unlimited Matches</p>
-            <p>Unlimited Messages</p>
-            <p>Unlimited App Usage</p>
-            <button type="button" class="btn5 btn btn-lg btn-block btn-dark">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- Call to Action -->
-
-  <!-- <div id="footer69">
-    <div class="row footer-row">
-      <div class="col-lg-12">
-        <h1 class="big-heading">Find the True Love of Your Dog's Life Today.</h1>
-        <button type="button" class="btn btn-dark btn-lg download-button3"><i class="fa-brands fa-apple"></i> Download</button>
-        <button type="button" class="btn btn-light btn-lg download-button3"><i class="fa-brands fa-google-play"></i> Download</button>
-      </div>
-    </div>
-
-
-
-    <!-- Footer -->
-
-  <!-- <div class="row real-footer">
-      <div class="col-lg-12">
-        <i class="fa-brands fa-twitter icons5"></i>
-        <i class="fa-brands fa-facebook-f icons5"></i>
-        <i class="fa-brands fa-instagram icons5"></i>
-        <i class="fa-solid fa-envelope icons5"></i>
-      </div>
-      <p class="Copyright">© Copyright TinDog</p>
-    </div> -->
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
