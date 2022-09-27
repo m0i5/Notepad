@@ -213,6 +213,15 @@ width: 25rem;
   float:left;
 }
 
+.pushPop {
+  width: 25rem;
+}
+
+.whosPayin, .fizzBuzz, .whileLoop, .fizzBuzzLoop, .forLoop, .forWhileLoops, .fizzBuzzforLooped {
+  width: 40rem;
+}
+
+
 
 /* ---------- Karussell ---------- */
 
