@@ -685,36 +685,18 @@
               <h4>Functions</h4>
             </button>
             <div class="content">
-              <p>«Function» mit dem Roboter Beispiel. Alle «actions» in der «function» verpackt.</p>
-              <p>z.B. function getMilk(){
-
-                };</p>
-              <p>Die Function kann dann mit getMilk(); einfach ausgelöst werden, bzw. alle Actions werden aktiviert.</p>
-              <p>
-                Im Developer-tool z.B. «alert» zu «console.log» tauschen, damit der Code in der Console angezeigt wird und man nicht durch jeden alert klicken muss zum etwas testen. <br /></p>
+              <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+              <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+              <img class="exampleFunction" src="Images/exampleFunction.png" alt="exampleFunction">
               <br />
-              <p>
-                function getMilk (bottles) { <br />
-                var cost = bottles * 1.5; <br />
-                } <br />
-                (Do something with cost) <br />
-                Calling: <b>getMilk(2)</b> --> Roboter holt zwei Flaschen für je 1.5.-
-              </p>
               <br />
               <hr />
               <p>
                 Aufgabe: Geld für Anzahl Flaschen:
               </p>
               <p>
-
-                function getMilk (money) { <br />
-                var numberOfBottles = Math.floor(money / 1.5 ); <br />
-                console.log ("buy " + numberOfBottles + " bottles of milk" ); <br />
-                } </p>
-
-              <p>Die Funktion Math.floor rundet auf. </p>
-
-
+                <img class="calcBottles" src="Images/calcBottles.png" alt="calcBottles">
+                <br />
               <p>Die Funktion Math.floor rundet ab. </p>
 
               <hr />
@@ -722,15 +704,7 @@
                 In this challenge, you are going to create a function that tells us how many days, weeks and months we have left if we live until 90 years old. <br />
                 For this challenge, assume there are 365 days in a year, 52 weeks in a year and 12 months in a year. <br /></p>
               <br />
-
-              function lifeInWeeks(age) {
-
-              console.log ("You have " + (32850-(age*365)) + " days, or " + (4680-(age*52)) + " weeks, or " + (1080- (age*12)) + " months left.");
-
-              }
-
-              lifeInWeeks(56);
-
+              <img class="lifeInWeeks" src="Images/lifeInWeeks.png" alt="lifeInWeeks">
 
               <br />
               <br />
@@ -738,53 +712,47 @@
               <b>Function inside a function:</b> <br />
               Outputs von functions in einer weiteren function nutzen: <br />
               <p>Überkomplizierte Lektion 121 step by step:</p>
-              <p>
-                <i>function getMilk (money) { <br />
-                  var numBottles = money / 1.5; <br />
-                  alert("buy" + numBottles + " bottles of Milk"); <br />
-                  return money % 1.5; <br /></i>
-                } <br />
+              <img class="getMilkStep1" src="Images/getMilkStep1.png" alt="getMilkStep1">
+                <br />
               </p>
-              Der Output dieser Function ist «return money % 1.5;», also das Wechselgeld. <br />
+              Der Output dieser Function ist <b>«return money % 1.5;»</b>, also das Wechselgeld. <br />
               Wenn also der Input getMilk(4); ist, wird der Output 1 sein, da 4 % 1.5 = 1 ergibt. <br />
               <br />
               In einem nächsten Schritt kann diesem Output eine Variable zugeordnet werden: <br />
-              <i>var change = getMilk(4) //change = 1 <br /></i>
+              <i><b>var change = getMilk(4) //change = 1 </b><br /></i>
               Und somit ist var «change» der Output des function-calls «getMilk(x)»
               <br />
               <br />
               Wenn man also <b>«console.log (change);»</b> callt, wird der Output wie folgt aussehen: <br />
               <i>"buy 2 bottles of Milk" <br />
-                "1"</i> //<b>Wichtig:</b> das Return-Statement spielt hier eine wichtige Rolle. <br />
+                "1"</i>
+              <br /><b>Wichtig:</b> das Return-Statement spielt hier eine wichtige Rolle. <br />
               <br />
               <br />
               Im nächsten Schritt erstellt sie für <br />
-              <i>«var numberOfBottles = Math.floor(money / 1.5);» <br />
-                «console.log("buy " + numberOfBottles + " bottles of milk");»</i>
+<img class="getMilkStep2" src="Images/getMilkStep2.png" alt="getMilkStep2">
+              <br />
               <br />
               Eine eigene function «calcBottles», die wie folgt aussieht: <br />
-              <br />
-              <i>function calcBottles (startingMoney, costPerBottle) { <br />
-                var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
-                return numberOfBottles; <br />
-                }</i> <br />
+
+              <img class="getMilkStep3" src="Images/getMilkStep3.png" alt="getMilkStep3">
+                <br />
               <br />
               Auch hier ist der «return numberOfBottles» sehr wichtig, da dieser jetzt in getMilk(x) eingebaut werden kann. <br />
               Das sieht dann so aus: <br />
               <br />
-              <i>console.log("buy " + calcBottles(money, 1.5) + " bottles of milk");</i> <br />
-              Das mag verwirren, aber «money» wird bei getMilk(money) definiert und ist in calcBottles als «startingMoney» definiert. <br />
+              <img class="getMilkStep4" src="Images/getMilkStep4.png" alt="getMilkStep4">
+              <br />
+              Das mag verwirren, aber «money» wird bei getMilk(money) definiert und kann in calcBottles auch z.B. als «startingMoney» definiert werden. <br />
               Die 1.5 sind als «costPerBottle» in der function «calcBottles» definiert. <br />
               <br />
               Das verwirrende ist, dass «numberOfBottles» jetzt durch «calcBottles» ersetzt wird, da es nun der Output der function «calcBottles» ist. <br />
-              Also der return «numberOfBottles» = calcBottles! <br />
+              Also der return  <b>«numberOfBottles» = calcBottles! </b><br />
               <br />
               Sie geht noch einen Schritt weiter und verschachtelt <i>«return money % 1.5;»</i> in einer function: <br />
-              <br />
-              <i>function calcChange(startingAmount, costPerBottle) { <br />
-                var change = staringAmount % costPerBottle; <br />
-                return change; <br />
-                }</i> <br />
+              <img class="getMilkStep5" src="Images/getMilkStep5.png" alt="getMilkStep5">
+                <br />
+                <br />
               <br />
               Und dann kann wie im ersten Beispiel «return money % 1.5;» mit return calcChange(money, 1.5) ersetzt werden. <br />
               Schlussendlich ist <b>« return calcChange(money, 1.5)»</b> der Output von getMilk(x) <br />
@@ -793,30 +761,8 @@
               Dazu müssen aber auch die Zahlen im oberen console.log durch «costPerBottle» ersetzt werden. <br />
               <br />
               Der fertige Code sieht dann wie folgt aus (am besten in die Console kopieren, damit es übersichtlich ist): <br />
+<img class="getMilkStep6" src="Images/getMilkStep6.png" alt="getMilkStep6">
               <br />
-              <i>
-                function getMilk(money, costPerBottle) { <br />
-                <br />
-                console.log("buy " + calcBottles(money, costPerBottle) + " bottles of milk"); <br />
-                <br />
-                return calcChange(money, costPerBottle); <br />
-                } <br />
-                <br />
-                <br />
-                function calcBottles(startingMoney, costPerBottle) { <br />
-                var numberOfBottles = Math.floor(startingMoney / costPerBottle); <br />
-                return numberOfBottles; <br />
-                } <br />
-                <br />
-                <br />
-                function calcChange(startingAmount, costPerBottle) { <br />
-                var change = startingAmount % costPerBottle; <br />
-                return change; <br />
-                } <br />
-                <br />
-                <br />
-                console.log ("Hello, here's your " + getMilk(4, 1.5) + ".- of change"); <br />
-              </i> <br />
               <hr />
             </div>
 
@@ -938,32 +884,32 @@
             </button>
             <div class="content">
               <b>Basics: </b><br />
-            <img class="whileLoop" src="Images/whileLoop.png" alt="whileLoop">
-            <br />
-            <br />
-Beispiel mit der fizzBuzz Challenge, wo die function «fizzBuzz» jedes mal manuell ausgeführt werden musste. <br />
-Mit einer while-loop, kann die function gelooped werden:
-<br />
+              <img class="whileLoop" src="Images/whileLoop.png" alt="whileLoop">
+              <br />
+              <br />
+              Beispiel mit der fizzBuzz Challenge, wo die function «fizzBuzz» jedes mal manuell ausgeführt werden musste. <br />
+              Mit einer while-loop, kann die function gelooped werden:
+              <br />
 
-<img class="fizzBuzzLoop" src="Images/fizzBuzzLoop.png" alt="fizzBuzzLoop">
-<br />
-<hr />
-<br />
-<br />
-<b>For-Loops</b><br />
-<img class="forLoop" src="Images/forLoop.png" alt="forLoop">
-<br />
-<hr />
-<img class="forWhileLoops" src="Images/forWhileLoops.png" alt="forWhileLoops">
-<br />
-<br />
-<b>Beispiel mit FizzBuzz:</b><br />
-<img class="fizzBuzzforLooped" src="Images/fizzBuzzforLooped.png" alt="fizzBuzzforLooped">
-<br />
-<br />
-Wann braucht es whileLoops und wann forLoops? <br />
-Mit einer <i>whileLoop</i> fragt man den Status ab «while something is true» und mit <i>forLoops</i> wird <br />
-der Status solange gelooped bis er nicht mehr zutrifft.
+              <img class="fizzBuzzLoop" src="Images/fizzBuzzLoop.png" alt="fizzBuzzLoop">
+              <br />
+              <hr />
+              <br />
+              <br />
+              <b>For-Loops</b><br />
+              <img class="forLoop" src="Images/forLoop.png" alt="forLoop">
+              <br />
+              <hr />
+              <img class="forWhileLoops" src="Images/forWhileLoops.png" alt="forWhileLoops">
+              <br />
+              <br />
+              <b>Beispiel mit FizzBuzz:</b><br />
+              <img class="fizzBuzzforLooped" src="Images/fizzBuzzforLooped.png" alt="fizzBuzzforLooped">
+              <br />
+              <br />
+              Wann braucht es whileLoops und wann forLoops? <br />
+              Mit einer <i>whileLoop</i> fragt man den Status ab «while something is true» und mit <i>forLoops</i> wird <br />
+              der Status solange gelooped bis er nicht mehr zutrifft.
 
 
 

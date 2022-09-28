@@ -217,11 +217,13 @@ width: 25rem;
   width: 25rem;
 }
 
-.whosPayin, .fizzBuzz, .whileLoop, .fizzBuzzLoop, .forLoop, .forWhileLoops, .fizzBuzzforLooped {
+.whosPayin, .fizzBuzz, .whileLoop, .fizzBuzzLoop, .forLoop, .forWhileLoops, .fizzBuzzforLooped, .calcBottles, .exampleFunction {
   width: 40rem;
 }
 
-
+.lifeInWeeks {
+  width: 50rem;
+}
 
 /* ---------- Karussell ---------- */
 
