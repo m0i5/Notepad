@@ -225,6 +225,10 @@ width: 25rem;
   width: 50rem;
 }
 
+.fiboGenerator, .fiboGeneratorClean {
+  width: 35rem;
+}
+
 /* ---------- Karussell ---------- */
 
 .active, .testimonials{
