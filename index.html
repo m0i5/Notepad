@@ -434,8 +434,6 @@
 
 
 
-
-
   <!--- Javascript Notes ---------->
 
   <section class="JavaScript-Notes" id="jsSection">
@@ -713,7 +711,7 @@
               Outputs von functions in einer weiteren function nutzen: <br />
               <p>Überkomplizierte Lektion 121 step by step:</p>
               <img class="getMilkStep1" src="Images/getMilkStep1.png" alt="getMilkStep1">
-                <br />
+              <br />
               </p>
               Der Output dieser Function ist <b>«return money % 1.5;»</b>, also das Wechselgeld. <br />
               Wenn also der Input getMilk(4); ist, wird der Output 1 sein, da 4 % 1.5 = 1 ergibt. <br />
@@ -730,13 +728,13 @@
               <br />
               <br />
               Im nächsten Schritt erstellt sie für <br />
-<img class="getMilkStep2" src="Images/getMilkStep2.png" alt="getMilkStep2">
+              <img class="getMilkStep2" src="Images/getMilkStep2.png" alt="getMilkStep2">
               <br />
               <br />
               Eine eigene function «calcBottles», die wie folgt aussieht: <br />
 
               <img class="getMilkStep3" src="Images/getMilkStep3.png" alt="getMilkStep3">
-                <br />
+              <br />
               <br />
               Auch hier ist der «return numberOfBottles» sehr wichtig, da dieser jetzt in getMilk(x) eingebaut werden kann. <br />
               Das sieht dann so aus: <br />
@@ -747,12 +745,12 @@
               Die 1.5 sind als «costPerBottle» in der function «calcBottles» definiert. <br />
               <br />
               Das verwirrende ist, dass «numberOfBottles» jetzt durch «calcBottles» ersetzt wird, da es nun der Output der function «calcBottles» ist. <br />
-              Also der return  <b>«numberOfBottles» = calcBottles! </b><br />
+              Also der return <b>«numberOfBottles» = calcBottles! </b><br />
               <br />
               Sie geht noch einen Schritt weiter und verschachtelt <i>«return money % 1.5;»</i> in einer function: <br />
               <img class="getMilkStep5" src="Images/getMilkStep5.png" alt="getMilkStep5">
-                <br />
-                <br />
+              <br />
+              <br />
               <br />
               Und dann kann wie im ersten Beispiel «return money % 1.5;» mit return calcChange(money, 1.5) ersetzt werden. <br />
               Schlussendlich ist <b>« return calcChange(money, 1.5)»</b> der Output von getMilk(x) <br />
@@ -761,7 +759,7 @@
               Dazu müssen aber auch die Zahlen im oberen console.log durch «costPerBottle» ersetzt werden. <br />
               <br />
               Der fertige Code sieht dann wie folgt aus (am besten in die Console kopieren, damit es übersichtlich ist): <br />
-<img class="getMilkStep6" src="Images/getMilkStep6.png" alt="getMilkStep6">
+              <img class="getMilkStep6" src="Images/getMilkStep6.png" alt="getMilkStep6">
               <br />
               <hr />
             </div>
@@ -919,14 +917,18 @@
             <div class="content">
               <b>Different solutions:</b><br />
               <img class="fiboGenerator" src="Images/fibonacciGenerator.png" alt="fiboGenerator">
-<br />
-<br />
-<b> or:</b>
-<br />
-<br />
-<img class="fiboGeneratorClean" src="Images/fibonacciGeneratorClean.png" alt="fiboGenerator">
-
+              <br />
+              <br />
+              <b> or:</b>
+              <br />
+              <br />
+              <img class="fiboGeneratorClean" src="Images/fibonacciGeneratorClean.png" alt="fiboGenerator">
             </div>
+
+
+
+
+
 
 
 
@@ -941,81 +943,156 @@
   </section>
 
 
-  <!-- Testimonials -->
+  <!--- Document Object Model -------->
 
-  <section class="testimonials" id="HPQuotes">
+  <section class="DOM" id="domSection">
+    <div class="container-fluid">
 
-    <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
-  Ende des Body platziert werden! -->
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <h2 class="testimonial-text">«Respect to the man in the ice cream van!»</h2>
-          <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i> The Document Object Model</h1>
         </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
-          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«How much is the fish?»</h2>
-          <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
-
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
-          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
-
       </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Adding JS to Websites</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>Inline & External Javascript:</h4>
+            </button>
+            <div class="content">
+              <b>Inline Javascript:</b>
+              <br />
+              <img src="Images/domScreenshots/inlineJavascript.png" alt="inlineJS">
+              <br />
+              <br />
+              <ul>
+                Downsides:
+                <li>
+                  not modular
+                </li>
+                <li>
+                  difficult to debug
+                </li>
+                <li>
+                  overall not good practice
+                </li>
+              </ul>
+              <br />
+              <br />
+              <b>Inline Javascript:</b>
+              <br />
+              <img src="Images/domScreenshots/internalJavascript.png" alt="internalJS">
+              <br />
+              <br />
+              <b>External Javascript:</b>
+              <br />
+              <img src="Images/domScreenshots/externalJavascript.png" alt="externalJS">
+              <br />
+              <br />
+              <b>Best Practice:</b><br />
+              Always place the Javascript files at the very end of the body!
+              <br />
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Introduction to DOM</h4>
+            </button>
+            <div class="content">
+              <b>Beispiel mit HTML Tree Generator & Console:</b>
+              <br />
+              <img src="Images/domScreenshots/domSearch.png" alt="domSearch">
+
+<b>Manipulate in console:</b>
+<img src="Images/domScreenshots/domManipulate.png" alt="domManipulate">
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
     </div>
 
 
-  </section>
+    <!-- Testimonials -->
+
+    <section class="testimonials" id="HPQuotes">
+
+      <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
+  Ende des Body platziert werden! -->
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="testimonial-text">«Respect to the man in the ice cream van!»</h2>
+            <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
+            <em>H.P. Baxxter</em>
+
+          </div>
+          <div class="carousel-item">
+            <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
+            <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+            <em>H.P. Baxxter</em>
+          </div>
+          <div class="carousel-item">
+            <h2 class="testimonial-text">«How much is the fish?»</h2>
+            <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
+            <em>H.P. Baxxter</em>
+          </div>
+
+          <div class="carousel-item">
+            <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
+            <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+            <em>H.P. Baxxter</em>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    </section>
 
 
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-  </script>
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
 
 
 
