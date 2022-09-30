@@ -225,8 +225,12 @@ width: 25rem;
   width: 50rem;
 }
 
-.fiboGenerator, .fiboGeneratorClean {
+.fiboGenerator, .fiboGeneratorClean, .buttonPropMeth, .domChallenge2, .inlineJS, .internalJS, .externalJS, .domSearch, .domManipulate {
   width: 35rem;
+}
+
+.domChallenge1{
+  width: 15rem;
 }
 
 /* ---------- Karussell ---------- */
