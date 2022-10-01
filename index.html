@@ -1058,6 +1058,60 @@
 
             </div>
 
+            <button type="button" class="collapsible">
+              <h4>Selecting HTML Elements with Javascript</h4>
+            </button>
+            <div class="content">
+              There are a few different ways to select elements with JS:
+              <br />
+              <br />
+              document.getElements<b>ByTagName("li")</b>
+              <br />
+              gives back an array with all list items on the page, so to change the elements the code has to look like this:
+              <br />
+              document.getElementsByTagName("li")<b>[1]</b>.style.color = "purple";
+              <br />
+              <hr />
+              <br />
+              document.getElementsBy<b>ClassName("btn");</b>
+              <br />
+              also gives back an array with all classes named "btn" on the page, so to change the elements the code has to look like this:
+              <br />
+              document.getElementsByTagClass("btn")<b>[1]</b>.style.color = "purple";
+              <br />
+              <hr />
+              <br />
+              document.getElementsBy<b>Id("title");</b>
+              <br />
+              also gives back the element with the defined ID. To change elements it could look like this:
+              <br />
+              document.getElementsById("title").innerHTML = "purple";
+              <br />
+              <hr />
+              <br />
+              But the best selector is the <b>querySelector()</b>
+              <br />
+              <b>document.querySelector()</b> also gives back only one element, but the selectors in the braces can be combined!
+              <br /> For example an ID with a class<b>("#titleBig .btn )</b>, or a class with an element("li.item").
+              <br />
+              <br />
+              <b>document.querySelector("li a")</b> // select the anchor in the list tag.
+              <br />
+<img class="colorChangeExample" src="Images\domScreenshots\Selectors\colorChangeExample.png" alt="colorChangeExample">
+<br />
+<br />
+
+
+              If you have a lot of objects in a selector and you want to select them all, use:
+              <br />
+              <b>document.querySelctorAll</b>
+              <br />
+              <img =class"querySelectorAll" src="Images\domScreenshots\Selectors\querySelectorAll.png" alt="querySelctorAll">
+              <br />
+
+
+
+            </div>
 
 
           </div>
