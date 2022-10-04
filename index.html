@@ -1151,8 +1151,73 @@
               <br />
               <img class="diceGame" src="Images\domScreenshots\diceGame.png" alt="diceGame">
               <br />
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Intermediate JS and DOM Manipulation</h4>
+            </button>
+            <div class="content">
+<b>Drum kit:</b>
+<br />
+First step was adding an eventListener to the first button, triggering an alert «"I got clicked"» <br />
+This is how the addEventListener is added to the first button: <br />
+<br />
+<i>Remember to use the querySelector to target the button!</i>
+<br />
+<img class="drumBottons" src="Images/drumKit/drumBottons.png" alt="drumBottons">
+<img class="eventListener" src="Images/drumKit/eventListener.png" alt="eventListener">
+<br />
+<br />
+<a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp" target="_blank">Click for more info about .addEventListener syntax and options</a>
+<br />
+In this example the «eventListener» waits until the target ("button") is «clicked». When clicked, the function will be triggered.
+<br />
+<br />
+<b>Important:</b>
+The function is written without parantheses() in this case, because the «eventListener» must wait for the click until the function should be called. <br />
+If the function is written normally like «handleClick()» it wouldn't wait for the click and the function (in this case the alert) will be instantly triggered. <br />
+<br />
+<br />
+So the code should run like this:
+<br />
+<ol>
+  <li>searching for the button via .querySelector</li>
+  <li>.addEventListener waits for «click»</li>
+  <li>only after it is clicked, the function «handleClick» will be triggered </li>
+</ol>
+<br />
+<br />
+It could also be done using an anonymous function:
+<br />
+<img class="anonymousFunction" src="Images/drumKit/anonymousFunction.png" alt="anonymousFunction">
+<br />
+<br />
+Another example with addEventListener and "click" using an anonymous function:
+<br />
+<img class="clickExample" src="Images/drumKit/clickExample.png" alt="clickExample">
+<br />
+<br />
+<hr>
+<b>Higher Order Functions</b>
+<br />
+«Higher order functions are functions that can take other functions as inputs.»
+<br />
+<img class="higherOrder" src="Images/drumKit/higherOrder.png" alt="higherOrder">
+<br />
+<br />
+<b>Debugger:</b>
+<br />
+<img class="debugger" src="Images/drumKit/debugger.png" alt="debugger">
+
+
+
+
+
 
             </div>
+
 
 
           </div>

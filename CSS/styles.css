@@ -225,13 +225,19 @@ width: 25rem;
   width: 50rem;
 }
 
-.fiboGenerator, .fiboGeneratorClean, .buttonPropMeth, .domChallenge2, .inlineJS, .internalJS, .externalJS, .domSearch, .domManipulate {
+.fiboGenerator, .fiboGeneratorClean, .buttonPropMeth, .domChallenge2, .inlineJS,
+.internalJS, .externalJS, .domSearch, .domManipulate, .eventListener, .anonymousFunction {
   width: 35rem;
 }
 
 .domChallenge1{
   width: 15rem;
 }
+
+.drumBottons, .clickExample, .higherOrder {
+  width: 25rem;
+}
+
 
 /* ---------- Karussell ---------- */
 
