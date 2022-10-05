@@ -71,7 +71,6 @@ color: #fff;
   .title .navbar-brand {
     text-align: center;
   }
-
   .iphone6 {
     position: static;
     transform: rotate(0);
@@ -108,7 +107,6 @@ color: #fff;
 .fa-bullseye {
   color: #ef8172;
 }
-
 .fa-bullseye:hover {
   color: #ff4c68;
 }
