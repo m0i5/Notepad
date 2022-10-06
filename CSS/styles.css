@@ -224,7 +224,7 @@ width: 25rem;
 }
 
 .fiboGenerator, .fiboGeneratorClean, .buttonPropMeth, .domChallenge2, .inlineJS,
-.internalJS, .externalJS, .domSearch, .domManipulate, .eventListener, .anonymousFunction {
+.internalJS, .externalJS, .domSearch, .domManipulate, .eventListener, .anonymousFunction, .thisKeyword  {
   width: 35rem;
 }
 
