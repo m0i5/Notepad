@@ -102,7 +102,7 @@
 
   </section>
 
-
+  <!--- HTML Notes ---------->
 
   <section class="HTML" id="htmlSection">
     <div class="container-fluid">
@@ -213,16 +213,14 @@
               </form>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
-
-
-
-    <!--- CSS Notes ---------->
   </section>
+
+
+  <!--- CSS Notes ---------->
+
   <section class="CSS Notes" id="cssSection">
     <div class="container-fluid">
 
@@ -685,7 +683,7 @@
             <div class="content">
               <p>A JavaScript function is a block of code designed to perform a particular task.</p>
               <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
-              <img class="exampleFunction" src="Images/exampleFunction.png" alt="exampleFunction">
+              <img class="exampleFunction" src="Images/functions/exampleFunction.png" alt="exampleFunction">
               <br />
               <br />
               <hr />
@@ -693,7 +691,7 @@
                 Aufgabe: Geld für Anzahl Flaschen:
               </p>
               <p>
-                <img class="calcBottles" src="Images/calcBottles.png" alt="calcBottles">
+                <img class="calcBottles" src="Images/functions/calcBottles.png" alt="calcBottles">
                 <br />
               <p>Die Funktion Math.floor rundet ab. </p>
 
@@ -702,7 +700,7 @@
                 In this challenge, you are going to create a function that tells us how many days, weeks and months we have left if we live until 90 years old. <br />
                 For this challenge, assume there are 365 days in a year, 52 weeks in a year and 12 months in a year. <br /></p>
               <br />
-              <img class="lifeInWeeks" src="Images/lifeInWeeks.png" alt="lifeInWeeks">
+              <img class="lifeInWeeks" src="Images/functions/lifeInWeeks.png" alt="lifeInWeeks">
 
               <br />
               <br />
@@ -943,6 +941,7 @@
   </section>
 
 
+
   <!--- Document Object Model -------->
 
   <section class="DOM" id="domSection">
@@ -956,7 +955,7 @@
 
       <div class="row-html">
         <div class="col-lg-12">
-          <h3 class="note-title-small">Adding JS to Websites</h3>
+          <h3 class="note-title-small">DOM & Selectors</h3>
           <div class="collaps-section">
 
             <button type="button" class="collapsible">
@@ -1111,115 +1110,148 @@
               <br />
               <br />
               <hr />
-              Adding classes to objects can be used to check css values:
-              <br />
-              For example the class <i>.invisible</i> is defined in the stylesheet:
-              <br />
-              <img class="addingClasses" src="Images\domScreenshots\addingClasses.png" alt="addingClasses">
-              <br />
-              The ".invisible" class can be added to an object using js:
-              <br />
-              <img class="classListInvisible" src="Images\domScreenshots\classListInvisible.png" alt="classListInvisible">
-              <br />
-              It could also be removed using js:
-              <br />
-              <img class="classListRemove" src="Images\domScreenshots\classListRemove.png" alt="classListRemove">
-              <br />
-              Or toggled using js:
-              <br />
-              <img class="classListToggle" src="Images\domScreenshots\classListToggle.png" alt="classListToggle">
-              <br />
-              <hr />
-              <br />
-              Selecting and changing only text can be done using <i>.innerHTML</i> or <i>.textContent</i>:
-              <br />
-              <img class="domTextContent" src="Images\domScreenshots\domTextContent.png" alt="domTextContent">
-              <br />
-              <br />
-              <hr />
-              <br />
-              Attributes (<i>classes/hrefs/types/src/alt etc (orange in atom)</i>) can also be changed:
-              <br />
-              In this example, the href to "google" is changed to "probemas"
-              <br />
-              <img class="getSetAttribute" src="Images\domScreenshots\getSetAttribute.png" alt="getSetAttribute">
-              <br />
-              <br />
-              <hr />
-              <br />
-              <b>Dice game:</b>
-              <br />
-              <img class="diceGame" src="Images\domScreenshots\diceGame.png" alt="diceGame">
-              <br />
-            </div>
+          </div>
+          <button type="button" class="collapsible">
+            <h4>Adding classes & changing Attributes using querySelector </h4>
+          </button>
+          <div class="content">
+          Adding classes to objects can be used to check css values:
+          <br />
+          For example the class <i>.invisible</i> is defined in the stylesheet:
+          <br />
+          <img class="addingClasses" src="Images\domScreenshots\addingClasses.png" alt="addingClasses">
+          <br />
+          The ".invisible" class can be added to an object using js:
+          <br />
+          <img class="classListInvisible" src="Images\domScreenshots\classListInvisible.png" alt="classListInvisible">
+          <br />
+          It could also be removed using js:
+          <br />
+          <img class="classListRemove" src="Images\domScreenshots\classListRemove.png" alt="classListRemove">
+          <br />
+          Or toggled using js:
+          <br />
+          <img class="classListToggle" src="Images\domScreenshots\classListToggle.png" alt="classListToggle">
+          <br />
+          <hr />
+          <br />
+          Selecting and changing only text can be done using <i>.innerHTML</i> or <i>.textContent</i>:
+          <br />
+          <img class="domTextContent" src="Images\domScreenshots\domTextContent.png" alt="domTextContent">
+          <br />
+          <br />
+          <hr />
+          <br />
+          Attributes (<i>classes/hrefs/types/src/alt etc (orange in atom)</i>) can also be changed:
+          <br />
+          In this example, the href to "google" is changed to "probemas"
+          <br />
+          <img class="getSetAttribute" src="Images\domScreenshots\getSetAttribute.png" alt="getSetAttribute">
+          <br />
+          <br />
+          <hr />
+          <br />
+          <b>Dice game:</b>
+          <br />
+          <img class="diceGame" src="Images\domScreenshots\diceGame.png" alt="diceGame">
+          <br />
+        </div>
 
 
 
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--- Advanced Javascript and DOM Manipulation ----->
+
+  <section class="JavaScript-Notes" id="jsAdvancedSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands fa-square-js fa-1x"></i> Advanced Javascript and DOM Manipulation</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction</h3>
+          <div class="collaps-section">
             <button type="button" class="collapsible">
               <h4>Intermediate JS and DOM Manipulation</h4>
             </button>
             <div class="content">
-<b>Drum kit:</b>
-<br />
-First step was adding an eventListener to the first button, triggering an alert «"I got clicked"» <br />
-This is how the addEventListener is added to the first button: <br />
-<br />
-<i>Remember to use the querySelector to target the button!</i>
-<br />
-<img class="drumBottons" src="Images/drumKit/drumBottons.png" alt="drumBottons">
-<img class="eventListener" src="Images/drumKit/eventListener.png" alt="eventListener">
-<br />
-<br />
-<a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp" target="_blank">Click for more info about .addEventListener syntax and options</a>
-<br />
-In this example the «eventListener» waits until the target ("button") is «clicked». When clicked, the function will be triggered.
-<br />
-<br />
-<b>Important:</b>
-The function is written without parantheses() in this case, because the «eventListener» must wait for the click until the function should be called. <br />
-If the function is written normally like «handleClick()» it wouldn't wait for the click and the function (in this case the alert) will be instantly triggered. <br />
-<br />
-<br />
-So the code should run like this:
-<br />
-<ol>
-  <li>searching for the button via .querySelector</li>
-  <li>.addEventListener waits for «click»</li>
-  <li>only after it is clicked, the function «handleClick» will be triggered </li>
-</ol>
-<br />
-<br />
-It could also be done using an anonymous function:
-<br />
-<img class="anonymousFunction" src="Images/drumKit/anonymousFunction.png" alt="anonymousFunction">
-<br />
-<br />
-Another example with addEventListener and "click" using an anonymous function:
-<br />
-<img class="clickExample" src="Images/drumKit/clickExample.png" alt="clickExample">
-<br />
-<br />
-<hr>
-<b>Higher Order Functions</b>
-<br />
-«Higher order functions are functions that can take other functions as inputs.»
-<br />
-<img class="higherOrder" src="Images/drumKit/higherOrder.png" alt="higherOrder">
-<br />
-<br />
-<b>Debugger:</b>
-<br />
-<img class="debugger" src="Images/drumKit/debugger.png" alt="debugger">
-<br />
-<br />
-<b>Higher Order Function Calcutlator:</b>
-<br />
-<img class="highOrder" src="Images\higherOrderFunction\highOrderFunctionCalc.png" alt="higherOrder">
-<br />
-<br />
+              <b>Drum kit:</b>
+              <br />
+              First step was adding an eventListener to the first button, triggering an alert «"I got clicked"» <br />
+              This is how the addEventListener is added to the first button: <br />
+              <br />
+              <i>Remember to use the querySelector to target the button!</i>
+              <br />
+              <img class="drumBottons" src="Images/drumKit/drumBottons.png" alt="drumBottons">
+              <img class="eventListener" src="Images/drumKit/eventListener.png" alt="eventListener">
+              <br />
+              <br />
+              <a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp" target="_blank">Click for more info about .addEventListener syntax and options</a>
+              <br />
+              In this example the «eventListener» waits until the target ("button") is «clicked». When clicked, the function will be triggered.
+              <br />
+              <br />
+              <b>Important:</b>
+              The function is written without parantheses() in this case, because the «eventListener» must wait for the click until the function should be called. <br />
+              If the function is written normally like «handleClick()» it wouldn't wait for the click and the function (in this case the alert) will be instantly triggered. <br />
+              <br />
+              <br />
+              So the code should run like this:
+              <br />
+              <ol>
+                <li>searching for the button via .querySelector</li>
+                <li>.addEventListener waits for «click»</li>
+                <li>only after it is clicked, the function «handleClick» will be triggered </li>
+              </ol>
+              <br />
+              <br />
+              It could also be done using an anonymous function:
+              <br />
+              <img class="anonymousFunction" src="Images/drumKit/anonymousFunction.png" alt="anonymousFunction">
+              <br />
+              <br />
+              Another example with addEventListener and "click" using an <b>anonymous function:</b>
+              <br />
+              <img class="clickExample" src="Images/drumKit/clickExample.png" alt="clickExample">
+              <br />
+              <br />
+              <hr>
 
+            </div>
 
-
+            <button type="button" class="collapsible">
+              <h4>Higher Order Functions</h4>
+            </button>
+            <div class="content">
+              <b>Higher Order Functions</b>
+              <br />
+              «Higher order functions are functions that can take other functions as inputs.»
+              <br />
+              <img class="higherOrder" src="Images/drumKit/higherOrder.png" alt="higherOrder">
+              <br />
+              <br />
+              <b>Debugger:</b>
+              <br />
+              <img class="debugger" src="Images/drumKit/debugger.png" alt="debugger">
+              <br />
+              <br />
+              <b>Higher Order Function Calcutlator:</b>
+              <br />
+              <img class="highOrder" src="Images\higherOrderFunction\highOrderFunctionCalc.png" alt="higherOrder">
+              <br />
+              <br />
 
 
 
@@ -1228,87 +1260,94 @@ Another example with addEventListener and "click" using an anonymous function:
 
 
 
-          </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- Testimonials -->
+
+  <section class="testimonials" id="HPQuotes">
+
+    <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
+  Ende des Body platziert werden! -->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">«Respect to the man in the ice cream van!»</h2>
+          <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+
         </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
+          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«How much is the fish?»</h2>
+          <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
+
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
+          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
+
       </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
 
-    <!-- Testimonials -->
-
-    <section class="testimonials" id="HPQuotes">
-
-      <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
-  Ende des Body platziert werden! -->
-
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <h2 class="testimonial-text">«Respect to the man in the ice cream van!»</h2>
-            <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
-            <em>H.P. Baxxter</em>
-
-          </div>
-          <div class="carousel-item">
-            <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
-            <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-            <em>H.P. Baxxter</em>
-          </div>
-          <div class="carousel-item">
-            <h2 class="testimonial-text">«How much is the fish?»</h2>
-            <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
-            <em>H.P. Baxxter</em>
-          </div>
-
-          <div class="carousel-item">
-            <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
-            <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-            <em>H.P. Baxxter</em>
-          </div>
-
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-
-    </section>
+  </section>
 
 
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-    </script>
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 
 
 
