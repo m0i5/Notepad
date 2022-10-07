@@ -224,15 +224,15 @@ width: 25rem;
 }
 
 .fiboGenerator, .fiboGeneratorClean, .buttonPropMeth, .domChallenge2, .inlineJS,
-.internalJS, .externalJS, .domSearch, .domManipulate, .eventListener, .anonymousFunction, .thisKeyword  {
+.internalJS, .externalJS, .domSearch, .domManipulate, .eventListener, .anonymousFunction, .thisKeyword, .constructorFunction, .switchForSounds, .objectMethods  {
   width: 35rem;
 }
 
-.domChallenge1{
+.domChallenge1, {
   width: 15rem;
 }
 
-.drumBottons, .clickExample, .higherOrder {
+.drumBottons, .clickExample, .higherOrder, .houseKeeper1, .switchStatement, .angelaObjectMethod {
   width: 25rem;
 }
 
