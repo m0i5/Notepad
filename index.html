@@ -1353,6 +1353,72 @@ This part of Angela's course is garbage, use this doc on w3: <br />
 <a href="https://www.w3schools.com/js/js_callback.asp" target="_blank">Javascript Callbacks</a>
 <br />
 
+</div>
+
+
+<button type="button" class="collapsible">
+  <h4>Adding Animation to Websites</h4>
+</button>
+<div class="content">
+First, a new function for the animation is created: <br />
+<img class="buttonAnimation.png" src="Images\drumKit\animation\buttonAnimation.png" alt="buttonAnimation.png">
+<br />
+<br />
+
+Then, the function has to be called in "detecting the button press" <br />
+& "detecting the key press" with the correct parameter.
+<a href="https://www.w3schools.com/js/js_function_parameters.asp" target="_blank"> JS Parameter Infos</a>
+<br />
+<img class="animationFunctionParameter" src="Images\drumKit\animation\animationFunctionParameter.png" alt="animationFunctionParameter">
+<br />
+<br />
+
+Now, the goal is to set an animation to every single button. Every button has its own class: <br />
+<img class="buttonClasses" src="Images\drumKit\animation\buttonClasses.png" alt="buttonClasses"> <br />
+<br />
+To target each class we can use the querySelector again: <br />
+<img class="buttonQuerySel" src="Images\drumKit\animation\buttonQuerySel.png" alt="buttonQuerySel">
+<br />
+<br />
+
+
+Remember that "currentKey" targets a single character(w, a, s, d, j, k, l) because the function, which reacts <br />
+ to the "click eventListener" has "this.InnerHTML" as a variable.
+ Since we want to target the classes of each button, we have to consider it like this: <br />
+<img class="buttonAnimation2" src="Images\drumKit\animation\buttonAnimation2.png" alt="buttonAnimation2">
+<br />
+<br />
+Because we want to set the animation to an active button, we create a variable for it: <br />
+<img clas="activeButton" src="Images\drumKit\animation\activeButton.png" alt="activeButton">
+<br />
+<br />
+The style of the activeButton is already defined in the stylesheet witht the class .pressed, so <br />
+we can use Javascript to add that class to it: <br />
+<img class="buttonClassListAdd" src="Images\drumKit\animation\buttonClassListAdd.png" alt="buttonClassListAdd"> <br />
+<br />
+<br />
+<hr />
+<br />
+Because the effects wont go away once clicked, we set a timer for how long it should be active. <br />
+In this case we can use the setTimeout() Method. <br />
+<a href="https://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">More info</a> <br />
+Syntax: <br />
+<img class="syntaxSetTimeout" src="Images\drumKit\animation\syntaxSetTimeout.png" alt="syntaxSetTimeout">
+<br>
+<br />
+So we use a setTimout Method to remove the ".pressed" class after 100ms: <br />
+<img class="setTimeOutAnimation" src="Images\drumKit\animation\setTimeOutAnimation.png" alt="setTimeOutAnimation"> <br />
+<br />
+And because we nested the "buttonAnimation(currentKey)" in the "Keyboard Press Function"<br />
+it also works using the keyboard. <br />
+<img class="buttonAnimation3" src="Images\drumKit\animation\buttonAnimation3.png" alt="buttonAnimation3">
+<br />
+<br />
+
+
+
+
+
 
 
 
