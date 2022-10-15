@@ -1444,18 +1444,170 @@
               <h4>CDN</h4>
             </button>
             <div class="content">
-<a href="https://jquery.com/download/" target="_blank">jQuery download</a>
-<br />
-<a href="https://releases.jquery.com/" target="_blank">jQuery CDN</a>
-<br />
+              <a href="https://jquery.com/download/" target="_blank">jQuery download</a>
+              <br />
+              <a href="https://releases.jquery.com/" target="_blank">jQuery CDN</a>
+              <br />
+              <br />
 
+            </div>
 
+            <button type="button" class="collapsible">
+              <h4>Minification & Selecting Elements with jQuery</h4>
+            </button>
+            <div class="content">
 
-test 
+              Making websites smaller and faster to load by minifying the JS and CSS code:
+              <br />
+              <a href="https://minifier.org/" target="_blank">Minifiere</a>
+              <br />
+              <br>
+              <b>Selecting Elements with jQuery</b>
+              <br>
+              Elements can be selected by using '$':
+              <br>
+              <img class="jQuerySelector" src="Images\jQuery\jQuerySelector.png" alt="jQuerySelector" />
+              <br>
+              <br>
+              Selecting classes or ID's:
+              <br>
+              <img class="jQuerySelector2" src="Images\jQuery\jQuerySelector2.png" alt="jQuerySelector2">
+              <br>
+              <br>
+              Using '$' will always select <i>all</i> elements:
+              <br>
+              <img class="jQuerySelector3" src="Images\jQuery\jQuerySelector3.png" alt="jQuerySelector3">
+              <br>
 
             </div>
 
 
+            <button type="button" class="collapsible">
+              <h4>Manipulating Styles with jQuery</h4>
+            </button>
+            <div class="content">
+              When selecting an element with '$', CSS properties can be added. <br>
+              - First input defines what should be changed <br>
+              - Second input defines the value of first input <br>
+              <br>
+              <img class="cssjQuery" src="Images\jQuery\cssjQuery.png" alt="cssjQuery">
+              <br>
+              <br>
+              It can also be used the get information of the value:
+              <br>
+              <br>
+              <img class="valueInformationjQuery" src="Images\jQuery\valueInformationjQuery.png" alt="valueInformationjQuery">
+              <br>
+              <br>
+              <img class="valueInformationjQuery2" src="Images\jQuery\valueInformationjQuery2.png" alt="valueInformationjQuery2">
+              <br>
+              <br>
+              <b>Important:</b>
+              <br>
+              <br>
+              - <b>Keep javascript code all about behaviour</b> <br>
+              - <b>Keep style code all about appearance</b> <br>
+              - <b>Keep HTML all about content</b> <br>
+              <br>
+              <br>
+              Instead of adding css into javascript code, we can use jQuery to add CSS classes to elements:<br>
+              <br>
+              <img class="cssjQuery2" src="Images\jQuery\cssjQuery2.png" alt="cssjQuery2"> <br>
+              <br>
+              <img class="addClassjQuery" src="Images\jQuery\addClassjQuery.png" alt="addClassjQuery"> <br>
+              <br>
+              <br>
+              Adding multiple classes: <br>
+              <br>
+              <img class="multipleClassesjQuery" src="Images\jQuery\multipleClassesjQuery.png" alt="multipleClassesjQuery">
+              <br>
+              <br>
+              <br>
+              Can also be used to remove classes and check how it looks like in the console: <br>
+              <br>
+              <img class="removeClassjQuery" src="Images\jQuery\removeClassjQuery.png" alt="removeClassjQuery"> <br>
+              <br>
+              <br>
+              Console can be used with a <i>true/false boolean</i> to check if classes apply: <br>
+              <br>
+              <img class="hasClassjQuery" src="Images\jQuery\hasClassjQuery.png" alt="hasClassjQuery"> <br>
+              <br>
+              <br>
+              <br>
+              <b>Manipulating Text with jQuery:</b><br>
+              <br>
+              <img class="changeTextjQuery" src="Images\jQuery\changeTextjQuery.png" alt="changeTextjQuery">
+              <br>
+              <br>
+              innerHTMl = .html: <br>
+              <br>
+              <img class="innerHTMLjQuery" src="Images\jQuery\innerHTMLjQuery.png" alt="innerHTMLjQuery"> <br>
+              <br>
+              <br>
+              <img class="innerHTMLjQuery2" src="Images\jQuery\innerHTMLjQuery2.png" alt="innerHTMLjQuery2"> <br>
+              <br>
+              <br>
+              <hr>
+              <b>Manipulating Attributes</b>
+              <br>
+              Attributes = href(a) / src (img) / width/height (img) <br>
+              <br>
+              <br>
+              Getting information about an attribute: <br>
+              <br>
+              <img class="attrjQuery" src="Images\jQuery\attrjQuery.png" alt="attrjQuery"> <br>
+              <br>
+              <br>
+              How to change the value of an attribute: <br>
+              <br>
+              This will select all 'anchor tags' and change the 'href': <br>
+              <br>
+              <img class="setAttribute" src="Images\jQuery\setAttribute.png" alt="setAttribute"> <br>
+              <br>
+              <img class="attrClass" src="Images\jQuery\attrClass.png" alt="attrClass">
+              <br>
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Adding eventListener</h4>
+            </button>
+            <div class="content">
+Way easier than using vanilla javascript: <br>
+<br>
+Clicking on the h1 title to change the color: <br>
+<img class="eventListenerjQuery" src="Images\jQuery\eventListenerjQuery.png" alt="eventListenerjQuery"> <br>
+<br>
+<br>
+Before we had to use a <i>for loop</i> to change the appearance of all buttons: <br>
+<img class="oldjsOption" src="Images\jQuery\oldjsOption.png" alt="oldjsOption"> <br>
+<br>
+Using jQuery: <br>
+<img class="jQueryClick" src="Images\jQuery\jQueryClick.png" alt="jQueryClick">
+<br>
+<br>
+<br>
+<b>Detecting keyPress:</b> <br>
+<img class="keyPressjQuery" src="Images\jQuery\keyPressjQuery.png" alt="keyPressjQuery"> <br>
+<br>
+Challenge: <br>
+Change h1 to whatever key is pressed on the website: <br>
+<img class="changeTextkeyPress" src="Images\jQuery\changeTextkeyPress.png" alt="changeTextkeyPress"> <br>
+<br>
+<br>
+Mouseover:<br>
+<img class="mouseOver" src="Images\jQuery\mouseOver.png" alt="mouseOver"> <br>
+<br>
+<br>
+<b>Eventlist:</b>
+<a href="https://developer.mozilla.org/en-US/docs/Web/Events?retiredLocale=de" target="_blank">Event references</a> <br>
+
+
+
+
+
+
+            </div>
 
 
 
