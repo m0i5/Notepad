@@ -239,7 +239,12 @@ width: 25rem;
 }
 
 .drumBottons, .clickExample, .higherOrder, .houseKeeper1, .switchStatement, .angelaObjectMethod {
-  width: 25rem;
+  width: 35rem;
+}
+
+
+.expressSetup, .expressSetup2 {
+  width: 40rem;
 }
 
 
