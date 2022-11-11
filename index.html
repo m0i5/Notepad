@@ -1772,9 +1772,71 @@ Challenge: <br>
 <br>
 <br>
 <img class="expressSetup2" src="Images/expressNode/expressSetup2.png" alt="expressSetup2">
+<br>
+<br>
+Task: Setup a new contact or about route and send back some information <br>
+<br>
+<img class="aboutRoute" src="Images/expressNode/aboutRoute.png" alt="aboutRoute">
+<br>
+Use control-C to stop the server and arrow-up(node server.js) to restart. <br>
+<br>
+Nodemon can be used to detect/monitor if there are changes in the code, to stop and restart the server automatically. <br>
+Install: npm install -g nodemon <br>
+Use «Sudo» if admin-permission is needed. <br>
+To activate use: nodemon (servername) <br>
+</div>
 
 
-            </div>
+<button type="button" class="collapsible">
+  <h4>Calculator</h4>
+</button>
+<div class="content">
+Creating a simple calculator.<br>
+<ol>
+  <li><b>Make a new folder called Calculator on your Desktop</b></li>
+  > cd desktop > mkdir Calculator<br>
+  <li><b>Change Directory to this new folder</b></li>
+  > cd calculator <br>
+  <li><b>Inside the Calculator folder, create a new file called calculator.js</b></li>
+  > touch calculator.js
+  <li><b>Set up a new NPM package</b></li>
+  > npm init
+  <li><b>Open the project folder in Atom</b></li>
+  > atom .
+  <li><b>Using NPM install the express module</b></li>
+  > npm install express
+  <br>
+  <li><b>Require express in your calculator.js</b></li>
+  <li><b>Create a root route get method with app.get()</b></li>
+  <li><b>Send the words «Hello World» from the root route as the response</b></li>
+  <li><b>Spin up our server on port 3000 with app.listen</b></li>
+  <li><b>Run server with nodemon</b></li>
+  <img class="setupTask" src="Images/Calculator/setupTask.png" alt="setupTask">
+</ol>
+
+Next, setup the HTML:
+<ol>
+  <li><b>cd Calculator > touch index.html</b></li>
+    <li><b>Use HTML boilerplate</b></li>
+    <li>Create a form with a button:</li>
+    <img class="formCalculator" src="Images/Calculator/formCalculator.png" alt="formCalculator">
+</ol>
+<br><br>
+Connecting the HTML Page with calculator.js:<br>
+<img class="connectJSON" src="Images/Calculator/connectJSON.png" alt="connectJSON">
+<br><br>
+Now the problem with the form (in the HTML file) is that the form has a "post method" which sends data to "action="index.html".<br>
+But we want the data sent to our server. So either delete "action", because the default will work - or change action to «action="/"»
+<br>
+<br>
+<br>
+<br>
+Challenge to change it to a BMI Calculator:<br>
+<img class="bmiCalc" src="Images/Calculator/bmiCalc.png" alt="bmiCalc">
+
+
+
+</div>
 
 
 

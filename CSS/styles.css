@@ -243,7 +243,7 @@ width: 25rem;
 }
 
 
-.expressSetup, .expressSetup2 {
+.expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc {
   width: 40rem;
 }
 
