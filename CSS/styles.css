@@ -243,7 +243,7 @@ width: 25rem;
 }
 
 
-.expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc, .apiOverview, .currentWeather, .Postman1, .Postman2 {
+.expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc, .apiOverview, .currentWeather, .Postman1, .Postman2, .setupExpress, .setupExpress2, .responseStatusCode, .weatherData, .weatherData2, .getURL {
   width: 40rem;
 }
 

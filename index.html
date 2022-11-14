@@ -1959,6 +1959,37 @@ Brave/Chrome add-on «JSON Viewer Pro» to visualize them nicely.
                     <h4>Putting APIs into Practice</h4>
                   </button>
                   <div class="content">
+We will build a simply page that displays the temperature of a particular location using a localhost.
+<br><br>
+Setting up the project
+<ul>
+  <li>Using hyperterminal to navigate to the desktop and create a folder called «WewatherProject»</li>
+  <li>Create index.html & app.js </li>
+  <li>Initialise npm --> npm init</li>
+  <li>npm i express (install express)</li>
+  <li>We want to create a new node app, to do that we need to require the express module</li>
+  <img class="setupExpress" src="Images/WeatherProject/setupExpress.png" alt="setupExpress">
+  <br>
+  <li>Now let's define what should happen when the user tries to get on the homepage using app.get:</li>
+  <img class="setupExpress2" src="Images/WeatherProject/setupExpress2.png" alt="setupExpress2">
+  <br>
+  <li>Use nodemon in the terminal to test it: «nodemon app.js»</li>
+  <li>Now we want to display the weather using a nodejs https.get request <a href="https://nodejs.org/api/https.html#https" target="_blank">Doc</a></li>
+  <li>With the information from the docs we will set it up in app.js:</li>
+  <img class="getURL" src="Images/WeatherProject/getURL.png" alt="getURL">
+  <li>After refreshing the page, a lot of information is displayed in the terminal.</li>
+  <li>We can specify it to only check the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">HTTP response status codes:</a></li>
+  <img class="responseStatusCode" src="Images/WeatherProject/responseStatusCode.png" alt="responseStatusCode">
+  <br>
+  <li>It's also possible to fetch the weather data, but we need to convert it into a js object:</li>
+  <img class="weatherData" src="Images/WeatherProject/weatherData.png" alt="weatherData">
+  <img class="weatherData2" src="Images/WeatherProject/weatherData2.png" alt="weatherData2">
+  
+
+
+</ul>
+
+
 
                   </div>
 
