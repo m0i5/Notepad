@@ -1848,6 +1848,126 @@ Challenge to change it to a BMI Calculator:<br>
 
 
 
+  <!--- API -------->
+
+  <section class="apis" id="apiSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i>API</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">All about API's</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>What is an API?</h4>
+            </button>
+            <div class="content">
+<img class="apiOverview" src="Images/API/apiOverview.png" alt="apiOverview">
+
+            </div>
+
+
+                  <button type="button" class="collapsible">
+                    <h4>API Endpoints, Paths and Parameters</h4>
+                  </button>
+                  <div class="content">
+
+<b>Endpoints:</b><br>
+Example with the kanye.rest API to get randon Kanye quotes: <br>
+<a href="https://api.kanye.rest/"target="_blank">api.kanye.rest</a> <br>
+<br>
+<b>Paths:</b><br>
+Example with an API that allows us access to a database with random jokes and through the use
+of paths and parameters we will customize it. <br>
+<a href="https://sv443.net/jokeapi/v2/" target="_blank">sv443.net/jokeapi/v2/</a> <br>
+This API is a bit more complex because it offers different things to filter/select, such as: <br>
+<ul>
+  <li>selecting catergory like programming or dark jokes</li>
+  <li>flags to blacklist</li>
+  <li>response format (json/xml/yaml)</li>
+  <li>joke type</li>
+  <li>search bar</li>
+  <li>search for a joke in with ID range</li>
+</ul>
+<br>
+In the documentation we searched for the endpoint «GET joke» and found the following link: <br>
+<a href="https://sv443.net/jokeapi/v2/joke/"target="_blank">https://sv443.net/jokeapi/v2/joke/</a><br>
+But that doesn't work because we first have to specify which category, for example «Programming». <br>
+<br>
+So we have the link «https://sv443.net/jokeapi/v2/joke/» and with the paths like «Programming» or «Dark»
+we can access those different data bases containing these jokes. <br>
+<br>
+Now this api allows us to search for jokes containing the search string we entered, like «debugging»:
+<br>
+<br>
+<img class="apiParameter" src="Images/API/apiParameter.png" alt="apiParameter"> <br>
+<br>
+
+                  </div>
+
+                  <button type="button" class="collapsible">
+                    <h4>API Authentication and Postman</h4>
+                  </button>
+                  <div class="content">
+Example with OpenWeather API which takes your location and gives you a weekly forecast. <br>
+60 calls per minutes are free but depending on how much traffic you have on your website, it will be a price plan
+between 40-2'000 USD / month.
+<a href="https://openweathermap.org/price"target="_blank">OpenWeatherMap</a> <br>
+<br>
+On «API keys» we can create a key and copy it. As always, read the documentation! <br>
+<br>
+There are many ways to filter which weather information we can get, but in this case we take the parameter «by city name»: <br>
+<a href="https://openweathermap.org/current" target="_blank">Current Weather API Doc</a> <br>
+<img class="currentWeather" src="Images/API/currentWeather.png" alt="currentWeather"> <br>
+<br>
+Now we just need to type in the city and enter a valid API key. <br>
+Of course other parameters can be added, for example &units=metric to get the temparature in celsius instead of fahrenheit. <br>
+<br>
+<br>
+Depending on how many parameters there will be added the link can get really long, which makes it harder to test it and find typos. <br>
+In this case the tool <a href="https://www.postman.com/" target="_blank">Postman</a> is great. <br>
+<br>
+<img class="Postman1" src="Images/API/Postman1.png" alt="Postman1">
+<img class="Postman2" src="Images/API/Postman1.png" alt="Postman2">
+                  </div>
+
+
+                  <button type="button" class="collapsible">
+                    <h4>JSON</h4>
+                  </button>
+                  <div class="content">
+What is JSON? <br>
+It stands for «Javascript Object notation»
+- JSON is a lightweight format for storing and transporting data <br>
+<br>
+- JSON is often used when data is sent from a server to a web page <br>
+<br>
+- JSON is "self-describing" and easy to understand <br>
+<br>
+Brave/Chrome add-on «JSON Viewer Pro» to visualize them nicely.
+                  </div>
+
+
+
+                  <button type="button" class="collapsible">
+                    <h4>Putting APIs into Practice</h4>
+                  </button>
+                  <div class="content">
+
+                  </div>
+
+
+  </section>
+
+
+
+
 
 
 

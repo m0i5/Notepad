@@ -243,7 +243,7 @@ width: 25rem;
 }
 
 
-.expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc {
+.expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc, .apiOverview, .currentWeather, .Postman1, .Postman2 {
   width: 40rem;
 }
 
