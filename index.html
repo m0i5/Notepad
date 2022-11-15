@@ -47,11 +47,15 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Scrolla Dropdaun
+                Dropdaun
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#htmlSection">HTML Notes</a>
                 <a class="dropdown-item" href="#cssSection">CSS Notes</a>
+                <a class="dropdown-item" href="#jsNotes">JS Notes</a>
+                <a class="dropdown-item" href="#jsNotes">JS Notes</a>
+                <a class="dropdown-item" href="#jsNotes">JS Notes</a>
+                <a class="dropdown-item" href="#jsNotes">JS Notes</a>
                 <a class="dropdown-item" href="#jsNotes">JS Notes</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#HPQuotes">Amazing H.P. Baxxter Quotes</a>
@@ -1735,17 +1739,17 @@
               <h4>NPM Package Manager</h4>
             </button>
             <div class="content">
-NPM = Node Package Manager <br>
-<br>
-Example with SuperheroName: <br>
-<ol>
-  <li>Searched for "superheroes" package on npm</li>
-  <li>Downloaded it via terminal using: <b>npm install superheroes</b></li>
-  <li>Required it in the index.js file: <b> const superheroes = require("superheroes")</b></li>
-  <li>Created a variable to store a random superhero name: <b>var mySuperheroName = superheroes.random();</b></li>
-  <li>Created <b>console.log(mySuperheroName)</b> to test it.</li>
-  <li>Called it in the terminal: <b>node index.js</b></li>
-</ol>
+              NPM = Node Package Manager <br>
+              <br>
+              Example with SuperheroName: <br>
+              <ol>
+                <li>Searched for "superheroes" package on npm</li>
+                <li>Downloaded it via terminal using: <b>npm install superheroes</b></li>
+                <li>Required it in the index.js file: <b> const superheroes = require("superheroes")</b></li>
+                <li>Created a variable to store a random superhero name: <b>var mySuperheroName = superheroes.random();</b></li>
+                <li>Created <b>console.log(mySuperheroName)</b> to test it.</li>
+                <li>Called it in the terminal: <b>node index.js</b></li>
+              </ol>
 
             </div>
 
@@ -1756,87 +1760,87 @@ Example with SuperheroName: <br>
               <h4>Express - Node.js</h4>
             </button>
             <div class="content">
-Creating my first server with express:<br>
-<br>
-Challenge: <br>
-<ul>
-  <li>Step1: Create a new directory called «my-express-server»</li>
-  <li>cd into the new directory</li>
-  <li>Inside, create a new file called server.js</li>
-  <li>Inilise npm with server.js as start point</li>
-</ul>
-<img class="expressSetup" src="Images/expressNode/expressSetup.png" alt="expressSetup"> <br>
-<br>
-<a href="https://expressjs.com/de/starter/installing.html" target="_blank">Installation</a> <br>
-<a href="https://expressjs.com/de/starter/hello-world.html">Setup - "Hello World"</a> <br>
-<br>
-<br>
-<img class="expressSetup2" src="Images/expressNode/expressSetup2.png" alt="expressSetup2">
-<br>
-<br>
-Task: Setup a new contact or about route and send back some information <br>
-<br>
-<img class="aboutRoute" src="Images/expressNode/aboutRoute.png" alt="aboutRoute">
-<br>
-Use control-C to stop the server and arrow-up(node server.js) to restart. <br>
-<br>
-Nodemon can be used to detect/monitor if there are changes in the code, to stop and restart the server automatically. <br>
-Install: npm install -g nodemon <br>
-Use «Sudo» if admin-permission is needed. <br>
-To activate use: nodemon (servername) <br>
-</div>
+              Creating my first server with express:<br>
+              <br>
+              Challenge: <br>
+              <ul>
+                <li>Step1: Create a new directory called «my-express-server»</li>
+                <li>cd into the new directory</li>
+                <li>Inside, create a new file called server.js</li>
+                <li>Inilise npm with server.js as start point</li>
+              </ul>
+              <img class="expressSetup" src="Images/expressNode/expressSetup.png" alt="expressSetup"> <br>
+              <br>
+              <a href="https://expressjs.com/de/starter/installing.html" target="_blank">Installation</a> <br>
+              <a href="https://expressjs.com/de/starter/hello-world.html">Setup - "Hello World"</a> <br>
+              <br>
+              <br>
+              <img class="expressSetup2" src="Images/expressNode/expressSetup2.png" alt="expressSetup2">
+              <br>
+              <br>
+              Task: Setup a new contact or about route and send back some information <br>
+              <br>
+              <img class="aboutRoute" src="Images/expressNode/aboutRoute.png" alt="aboutRoute">
+              <br>
+              Use control-C to stop the server and arrow-up(node server.js) to restart. <br>
+              <br>
+              Nodemon can be used to detect/monitor if there are changes in the code, to stop and restart the server automatically. <br>
+              Install: npm install -g nodemon <br>
+              Use «Sudo» if admin-permission is needed. <br>
+              To activate use: nodemon (servername) <br>
+            </div>
 
 
-<button type="button" class="collapsible">
-  <h4>Calculator</h4>
-</button>
-<div class="content">
-Creating a simple calculator.<br>
-<ol>
-  <li><b>Make a new folder called Calculator on your Desktop</b></li>
-  > cd desktop > mkdir Calculator<br>
-  <li><b>Change Directory to this new folder</b></li>
-  > cd calculator <br>
-  <li><b>Inside the Calculator folder, create a new file called calculator.js</b></li>
-  > touch calculator.js
-  <li><b>Set up a new NPM package</b></li>
-  > npm init
-  <li><b>Open the project folder in Atom</b></li>
-  > atom .
-  <li><b>Using NPM install the express module</b></li>
-  > npm install express
-  <br>
-  <li><b>Require express in your calculator.js</b></li>
-  <li><b>Create a root route get method with app.get()</b></li>
-  <li><b>Send the words «Hello World» from the root route as the response</b></li>
-  <li><b>Spin up our server on port 3000 with app.listen</b></li>
-  <li><b>Run server with nodemon</b></li>
-  <img class="setupTask" src="Images/Calculator/setupTask.png" alt="setupTask">
-</ol>
+            <button type="button" class="collapsible">
+              <h4>Calculator</h4>
+            </button>
+            <div class="content">
+              Creating a simple calculator.<br>
+              <ol>
+                <li><b>Make a new folder called Calculator on your Desktop</b></li>
+                > cd desktop > mkdir Calculator<br>
+                <li><b>Change Directory to this new folder</b></li>
+                > cd calculator <br>
+                <li><b>Inside the Calculator folder, create a new file called calculator.js</b></li>
+                > touch calculator.js
+                <li><b>Set up a new NPM package</b></li>
+                > npm init
+                <li><b>Open the project folder in Atom</b></li>
+                > atom .
+                <li><b>Using NPM install the express module</b></li>
+                > npm install express
+                <br>
+                <li><b>Require express in your calculator.js</b></li>
+                <li><b>Create a root route get method with app.get()</b></li>
+                <li><b>Send the words «Hello World» from the root route as the response</b></li>
+                <li><b>Spin up our server on port 3000 with app.listen</b></li>
+                <li><b>Run server with nodemon</b></li>
+                <img class="setupTask" src="Images/Calculator/setupTask.png" alt="setupTask">
+              </ol>
 
-Next, setup the HTML:
-<ol>
-  <li><b>cd Calculator > touch index.html</b></li>
-    <li><b>Use HTML boilerplate</b></li>
-    <li>Create a form with a button:</li>
-    <img class="formCalculator" src="Images/Calculator/formCalculator.png" alt="formCalculator">
-</ol>
-<br><br>
-Connecting the HTML Page with calculator.js:<br>
-<img class="connectJSON" src="Images/Calculator/connectJSON.png" alt="connectJSON">
-<br><br>
-Now the problem with the form (in the HTML file) is that the form has a "post method" which sends data to "action="index.html".<br>
-But we want the data sent to our server. So either delete "action", because the default will work - or change action to «action="/"»
-<br>
-<br>
-<br>
-<br>
-Challenge to change it to a BMI Calculator:<br>
-<img class="bmiCalc" src="Images/Calculator/bmiCalc.png" alt="bmiCalc">
+              Next, setup the HTML:
+              <ol>
+                <li><b>cd Calculator > touch index.html</b></li>
+                <li><b>Use HTML boilerplate</b></li>
+                <li>Create a form with a button:</li>
+                <img class="formCalculator" src="Images/Calculator/formCalculator.png" alt="formCalculator">
+              </ol>
+              <br><br>
+              Connecting the HTML Page with calculator.js:<br>
+              <img class="connectJSON" src="Images/Calculator/connectJSON.png" alt="connectJSON">
+              <br><br>
+              Now the problem with the form (in the HTML file) is that the form has a "post method" which sends data to "action="index.html".<br>
+              But we want the data sent to our server. So either delete "action", because the default will work - or change action to «action="/"»
+              <br>
+              <br>
+              <br>
+              <br>
+              Challenge to change it to a BMI Calculator:<br>
+              <img class="bmiCalc" src="Images/Calculator/bmiCalc.png" alt="bmiCalc">
 
 
 
-</div>
+            </div>
 
 
 
@@ -1868,130 +1872,192 @@ Challenge to change it to a BMI Calculator:<br>
               <h4>What is an API?</h4>
             </button>
             <div class="content">
-<img class="apiOverview" src="Images/API/apiOverview.png" alt="apiOverview">
+              <img class="apiOverview" src="Images/API/apiOverview.png" alt="apiOverview">
 
             </div>
 
 
-                  <button type="button" class="collapsible">
-                    <h4>API Endpoints, Paths and Parameters</h4>
-                  </button>
-                  <div class="content">
+            <button type="button" class="collapsible">
+              <h4>API Endpoints, Paths and Parameters</h4>
+            </button>
+            <div class="content">
 
-<b>Endpoints:</b><br>
-Example with the kanye.rest API to get randon Kanye quotes: <br>
-<a href="https://api.kanye.rest/"target="_blank">api.kanye.rest</a> <br>
-<br>
-<b>Paths:</b><br>
-Example with an API that allows us access to a database with random jokes and through the use
-of paths and parameters we will customize it. <br>
-<a href="https://sv443.net/jokeapi/v2/" target="_blank">sv443.net/jokeapi/v2/</a> <br>
-This API is a bit more complex because it offers different things to filter/select, such as: <br>
-<ul>
-  <li>selecting catergory like programming or dark jokes</li>
-  <li>flags to blacklist</li>
-  <li>response format (json/xml/yaml)</li>
-  <li>joke type</li>
-  <li>search bar</li>
-  <li>search for a joke in with ID range</li>
-</ul>
-<br>
-In the documentation we searched for the endpoint «GET joke» and found the following link: <br>
-<a href="https://sv443.net/jokeapi/v2/joke/"target="_blank">https://sv443.net/jokeapi/v2/joke/</a><br>
-But that doesn't work because we first have to specify which category, for example «Programming». <br>
-<br>
-So we have the link «https://sv443.net/jokeapi/v2/joke/» and with the paths like «Programming» or «Dark»
-we can access those different data bases containing these jokes. <br>
-<br>
-Now this api allows us to search for jokes containing the search string we entered, like «debugging»:
-<br>
-<br>
-<img class="apiParameter" src="Images/API/apiParameter.png" alt="apiParameter"> <br>
-<br>
+              <b>Endpoints:</b><br>
+              Example with the kanye.rest API to get randon Kanye quotes: <br>
+              <a href="https://api.kanye.rest/" target="_blank">api.kanye.rest</a> <br>
+              <br>
+              <b>Paths:</b><br>
+              Example with an API that allows us access to a database with random jokes and through the use
+              of paths and parameters we will customize it. <br>
+              <a href="https://sv443.net/jokeapi/v2/" target="_blank">sv443.net/jokeapi/v2/</a> <br>
+              This API is a bit more complex because it offers different things to filter/select, such as: <br>
+              <ul>
+                <li>selecting catergory like programming or dark jokes</li>
+                <li>flags to blacklist</li>
+                <li>response format (json/xml/yaml)</li>
+                <li>joke type</li>
+                <li>search bar</li>
+                <li>search for a joke in with ID range</li>
+              </ul>
+              <br>
+              In the documentation we searched for the endpoint «GET joke» and found the following link: <br>
+              <a href="https://sv443.net/jokeapi/v2/joke/" target="_blank">https://sv443.net/jokeapi/v2/joke/</a><br>
+              But that doesn't work because we first have to specify which category, for example «Programming». <br>
+              <br>
+              So we have the link «https://sv443.net/jokeapi/v2/joke/» and with the paths like «Programming» or «Dark»
+              we can access those different data bases containing these jokes. <br>
+              <br>
+              Now this api allows us to search for jokes containing the search string we entered, like «debugging»:
+              <br>
+              <br>
+              <img class="apiParameter" src="Images/API/apiParameter.png" alt="apiParameter"> <br>
+              <br>
 
-                  </div>
+            </div>
 
-                  <button type="button" class="collapsible">
-                    <h4>API Authentication and Postman</h4>
-                  </button>
-                  <div class="content">
-Example with OpenWeather API which takes your location and gives you a weekly forecast. <br>
-60 calls per minutes are free but depending on how much traffic you have on your website, it will be a price plan
-between 40-2'000 USD / month.
-<a href="https://openweathermap.org/price"target="_blank">OpenWeatherMap</a> <br>
-<br>
-On «API keys» we can create a key and copy it. As always, read the documentation! <br>
-<br>
-There are many ways to filter which weather information we can get, but in this case we take the parameter «by city name»: <br>
-<a href="https://openweathermap.org/current" target="_blank">Current Weather API Doc</a> <br>
-<img class="currentWeather" src="Images/API/currentWeather.png" alt="currentWeather"> <br>
-<br>
-Now we just need to type in the city and enter a valid API key. <br>
-Of course other parameters can be added, for example &units=metric to get the temparature in celsius instead of fahrenheit. <br>
-<br>
-<br>
-Depending on how many parameters there will be added the link can get really long, which makes it harder to test it and find typos. <br>
-In this case the tool <a href="https://www.postman.com/" target="_blank">Postman</a> is great. <br>
-<br>
-<img class="Postman1" src="Images/API/Postman1.png" alt="Postman1">
-<img class="Postman2" src="Images/API/Postman1.png" alt="Postman2">
-                  </div>
-
-
-                  <button type="button" class="collapsible">
-                    <h4>JSON</h4>
-                  </button>
-                  <div class="content">
-What is JSON? <br>
-It stands for «Javascript Object notation»
-- JSON is a lightweight format for storing and transporting data <br>
-<br>
-- JSON is often used when data is sent from a server to a web page <br>
-<br>
-- JSON is "self-describing" and easy to understand <br>
-<br>
-Brave/Chrome add-on «JSON Viewer Pro» to visualize them nicely.
-                  </div>
+            <button type="button" class="collapsible">
+              <h4>API Authentication and Postman</h4>
+            </button>
+            <div class="content">
+              Example with OpenWeather API which takes your location and gives you a weekly forecast. <br>
+              60 calls per minutes are free but depending on how much traffic you have on your website, it will be a price plan
+              between 40-2'000 USD / month.
+              <a href="https://openweathermap.org/price" target="_blank">OpenWeatherMap</a> <br>
+              <br>
+              On «API keys» we can create a key and copy it. As always, read the documentation! <br>
+              <br>
+              There are many ways to filter which weather information we can get, but in this case we take the parameter «by city name»: <br>
+              <a href="https://openweathermap.org/current" target="_blank">Current Weather API Doc</a> <br>
+              <img class="currentWeather" src="Images/API/currentWeather.png" alt="currentWeather"> <br>
+              <br>
+              Now we just need to type in the city and enter a valid API key. <br>
+              Of course other parameters can be added, for example &units=metric to get the temparature in celsius instead of fahrenheit. <br>
+              <br>
+              <br>
+              Depending on how many parameters there will be added the link can get really long, which makes it harder to test it and find typos. <br>
+              In this case the tool <a href="https://www.postman.com/" target="_blank">Postman</a> is great. <br>
+              <br>
+              <img class="Postman1" src="Images/API/Postman1.png" alt="Postman1">
+              <img class="Postman2" src="Images/API/Postman1.png" alt="Postman2">
+            </div>
 
 
-
-                  <button type="button" class="collapsible">
-                    <h4>Putting APIs into Practice</h4>
-                  </button>
-                  <div class="content">
-We will build a simply page that displays the temperature of a particular location using a localhost.
-<br><br>
-Setting up the project
-<ul>
-  <li>Using hyperterminal to navigate to the desktop and create a folder called «WewatherProject»</li>
-  <li>Create index.html & app.js </li>
-  <li>Initialise npm --> npm init</li>
-  <li>npm i express (install express)</li>
-  <li>We want to create a new node app, to do that we need to require the express module</li>
-  <img class="setupExpress" src="Images/WeatherProject/setupExpress.png" alt="setupExpress">
-  <br>
-  <li>Now let's define what should happen when the user tries to get on the homepage using app.get:</li>
-  <img class="setupExpress2" src="Images/WeatherProject/setupExpress2.png" alt="setupExpress2">
-  <br>
-  <li>Use nodemon in the terminal to test it: «nodemon app.js»</li>
-  <li>Now we want to display the weather using a nodejs https.get request <a href="https://nodejs.org/api/https.html#https" target="_blank">Doc</a></li>
-  <li>With the information from the docs we will set it up in app.js:</li>
-  <img class="getURL" src="Images/WeatherProject/getURL.png" alt="getURL">
-  <li>After refreshing the page, a lot of information is displayed in the terminal.</li>
-  <li>We can specify it to only check the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">HTTP response status codes:</a></li>
-  <img class="responseStatusCode" src="Images/WeatherProject/responseStatusCode.png" alt="responseStatusCode">
-  <br>
-  <li>It's also possible to fetch the weather data, but we need to convert it into a js object:</li>
-  <img class="weatherData" src="Images/WeatherProject/weatherData.png" alt="weatherData">
-  <img class="weatherData2" src="Images/WeatherProject/weatherData2.png" alt="weatherData2">
-  
-
-
-</ul>
+            <button type="button" class="collapsible">
+              <h4>JSON</h4>
+            </button>
+            <div class="content">
+              What is JSON? <br>
+              It stands for «Javascript Object notation»
+              - JSON is a lightweight format for storing and transporting data <br>
+              <br>
+              - JSON is often used when data is sent from a server to a web page <br>
+              <br>
+              - JSON is "self-describing" and easy to understand <br>
+              <br>
+              Brave/Chrome add-on «JSON Viewer Pro» to visualize them nicely.
+            </div>
 
 
 
-                  </div>
+            <button type="button" class="collapsible">
+              <h4>Putting APIs into Practice</h4>
+            </button>
+            <div class="content">
+              We will build a simply page that displays the temperature of a particular location using a localhost.
+              <br><br>
+              Setting up the project
+              <ul>
+                <li>Using hyperterminal to navigate to the desktop and create a folder called «WewatherProject»</li>
+                <li>Create index.html & app.js </li>
+                <li>Initialise npm --> npm init</li>
+                <li>npm i express (install express)</li>
+                <li>We want to create a new node app, to do that we need to require the express module</li>
+                <img class="setupExpress" src="Images/WeatherProject/setupExpress.png" alt="setupExpress">
+                <br>
+                <li>Now let's define what should happen when the user tries to get on the homepage using app.get:</li>
+                <img class="setupExpress2" src="Images/WeatherProject/setupExpress2.png" alt="setupExpress2">
+                <br>
+                <li>Use nodemon in the terminal to test it: «nodemon app.js»</li>
+                <li>Now we want to display the weather using a nodejs https.get request <a href="https://nodejs.org/api/https.html#https" target="_blank">Doc</a></li>
+                <li>With the information from the docs we will set it up in app.js:</li>
+                <img class="getURL" src="Images/WeatherProject/getURL.png" alt="getURL">
+                <li>After refreshing the page, a lot of information is displayed in the terminal.</li>
+                <li>We can specify it to only check the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">HTTP response status codes:</a></li>
+                <img class="responseStatusCode" src="Images/WeatherProject/responseStatusCode.png" alt="responseStatusCode">
+                <br>
+                <li>It's also possible to fetch the weather data, but we need to convert it into a js object:</li>
+                <img class="weatherData" src="Images/WeatherProject/weatherData.png" alt="weatherData">
+                <img class="weatherData2" src="Images/WeatherProject/weatherData2.png" alt="weatherData2">
+              </ul>
+
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Using Express to Render a Website with Live API Data</h4>
+            </button>
+            <div class="content">
+              First smoll challenge:
+              Use the data to display the weather description as a paragraph and the feels_like temperature as a h1. <br>
+              It should look like this: <br>
+              <img class="weatherChallenge" src="Images/WeatherProject/weatherChallenge.png" alt="weatherChallenge"> <br>
+              <br>
+              <img class="weatherChallenge2" src="Images/WeatherProject/weatherChallenge2.png" alt="weatherChallenge2">
+              <br>
+              <br>
+              Challenge2:
+              Display the correct weather icon. <br>
+              Remember, we already got the 'data' that contains the correct ID.<br>
+              <a href="https://openweathermap.org/weather-conditions" target="_blank">How to get the icon</a> <br>
+              <br>
+              <img class="weatherIcon" src="Images/WeatherProject/weatherIcon.png" alt="weatherIcon">
+              <br>
+              <br>
+              <br>
+              Next step is to display the weather of the users location: <br>
+              <ol>
+                <li>Create variables for the users location and the metrics:</li> <br>
+                <img class="userLocation1" src="Images/WeatherProject/userLocation1.png" alt="userLocation1"> <br>
+                <li>Create an HTML where the user can enter the location. We need a label with an input for it.</li>
+                <img class="userLocation2" src="Images/WeatherProject/userLocation2.png" alt="userLocation2"> <br>
+                <li>Now we need to send index.html over to the browser:</li>
+                <img class="sendFile" src="Images/WeatherProject/sendFile.png" alt="sendFile"> <br>
+                <li>Adding a submit button to send the data and wrapping it into a form to create a post request:</li> <br>
+                <img class="formPostrequest" src="Images/WeatherProject/formPostrequest.png" alt="formPostrequest"> <br>
+                <li>After that, we need to catch that request in our app.js file:</li> <br>
+                <img class="catchRequest" src="Images/WeatherProject/catchRequest.png" alt="catchRequest">
+              </ol>
+              <br>
+              <br>
+              <br>
+              In order to get the text that was submitted, we have to install body-parser (npm i body-parser). <br>
+              <ol>
+                <li>Install body-parser via Terminal using «npm i body-parser»</li>
+                <li>Create a require const, app.use and console log the input:</li> <br>
+                <img class="bodyParser" src="Images/WeatherProject/bodyParser.png" alt="bodyParser"> <br>
+                <li>If the logged input is correct, we can delete it and change the query:</li><br>
+                <img class="queryCityName" src="Images/WeatherProject/queryCityName.png" alt="queryCityName">
+              </ol>
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Creating a newsletter APP</h4>
+            </button>
+            <div class="content">
+Challenge: <br>
+<ol>
+  <li>CD to where you want to create your new project e.g. Desktop</li>
+  <li>Create New Project Folder called Newletter-Signup</li>
+  <li>Inside Newsletter-Signup, create a new app.js file, a signup.html file, success html and failure.html files.</li>
+  <li>Initialise npm with default options.</li>
+  <li>Install body-parser, express and request npm modules to the new project</li>
+  <li>Require the newly installed modules inside app.js</li>
+  <li>Create a new express app and set it to listen on port 3k</li>
+  <li>Once port is set up, log "server is running on port 3000"</li>
+</ol>
+
+            </div>
 
 
   </section>
