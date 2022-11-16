@@ -245,7 +245,7 @@ width: 25rem;
 
 .expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc, .apiOverview, .currentWeather, .Postman1,
 .Postman2, .setupExpress, .setupExpress2, .responseStatusCode, .weatherData, .weatherData2, .getURL, .weatherChallenge, .weatherChallenge2, .weatherIcon,
-.userLocation1, .userLocation2, .sendFile, .formPostrequest, .catchRequest, .bodyParser, .queryCityName
+.userLocation1, .userLocation2, .sendFile, .formPostrequest, .catchRequest, .bodyParser, .queryCityName, .cssConnection
 {
   width: 40rem;
 }
