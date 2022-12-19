@@ -2045,32 +2045,32 @@
               <h4>Creating a newsletter APP</h4>
             </button>
             <div class="content">
-Challenge: <br>
-<ol>
-  <li>CD to where you want to create your new project e.g. Desktop</li>
-  <li>Create New Project Folder called Newletter-Signup</li>
-  <li>Inside Newsletter-Signup, create a new app.js file, a signup.html file, success html and failure.html files.</li>
-  <li>Initialise npm with default options.</li>
-  <li>Install body-parser, express and request npm modules to the new project</li>
-  <li>Require the newly installed modules inside app.js</li>
-  <li>Create a new express app and set it to listen on port 3k</li>
-  <li>Once port is set up, log "server is running on port 3000"</li>
-</ol>
+              Challenge: <br>
+              <ol>
+                <li>CD to where you want to create your new project e.g. Desktop</li>
+                <li>Create New Project Folder called Newletter-Signup</li>
+                <li>Inside Newsletter-Signup, create a new app.js file, a signup.html file, success html and failure.html files.</li>
+                <li>Initialise npm with default options.</li>
+                <li>Install body-parser, express and request npm modules to the new project</li>
+                <li>Require the newly installed modules inside app.js</li>
+                <li>Create a new express app and set it to listen on port 3k</li>
+                <li>Once port is set up, log "server is running on port 3000"</li>
+              </ol>
 
-Once set up, copy a bootstrap Signup-Form: <br>
-<a href="https://getbootstrap.com/docs/5.2/examples/sign-in/">Bootstrap Signup Form</a>
-<br>
-Either set it up via CDN or just copy the whole page and modify it. <br> <br>
-Next, create a CSS file and copy all the values in there. Make sure that it works locally (copy full project path). <br>
-When it works, add the following code in the app.js file to be able to host it:<br>
-<img class="cssConnection" src="Images/Newsletter Project/cssConnection.png" alt="cssConnection"> <br>
-<br><br>
-What is bodyParser?<br>
-in order to read HTTP POST data, we have to use "body-parser" node module. body-parser is a piece of
-express middleware that reads a form's input and stores it as a javascript object accessible through <i>req.body</i> <br>
+              Once set up, copy a bootstrap Signup-Form: <br>
+              <a href="https://getbootstrap.com/docs/5.2/examples/sign-in/">Bootstrap Signup Form</a>
+              <br>
+              Either set it up via CDN or just copy the whole page and modify it. <br> <br>
+              Next, create a CSS file and copy all the values in there. Make sure that it works locally (copy full project path). <br>
+              When it works, add the following code in the app.js file to be able to host it:<br>
+              <img class="cssConnection" src="Images/Newsletter Project/cssConnection.png" alt="cssConnection"> <br>
+              <br><br>
+              What is bodyParser?<br>
+              in order to read HTTP POST data, we have to use "body-parser" node module. body-parser is a piece of
+              express middleware that reads a form's input and stores it as a javascript object accessible through <i>req.body</i> <br>
 
 
-Test Test
+
 
             </div>
 
@@ -2078,6 +2078,73 @@ Test Test
 
 
   </section>
+
+
+
+
+  <section class="DOM" id="domSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i>Git, github and Version Control</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>Version Control Using Git and the Command Line</h4>
+            </button>
+            <div class="content">
+<b>"touch" on mac to open files, "start" on Windows/Linux</b><br>
+<br>
+How to set up version control: <br>
+<ol>
+  <li>Initialize git via "git init"</li>
+  <li>To check if git is actually initialized, use "ls -a" to check</li>
+  <li>In order to track the version, it has to be moved to a "staging area"</li>
+  <li>To check what is in the staging area use: "git status"</li>
+  <li>To add the file to staging use: "git add "<filename>"</li>
+  <li>After that, commit it to version control: "git commit -m"</li> <br>
+  Note: "-m" is used to add a message, which can be used to identify the version. <br><br>
+  <li>Use "git log" to check for more information</li> <br>
+  Note: Adding multiple files to staging: "git add ." <br><br>
+</ol>
+<br><br>
+Test: <br>
+Change chapter3.txt contents to something random. <br>
+Use: "git status" to see that something was changed. <br>
+It says that there are modified files that haven't been committed or added to the staging area. <br>
+To actually see what has been changed, use: "git diff chapter3.txt" <br>
+To roll back to the previous version use: "git checkout < file name>" <br>
+
+
+
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>First steps</h4>
+            </button>
+            <div class="content">
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+  </section>
+
+
+
+
+
 
 
 
