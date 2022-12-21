@@ -2080,7 +2080,7 @@
   </section>
 
 
-
+  <!--- Git, Github & Version Control -------->
 
   <section class="DOM" id="domSection">
     <div class="container-fluid">
@@ -2177,14 +2177,112 @@
               <h4>Forking and Pull Requests</h4>
             </button>
             <div class="content">
-
-
-
             </div>
 
 
 
 
+
+          </div>
+        </div>
+  </section>
+
+
+
+  <!--- EJS -------->
+  <section class="ejsSection" id="domSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i>EJS</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Embedded JavaScript templating</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>What is EJS?</h4>
+            </button>
+            <div class="content">
+              EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Setting up the project</h4>
+            </button>
+            <div class="content">
+              <ol>
+                <li>Create a folder called todolist-v1 with index.html and app.js files using the terminal</li>
+                <li>initiliaze npm "npm init"</li>
+                <li>install npm "npm install"</li>
+                <li>install express/bodyparser "npm i express body-parser"</li>
+                <li>Setup the app.js file</li>
+                <br>
+                <img class="appSetup" src="Images\EJS\appSetup.png" alt="appSetup">
+                <br>
+              </ol>
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>First smoll test</h4>
+            </button>
+            <div class="content">
+              <ul>
+                <li>Goal is to write some logic that sends a certain message depending what day it is</li>
+                <li>Mo-Fr = 1-5</li>
+                <li>Sa = 6</li>
+                <li>So = 0</li>
+              </ul>
+              <br>
+              <img class="dayLogic" src="Images\EJS\dayLogic.png" alt="dayLogic">
+              <br>
+              <br>
+              How to test it: <br>
+              <ol>
+                <li>Open hyperTerminal</li>
+                <li>Start nodemon js "nodemon app.js"</li>
+                <li>If node isn't installed, use: "npm install-g nodemon"</li>
+                <li></li>
+              </ol>
+
+
+              It can be cleaned up using variables: <br>
+              <img class="cleanGetDay" src="Images\EJS\cleanGetDay.png" alt="cleanGetDay">
+              <br>
+              <a href="https://www.w3schools.com/jsref/jsref_getday.asp">More info about getDay()</a> <br>
+              <br>
+<br>
+<br>
+<b>Note:</b>res.send can only send back one final piece of data. In order
+so send back multiple pieces of data, use <b>"res.write"</b> <br>
+<img class="resWrite" src="Images\EJS\resWrite.png" alt="resWrite">
+<br>
+
+But instead of writing everything in JavaScript, an entire html file can be send as an aswer to the if-else statement: <br>
+<ul>
+  <li>Setup the boiler plate in index.html</li>
+  <li>res.sendFile is needed plus /index.html as a file to send</li>
+  <li>Set it up like this in app.js:</li>
+  <img class="sendFile" src="Images\EJS\sendFile.png" alt="sendFile">
+</ul>
+<br>
+<br>
+But in this case, we would have to setup way too many html pages for each response. <br>
+This is where HTML templates come in handy, where certain parts of the document change. <br>
+ 
+
+
+
+
+            </div>
 
           </div>
         </div>
