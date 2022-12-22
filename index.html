@@ -2259,30 +2259,126 @@
               <br>
               <a href="https://www.w3schools.com/jsref/jsref_getday.asp">More info about getDay()</a> <br>
               <br>
-<br>
-<br>
-<b>Note:</b>res.send can only send back one final piece of data. In order
-so send back multiple pieces of data, use <b>"res.write"</b> <br>
-<img class="resWrite" src="Images\EJS\resWrite.png" alt="resWrite">
-<br>
+              <br>
+              <br>
+              <b>Note:</b>res.send can only send back one final piece of data. In order
+              so send back multiple pieces of data, use <b>"res.write"</b> <br>
+              <img class="resWrite" src="Images\EJS\resWrite.png" alt="resWrite">
+              <br>
 
-But instead of writing everything in JavaScript, an entire html file can be send as an aswer to the if-else statement: <br>
+              But instead of writing everything in JavaScript, an entire html file can be send as an aswer to the if-else statement: <br>
+              <ul>
+                <li>Setup the boiler plate in index.html</li>
+                <li>res.sendFile is needed plus /index.html as a file to send</li>
+                <li>Set it up like this in app.js:</li>
+                <img class="sendFile" src="Images\EJS\sendFile.png" alt="sendFile">
+              </ul>
+              <br>
+              <br>
+              But in this case, we would have to setup way too many html pages for each response. <br>
+              This is where HTML templates come in handy, where certain parts of the document change. <br>
+              <br>
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Creating the first template</h4>
+            </button>
+            <div class="content">
+              First steps: <br>
+              <ol>
+                <li>Get EJS "npm i ejs" </li>
+                <li>In the docs it states, it is assumed that a views directory exists, so let's create a new folder called 'views' with a file called 'list.ejs'</li>
+                <li>'views.ejs' will function as the index.html page and will contain html</li>
+                <li>Copy all the html code used from the weekday part into list.ejs</li>
+                <br>
+                Quick challenge: Try to display the current day ("It's a thursday!") <br>
+                So in 'app.js' the code will check which day it is, and that output should be displayed on 'list.ejs'. <br>
+                EJS is using <b>markers</b>, which look like this: <b><%= <i>value</i> %></b> <br>
+
+                Let's create a variable 'kindOfDay' and place it with a marker in 'list.ejs':<br>
+                <img class="kindOfDay" src="Images\EJS\kindOfDay.png" alt="kindOfDay">
+                <br>
+                <br>
+                This is how it is connected in 'app.js': <br>
+                <img class="kindOfDay2" src="Images\EJS\kindOfDay2.png" alt="kindOfDay2">
+                <br>
+                Always make sure to not use the same name in the markers as the variable! (kindOfDay / day) <br>
+                <br>
+                <br>
+                Challenge: Change the existing code to render the current day <br>
+                As always, it can be done with multiple ways. But if more than 5 'if else statements'
+                are used, it is advised to use a 'switch'
+
+                Solution with 'if else statements': <br>
+                <img class="ifelseDay" src="Images\EJS\ifelseDay.png" alt="ifelseDay">
+                <br>
+                <br>
+                So
+                Solution with 'switch': <br>
+                <img class="switchDay" src="Images\EJS\switchDay.png" alt="switchDay">
+                <br>
+              </ol>
+              <a href="https://github.com/mde/ejs/wiki/Using-EJS-with-Express">Using EJS with Express</a>
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Running code Inside the EJS Template</h4>
+            </button>
+            <div class="content">
+As seen in the <a href="https://ejs.co/">EJS docs</a>, 'scriplet tags' can be used to
+write different code in HTML.<b>Remember to add it to every line of code that isn't html.</b> <br>
+<br>
+Example with displaying different h1 colors depending on what day it is:
+<img class="insideEJS" src="Images\EJS\insideEJS.png" alt="insideEJS">
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Passing Data from your Webpage to your Server </h4>
+            </button>
+            <div class="content">
+First steps: <br>
 <ul>
-  <li>Setup the boiler plate in index.html</li>
-  <li>res.sendFile is needed plus /index.html as a file to send</li>
-  <li>Set it up like this in app.js:</li>
-  <img class="sendFile" src="Images\EJS\sendFile.png" alt="sendFile">
+  <li>Created a list</li>
+  <li>Created a form, reminder:</li>
+  <img class="formData" src="Images\EJS\formData.png" alt="formData">
 </ul>
+Form inputs are handled by 'post requests'. This is how it should look like in 'app.js': <br>
+<img class="getnewItem" src="Images\EJS\getnewItem.png" alt="getnewItem">
+<br>
+It's also necessary to tell our app to use the bodyparser to be able to grab the value 'newItem' from the form.<br>
+<img class="useBodyParser" src="Images\EJS\useBodyParser.png" alt="useBodyParser">
 <br>
 <br>
-But in this case, we would have to setup way too many html pages for each response. <br>
-This is where HTML templates come in handy, where certain parts of the document change. <br>
- 
+Next step is, to push that value in the list above: <br>
+<img class="itemPost" src="Images\EJS\itemPost.png" alt="itemPost">
+<br>
+<br>
+This works with replacing the last item of list with each input. But it should be added to the list, so let's use an array: <br>
+<img class="itemsPush" src="Images\EJS\itemsPush.png" alt="itemsPush"> <br>
+<br>
+But the probleme here is, that it just pushes new items into the same line: <br>
+<img class="sameLine" src="Images\EJS\sameLine.png" alt="sameLine">
+<br>
+<br>
+This part is a bit complicated but can be solved using a 'for loop' inside HTML: <br>
+<img class="forloopList" src="Images\EJS\forloopList.png" alt="forloopList">
+
+
+
+
 
 
 
 
             </div>
+
+
+
+
 
           </div>
         </div>

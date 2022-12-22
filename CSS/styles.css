@@ -257,7 +257,8 @@ width: 25rem;
 
 .expressSetup, .expressSetup2, .aboutRoute, .setupTask, .formCalculator, .connectJSON, .bmiCalc, .apiOverview, .currentWeather, .Postman1,
 .Postman2, .setupExpress, .setupExpress2, .responseStatusCode, .weatherData, .weatherData2, .getURL, .weatherChallenge, .weatherChallenge2, .weatherIcon,
-.userLocation1, .userLocation2, .sendFile, .formPostrequest, .catchRequest, .bodyParser, .queryCityName, .cssConnection, .appSetup, .dayLogic, .cleanGetDay, .resWrite, .sendFile
+.userLocation1, .userLocation2, .sendFile, .formPostrequest, .catchRequest, .bodyParser, .queryCityName, .cssConnection, .appSetup, .dayLogic, .cleanGetDay, .resWrite, .sendFile, .kindOfDay, .kindOfDay2, .ifelseDay,
+.switchDay, .insideEJS, .formData, .getnewItem, .getnewItem, .itemPost, .itemsPush, .sameLine, .forloopList
 {
   width: 40rem;
 }
