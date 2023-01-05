@@ -2328,11 +2328,11 @@
               <h4>Running code Inside the EJS Template</h4>
             </button>
             <div class="content">
-As seen in the <a href="https://ejs.co/">EJS docs</a>, 'scriplet tags' can be used to
-write different code in HTML.<b>Remember to add it to every line of code that isn't html.</b> <br>
-<br>
-Example with displaying different h1 colors depending on what day it is:
-<img class="insideEJS" src="Images\EJS\insideEJS.png" alt="insideEJS">
+              As seen in the <a href="https://ejs.co/">EJS docs</a>, 'scriplet tags' can be used to
+              write different code in HTML.<b>Remember to add it to every line of code that isn't html.</b> <br>
+              <br>
+              Example with displaying different h1 colors depending on what day it is: <br>
+              <img class="insideEJS" src="Images\EJS\insideEJS.png" alt="insideEJS">
             </div>
 
 
@@ -2340,41 +2340,100 @@ Example with displaying different h1 colors depending on what day it is:
               <h4>Passing Data from your Webpage to your Server </h4>
             </button>
             <div class="content">
-First steps: <br>
-<ul>
-  <li>Created a list</li>
-  <li>Created a form, reminder:</li>
-  <img class="formData" src="Images\EJS\formData.png" alt="formData">
-</ul>
-Form inputs are handled by 'post requests'. This is how it should look like in 'app.js': <br>
-<img class="getnewItem" src="Images\EJS\getnewItem.png" alt="getnewItem">
-<br>
-It's also necessary to tell our app to use the bodyparser to be able to grab the value 'newItem' from the form.<br>
-<img class="useBodyParser" src="Images\EJS\useBodyParser.png" alt="useBodyParser">
-<br>
-<br>
-Next step is, to push that value in the list above: <br>
-<img class="itemPost" src="Images\EJS\itemPost.png" alt="itemPost">
-<br>
-<br>
-This works with replacing the last item of list with each input. But it should be added to the list, so let's use an array: <br>
-<img class="itemsPush" src="Images\EJS\itemsPush.png" alt="itemsPush"> <br>
-<br>
-But the probleme here is, that it just pushes new items into the same line: <br>
-<img class="sameLine" src="Images\EJS\sameLine.png" alt="sameLine">
-<br>
-<br>
-This part is a bit complicated but can be solved using a 'for loop' inside HTML: <br>
-<img class="forloopList" src="Images\EJS\forloopList.png" alt="forloopList">
+              First steps: <br>
+              <ul>
+                <li>Created a list</li>
+                <li>Created a form, reminder:</li>
+                <img class="formData" src="Images\EJS\formData.png" alt="formData">
+              </ul>
+              Form inputs are handled by 'post requests'. This is how it should look like in 'app.js': <br>
+              <img class="getnewItem" src="Images\EJS\getnewItem.png" alt="getnewItem">
+              <br>
+              It's also necessary to tell our app to use the bodyparser to be able to grab the value 'newItem' from the form.<br>
+              <img class="useBodyParser" src="Images\EJS\useBodyParser.png" alt="useBodyParser">
+              <br>
+              <br>
+              Next step is, to push that value in the list above: <br>
+              <img class="itemPost" src="Images\EJS\itemPost.png" alt="itemPost">
+              <br>
+              <br>
+              This works with replacing the last item of list with each input. But it should be added to the list, so let's use an array: <br>
+              <img class="itemsPush" src="Images\EJS\itemsPush.png" alt="itemsPush"> <br>
+              <br>
+              But the probleme here is, that it just pushes new items into the same line: <br>
+              <img class="sameLine" src="Images\EJS\sameLine.png" alt="sameLine">
+              <br>
+              <br>
+              This part is a bit complicated but can be solved using a 'for loop' inside HTML: <br>
+              <img class="forloopList" src="Images\EJS\forloopList.png" alt="forloopList">
 
+            </div>
 
-
-
+            <button type="button" class="collapsible">
+              <h4>The concept of scope in the context of js</h4>
+            </button>
+            <div class="content">
+Example with a variable "x" inside a function. (local scope) <br>
+The scope of variable x is limited to "function a" because it's inside the curly braces.<br>
+<img src="Images\EJS\scopeFunction.png" alt="scopeFunction"> <br>
+<br>
+If the variable would be defined outside the function, it is called <b>Globa Variables</b> <br>
+<br>
+<br>
+<a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">Good article about the scope of the variables <b>var, let and const</b></a>
 
 
 
 
             </div>
+
+            <button type="button" class="collapsible">
+              <h4>Add Pre-Made CSS Stylesheets to Your Website</h4>
+            </button>
+            <div class="content">
+<ol>
+  <li>Download the skeleton CSS stylesheet, create a folder called css and move it into the folder</li>
+  <li>link it in the header</li>
+  <li></li>
+</ol>
+<br>
+But like this it won't load the css properties because the css folder is in the root of the project. <br>
+When using express it doesn't automatically serve up all the files in the project. It only serves up the main access point which is defined <br>
+which is defined in "package.json": <br>
+<img src="Images\EJS\mainPackage.png" alt="mainPackage">
+<br>
+On a static website the stylesheet can easily be href'ed but on a server based page it has to be implemented. <br>
+In order to access the css we have to tell express explicitly to serve up the css files. Basically we have to tell express the location and then to use it. <br>
+<br><br>
+Normally, developers create a new folder called "public" where the css, images etc are stored. And then we can tell express to serve up the "public" folder as a static resource. <br>
+<br>
+How to do that: <br>
+<ol>
+  <li>Go to app.js</li>
+  <li>Just under app.use(bodyParser.urlencoded....) write</li>
+  <li><b>app.use(express.static("public"));</b></li>
+</ol>
+<img src="Images\EJS\expressStatic.png" alt="expressStatic"> <br>
+<br>
+With that skeleton css file, all the classes have to be added in "list.ejs" in order to be displayed correctly. <br>
+<br>
+Step by step: <br>
+<ol>
+  <li>Create a new div for the header, called "box" (to apply the values)</li>
+  <li>Add the ID "heading" to the div, to get the header values from css</li>
+  <li>Also move the item-list into a div with the class "box"</li>
+  <li>To get rid of the unordered list (bullet points), delete the UL and create a div with the class "item"</li>
+  <li>Change "li" to a paragraph</li>
+  <li>Instead of bullet points, add a checkbox (input > type="checkbox")</li>
+  <li>Move the button from the bottom into the div "item" and give it the class "item" as well</li>
+  <li>At the form, add a placeholder="New Item" and change the button-text to "+" </li>
+<br>
+<li>After that, turn off autocomplete by using: autocomplete="off" in the input field</li>
+</ol>
+
+            </div>
+
+
 
 
 
@@ -2383,8 +2442,6 @@ This part is a bit complicated but can be solved using a 'for loop' inside HTML:
           </div>
         </div>
   </section>
-
-
 
 
 
