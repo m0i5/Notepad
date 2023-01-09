@@ -2108,11 +2108,11 @@
               How to set up version control: <br>
               <ol>
                 <li>Initialize git via "git init"</li>
-                <li>To check if git is actually initialized, use "ls -a" to check</li>
-                <li>In order to track the version, it has to be moved to a "staging area"</li>
-                <li>To check what is in the staging area use: "git status"</li>
+                <li>To check if git is actually initialized, use "ls -a" to check</li> <br>
+                In order to track the version, it has to be moved to a "staging area" <br>
+                To check what is in the staging area use: "git status"<br>
                 <li>To add the file to staging use: "git add "<filename>"</li>
-                <li>After that, commit it to version control: "git commit -m"</li> <br>
+                <li>After that, commit it to version control: "git commit -m "message""</li> <br>
                 Note: "-m" is used to add a message, which can be used to identify the version. <br><br>
                 <li>Use "git log" to check for more information</li> <br>
                 Note: Adding multiple files to staging: "git add ." <br><br>
@@ -2376,14 +2376,14 @@
               <h4>The concept of scope in the context of js</h4>
             </button>
             <div class="content">
-Example with a variable "x" inside a function. (local scope) <br>
-The scope of variable x is limited to "function a" because it's inside the curly braces.<br>
-<img src="Images\EJS\scopeFunction.png" alt="scopeFunction"> <br>
-<br>
-If the variable would be defined outside the function, it is called <b>Globa Variables</b> <br>
-<br>
-<br>
-<a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">Good article about the scope of the variables <b>var, let and const</b></a>
+              Example with a variable "x" inside a function. (local scope) <br>
+              The scope of variable x is limited to "function a" because it's inside the curly braces.<br>
+              <img src="Images\EJS\scopeFunction.png" alt="scopeFunction"> <br>
+              <br>
+              If the variable would be defined outside the function, it is called <b>Globa Variables</b> <br>
+              <br>
+              <br>
+              <a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">Good article about the scope of the variables <b>var, let and const</b></a>
 
 
 
@@ -2394,45 +2394,45 @@ If the variable would be defined outside the function, it is called <b>Globa Var
               <h4>Add Pre-Made CSS Stylesheets to Your Website</h4>
             </button>
             <div class="content">
-<ol>
-  <li>Download the skeleton CSS stylesheet, create a folder called css and move it into the folder</li>
-  <li>link it in the header</li>
-  <li></li>
-</ol>
-<br>
-But like this it won't load the css properties because the css folder is in the root of the project. <br>
-When using express it doesn't automatically serve up all the files in the project. It only serves up the main access point which is defined <br>
-which is defined in "package.json": <br>
-<img src="Images\EJS\mainPackage.png" alt="mainPackage">
-<br>
-On a static website the stylesheet can easily be href'ed but on a server based page it has to be implemented. <br>
-In order to access the css we have to tell express explicitly to serve up the css files. Basically we have to tell express the location and then to use it. <br>
-<br><br>
-Normally, developers create a new folder called "public" where the css, images etc are stored. And then we can tell express to serve up the "public" folder as a static resource. <br>
-<br>
-How to do that: <br>
-<ol>
-  <li>Go to app.js</li>
-  <li>Just under app.use(bodyParser.urlencoded....) write</li>
-  <li><b>app.use(express.static("public"));</b></li>
-</ol>
-<img src="Images\EJS\expressStatic.png" alt="expressStatic"> <br>
-<br>
-With that skeleton css file, all the classes have to be added in "list.ejs" in order to be displayed correctly. <br>
-<br>
-Step by step: <br>
-<ol>
-  <li>Create a new div for the header, called "box" (to apply the values)</li>
-  <li>Add the ID "heading" to the div, to get the header values from css</li>
-  <li>Also move the item-list into a div with the class "box"</li>
-  <li>To get rid of the unordered list (bullet points), delete the UL and create a div with the class "item"</li>
-  <li>Change "li" to a paragraph</li>
-  <li>Instead of bullet points, add a checkbox (input > type="checkbox")</li>
-  <li>Move the button from the bottom into the div "item" and give it the class "item" as well</li>
-  <li>At the form, add a placeholder="New Item" and change the button-text to "+" </li>
-<br>
-<li>After that, turn off autocomplete by using: autocomplete="off" in the input field</li>
-</ol>
+              <ol>
+                <li>Download the skeleton CSS stylesheet, create a folder called css and move it into the folder</li>
+                <li>link it in the header</li>
+                <li></li>
+              </ol>
+              <br>
+              But like this it won't load the css properties because the css folder is in the root of the project. <br>
+              When using express it doesn't automatically serve up all the files in the project. It only serves up the main access point which is defined <br>
+              which is defined in "package.json": <br>
+              <img src="Images\EJS\mainPackage.png" alt="mainPackage">
+              <br>
+              On a static website the stylesheet can easily be href'ed but on a server based page it has to be implemented. <br>
+              In order to access the css we have to tell express explicitly to serve up the css files. Basically we have to tell express the location and then to use it. <br>
+              <br><br>
+              Normally, developers create a new folder called "public" where the css, images etc are stored. And then we can tell express to serve up the "public" folder as a static resource. <br>
+              <br>
+              How to do that: <br>
+              <ol>
+                <li>Go to app.js</li>
+                <li>Just under app.use(bodyParser.urlencoded....) write</li>
+                <li><b>app.use(express.static("public"));</b></li>
+              </ol>
+              <img src="Images\EJS\expressStatic.png" alt="expressStatic"> <br>
+              <br>
+              With that skeleton css file, all the classes have to be added in "list.ejs" in order to be displayed correctly. <br>
+              <br>
+              Step by step: <br>
+              <ol>
+                <li>Create a new div for the header, called "box" (to apply the values)</li>
+                <li>Add the ID "heading" to the div, to get the header values from css</li>
+                <li>Also move the item-list into a div with the class "box"</li>
+                <li>To get rid of the unordered list (bullet points), delete the UL and create a div with the class "item"</li>
+                <li>Change "li" to a paragraph</li>
+                <li>Instead of bullet points, add a checkbox (input > type="checkbox")</li>
+                <li>Move the button from the bottom into the div "item" and give it the class "item" as well</li>
+                <li>At the form, add a placeholder="New Item" and change the button-text to "+" </li>
+                <br>
+                <li>After that, turn off autocomplete by using: autocomplete="off" in the input field</li>
+              </ol>
 
             </div>
 
