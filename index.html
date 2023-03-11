@@ -1680,6 +1680,9 @@
                 <li>mkdir - create folder</li>
                 <li>touch - create file</li>
 
+                <li>To get touch working on windows use: npm install touch-cli -g</li>
+                <li>Clear terminal on windows: ctrl+L or Ctrl+Shift+K</li>
+
               </ul>
             </div>
 
@@ -2045,32 +2048,32 @@
               <h4>Creating a newsletter APP</h4>
             </button>
             <div class="content">
-Challenge: <br>
-<ol>
-  <li>CD to where you want to create your new project e.g. Desktop</li>
-  <li>Create New Project Folder called Newletter-Signup</li>
-  <li>Inside Newsletter-Signup, create a new app.js file, a signup.html file, success html and failure.html files.</li>
-  <li>Initialise npm with default options.</li>
-  <li>Install body-parser, express and request npm modules to the new project</li>
-  <li>Require the newly installed modules inside app.js</li>
-  <li>Create a new express app and set it to listen on port 3k</li>
-  <li>Once port is set up, log "server is running on port 3000"</li>
-</ol>
+              Challenge: <br>
+              <ol>
+                <li>CD to where you want to create your new project e.g. Desktop</li>
+                <li>Create New Project Folder called Newletter-Signup</li>
+                <li>Inside Newsletter-Signup, create a new app.js file, a signup.html file, success html and failure.html files.</li>
+                <li>Initialise npm with default options.</li>
+                <li>Install body-parser, express and request npm modules to the new project</li>
+                <li>Require the newly installed modules inside app.js</li>
+                <li>Create a new express app and set it to listen on port 3k</li>
+                <li>Once port is set up, log "server is running on port 3000"</li>
+              </ol>
 
-Once set up, copy a bootstrap Signup-Form: <br>
-<a href="https://getbootstrap.com/docs/5.2/examples/sign-in/">Bootstrap Signup Form</a>
-<br>
-Either set it up via CDN or just copy the whole page and modify it. <br> <br>
-Next, create a CSS file and copy all the values in there. Make sure that it works locally (copy full project path). <br>
-When it works, add the following code in the app.js file to be able to host it:<br>
-<img class="cssConnection" src="Images/Newsletter Project/cssConnection.png" alt="cssConnection"> <br>
-<br><br>
-What is bodyParser?<br>
-in order to read HTTP POST data, we have to use "body-parser" node module. body-parser is a piece of
-express middleware that reads a form's input and stores it as a javascript object accessible through <i>req.body</i> <br>
+              Once set up, copy a bootstrap Signup-Form: <br>
+              <a href="https://getbootstrap.com/docs/5.2/examples/sign-in/">Bootstrap Signup Form</a>
+              <br>
+              Either set it up via CDN or just copy the whole page and modify it. <br> <br>
+              Next, create a CSS file and copy all the values in there. Make sure that it works locally (copy full project path). <br>
+              When it works, add the following code in the app.js file to be able to host it:<br>
+              <img class="cssConnection" src="Images/Newsletter Project/cssConnection.png" alt="cssConnection"> <br>
+              <br><br>
+              What is bodyParser?<br>
+              in order to read HTTP POST data, we have to use "body-parser" node module. body-parser is a piece of
+              express middleware that reads a form's input and stores it as a javascript object accessible through <i>req.body</i> <br>
 
 
-Test Test
+
 
             </div>
 
@@ -2080,6 +2083,445 @@ Test Test
   </section>
 
 
+  <!--- Git, Github & Version Control -------->
+
+  <section class="DOM" id="domSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i>Git, github and Version Control</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Introduction</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>Version Control Using Git and the Command Line</h4>
+            </button>
+            <div class="content">
+              <b>"touch" on mac to open files, "start" on Windows/Linux</b><br>
+              <br>
+              How to set up version control: <br>
+              <ol>
+                <li>Initialize git via "git init"</li>
+                <li>To check if git is actually initialized, use "ls -a" to check</li> <br>
+                In order to track the version, it has to be moved to a "staging area" <br>
+                To check what is in the staging area use: "git status"<br>
+                <li>To add the file to staging use: "git add "<filename>"</li>
+                <li>After that, commit it to version control: "git commit -m "message""</li> <br>
+                Note: "-m" is used to add a message, which can be used to identify the version. <br><br>
+                <li>Use "git log" to check for more information</li> <br>
+                Note: Adding multiple files to staging: "git add ." <br><br>
+              </ol>
+              <br><br>
+              Test: <br>
+              Change chapter3.txt contents to something random. <br>
+              Use: "git status" to see that something was changed. <br>
+              It says that there are modified files that haven't been committed or added to the staging area. <br>
+              To actually see what has been changed, use: "git diff chapter3.txt" <br>
+              To roll back to the previous version use: "git checkout < file name>" <br>
+
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Gitignore</h4>
+            </button>
+            <div class="content">
+              Use Git ignore to filter out important information, that shouldn't be published on a public repository. <br>
+              <br>
+              How it works: <br>
+              <ol>
+                <li>Add ".gitignore" with touch cmd (touch .gitignore)</li>
+                <li>Check if it was created using "ls -a" (It's a hidden file)</li>
+                <li>Specify in the gitignore file, what should be excluded. For example: secrets.txt file1.txt</li>
+                <li>Use "git add ." to push it to staging</li>
+                <li>Check with "git status" which files were pushed (secrets.txt and file1.txt should've been excluded at this stage)</li>
+                <li>Commit it using: "git commit -m "Your commit info"</li>
+                <li></li>
+              </ol>
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Branching and Merging</h4>
+            </button>
+            <div class="content">
+              Branching can be used to test out experimental code on a branch, without changing the main code. <br>
+              If the experimental branch has some good features, it can be merged to the main code. <br>
+
+              First steps doing it locally with the TestStory folder: <br>
+              <ol>
+                <li>Use "git branch alien-test"</li>
+                <li>Use "git branch" to see all branches (alien-test & *main in this case)</li>
+                <br>
+                Note: The selected branch will have a "*" before the branch name, "*main"
+                <br>
+                <li>To switch branches, use "git checkout "branch-name"</li>
+                <li>In this test, I changed file 1 & 3 and pushed it using "git add ." & "git commit -m "modify chapter 1&3""</li>
+                <li>With "git log" the changes are logged, with additional info in which branch</li>
+                <li>Now, when changing back to the main branch ("git checkout main"), the changes wont be visible.</li>
+                <br>
+                <br>
+                <li>Let's create a chapter4.txt on main and push it (git add . & git commit -m "message")</li>
+                <li>To merge the changes to the alien-test branch, use "git merge alien-test" while being on main</li>
+                <li>A window will open to create a merge message. Use ":q!" to close it</li>
+                <li>Afterwards, use "git push origin main"</li>
+              </ol>
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Forking and Pull Requests</h4>
+            </button>
+            <div class="content">
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+  </section>
+
+
+
+  <!--- EJS -------->
+  <section class="ejsSection" id="domSection">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i>EJS</h1>
+        </div>
+      </div>
+
+      <div class="row-html">
+        <div class="col-lg-12">
+          <h3 class="note-title-small">Embedded JavaScript templating</h3>
+          <div class="collaps-section">
+
+            <button type="button" class="collapsible">
+              <h4>What is EJS?</h4>
+            </button>
+            <div class="content">
+              EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Setting up the project</h4>
+            </button>
+            <div class="content">
+              <ol>
+                <li>Create a folder called todolist-v1 with index.html and app.js files using the terminal</li>
+                <li>initiliaze npm "npm init"</li>
+                <li>install npm "npm install"</li>
+                <li>install express/bodyparser "npm i express body-parser"</li>
+                <li>Setup the app.js file</li>
+                <br>
+                <img class="appSetup" src="Images\EJS\appSetup.png" alt="appSetup">
+                <br>
+              </ol>
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>First smoll test</h4>
+            </button>
+            <div class="content">
+              <ul>
+                <li>Goal is to write some logic that sends a certain message depending what day it is</li>
+                <li>Mo-Fr = 1-5</li>
+                <li>Sa = 6</li>
+                <li>So = 0</li>
+              </ul>
+              <br>
+              <img class="dayLogic" src="Images\EJS\dayLogic.png" alt="dayLogic">
+              <br>
+              <br>
+              How to test it: <br>
+              <ol>
+                <li>Open hyperTerminal</li>
+                <li>Start nodemon js "nodemon app.js"</li>
+                <li>If node isn't installed, use: "npm install-g nodemon"</li>
+                <li></li>
+              </ol>
+
+
+              It can be cleaned up using variables: <br>
+              <img class="cleanGetDay" src="Images\EJS\cleanGetDay.png" alt="cleanGetDay">
+              <br>
+              <a href="https://www.w3schools.com/jsref/jsref_getday.asp">More info about getDay()</a> <br>
+              <br>
+              <br>
+              <br>
+              <b>Note:</b>res.send can only send back one final piece of data. In order
+              so send back multiple pieces of data, use <b>"res.write"</b> <br>
+              <img class="resWrite" src="Images\EJS\resWrite.png" alt="resWrite">
+              <br>
+
+              But instead of writing everything in JavaScript, an entire html file can be send as an aswer to the if-else statement: <br>
+              <ul>
+                <li>Setup the boiler plate in index.html</li>
+                <li>res.sendFile is needed plus /index.html as a file to send</li>
+                <li>Set it up like this in app.js:</li>
+                <img class="sendFile" src="Images\EJS\sendFile.png" alt="sendFile">
+              </ul>
+              <br>
+              <br>
+              But in this case, we would have to setup way too many html pages for each response. <br>
+              This is where HTML templates come in handy, where certain parts of the document change. <br>
+              <br>
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Creating the first template</h4>
+            </button>
+            <div class="content">
+              First steps: <br>
+              <ol>
+                <li>Get EJS "npm i ejs" </li>
+                <li>In the docs it states, it is assumed that a views directory exists, so let's create a new folder called 'views' with a file called 'list.ejs'</li>
+                <li>'views.ejs' will function as the index.html page and will contain html</li>
+                <li>Copy all the html code used from the weekday part into list.ejs</li>
+                <br>
+                Quick challenge: Try to display the current day ("It's a thursday!") <br>
+                So in 'app.js' the code will check which day it is, and that output should be displayed on 'list.ejs'. <br>
+                EJS is using <b>markers</b>, which look like this: <b><%= <i>value</i> %></b> <br>
+
+                Let's create a variable 'kindOfDay' and place it with a marker in 'list.ejs':<br>
+                <img class="kindOfDay" src="Images\EJS\kindOfDay.png" alt="kindOfDay">
+                <br>
+                <br>
+                This is how it is connected in 'app.js': <br>
+                <img class="kindOfDay2" src="Images\EJS\kindOfDay2.png" alt="kindOfDay2">
+                <br>
+                Always make sure to not use the same name in the markers as the variable! (kindOfDay / day) <br>
+                <br>
+                <br>
+                Challenge: Change the existing code to render the current day <br>
+                As always, it can be done with multiple ways. But if more than 5 'if else statements'
+                are used, it is advised to use a 'switch'
+
+                Solution with 'if else statements': <br>
+                <img class="ifelseDay" src="Images\EJS\ifelseDay.png" alt="ifelseDay">
+                <br>
+                <br>
+                So
+                Solution with 'switch': <br>
+                <img class="switchDay" src="Images\EJS\switchDay.png" alt="switchDay">
+                <br>
+              </ol>
+              <a href="https://github.com/mde/ejs/wiki/Using-EJS-with-Express">Using EJS with Express</a>
+            </div>
+
+
+
+            <button type="button" class="collapsible">
+              <h4>Running code Inside the EJS Template</h4>
+            </button>
+            <div class="content">
+              As seen in the <a href="https://ejs.co/">EJS docs</a>, 'scriplet tags' can be used to
+              write different code in HTML.<b>Remember to add it to every line of code that isn't html.</b> <br>
+              <br>
+              Example with displaying different h1 colors depending on what day it is: <br>
+              <img class="insideEJS" src="Images\EJS\insideEJS.png" alt="insideEJS">
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Passing Data from your Webpage to your Server </h4>
+            </button>
+            <div class="content">
+              First steps: <br>
+              <ul>
+                <li>Created a list</li>
+                <li>Created a form, reminder:</li>
+                <img class="formData" src="Images\EJS\formData.png" alt="formData">
+              </ul>
+              Form inputs are handled by 'post requests'. This is how it should look like in 'app.js': <br>
+              <img class="getnewItem" src="Images\EJS\getnewItem.png" alt="getnewItem">
+              <br>
+              It's also necessary to tell our app to use the bodyparser to be able to grab the value 'newItem' from the form.<br>
+              <img class="useBodyParser" src="Images\EJS\useBodyParser.png" alt="useBodyParser">
+              <br>
+              <br>
+              Next step is, to push that value in the list above: <br>
+              <img class="itemPost" src="Images\EJS\itemPost.png" alt="itemPost">
+              <br>
+              <br>
+              This works with replacing the last item of list with each input. But it should be added to the list, so let's use an array: <br>
+              <img class="itemsPush" src="Images\EJS\itemsPush.png" alt="itemsPush"> <br>
+              <br>
+              But the probleme here is, that it just pushes new items into the same line: <br>
+              <img class="sameLine" src="Images\EJS\sameLine.png" alt="sameLine">
+              <br>
+              <br>
+              This part is a bit complicated but can be solved using a 'for loop' inside HTML: <br>
+              <img class="forloopList" src="Images\EJS\forloopList.png" alt="forloopList">
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>The concept of scope in the context of js</h4>
+            </button>
+            <div class="content">
+              Example with a variable "x" inside a function. (local scope) <br>
+              The scope of variable x is limited to "function a" because it's inside the curly braces.<br>
+              <img src="Images\EJS\scopeFunction.png" alt="scopeFunction"> <br>
+              <br>
+              If the variable would be defined outside the function, it is called <b>Globa Variables</b> <br>
+              <br>
+              <br>
+              <a href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">Good article about the scope of the variables <b>var, let and const</b></a>
+
+
+
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Add Pre-Made CSS Stylesheets to Your Website</h4>
+            </button>
+            <div class="content">
+              <ol>
+                <li>Download the skeleton CSS stylesheet, create a folder called css and move it into the folder</li>
+                <li>link it in the header</li>
+                <li></li>
+              </ol>
+              <br>
+              But like this it won't load the css properties because the css folder is in the root of the project. <br>
+              When using express it doesn't automatically serve up all the files in the project. It only serves up the main access point which is defined <br>
+              which is defined in "package.json": <br>
+              <img src="Images\EJS\mainPackage.png" alt="mainPackage">
+              <br>
+              On a static website the stylesheet can easily be href'ed but on a server based page it has to be implemented. <br>
+              In order to access the css we have to tell express explicitly to serve up the css files. Basically we have to tell express the location and then to use it. <br>
+              <br><br>
+              Normally, developers create a new folder called "public" where the css, images etc are stored. And then we can tell express to serve up the "public" folder as a static resource. <br>
+              <br>
+              How to do that: <br>
+              <ol>
+                <li>Go to app.js</li>
+                <li>Just under app.use(bodyParser.urlencoded....) write</li>
+                <li><b>app.use(express.static("public"));</b></li>
+              </ol>
+              <img src="Images\EJS\expressStatic.png" alt="expressStatic"> <br>
+              <br>
+              With that skeleton css file, all the classes have to be added in "list.ejs" in order to be displayed correctly. <br>
+              <br>
+              Step by step: <br>
+              <ol>
+                <li>Create a new div for the header, called "box" (to apply the values)</li>
+                <li>Add the ID "heading" to the div, to get the header values from css</li>
+                <li>Also move the item-list into a div with the class "box"</li>
+                <li>To get rid of the unordered list (bullet points), delete the UL and create a div with the class "item"</li>
+                <li>Change "li" to a paragraph</li>
+                <li>Instead of bullet points, add a checkbox (input > type="checkbox")</li>
+                <li>Move the button from the bottom into the div "item" and give it the class "item" as well</li>
+                <li>At the form, add a placeholder="New Item" and change the button-text to "+" </li>
+                <br>
+                <li>After that, turn off autocomplete by using: autocomplete="off" in the input field</li>
+              </ol>
+
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>EJS Layouts</h4>
+            </button>
+            <div class="content">
+              Setting it up step by step: <br>
+              <ol>
+                <li>Create a footer.ejs and header.ejs within the views folder</li> <br>
+                <img class="headerEJS" src="Images\EJS\headerEJS.png" alt="headerEJS">
+                <img class="footerEJS" src="Images\EJS\footerEJS.png" alt="footerEJS">
+                <li>Now just include it in "list.ejs" like this:</li> <br>
+                <img class="layoutEJS" src="Images\EJS\layoutEJS.png" alt="layoutEJS">
+              </ol>
+              <br>
+              <br>
+              <br>
+              <b>About page:</b>
+              <ol>
+                <li>Create "about.ejs" in the views folder</li>
+                <li>Fill it with something random to begin with (h1/paragraph etc)</li>
+                <li>Make a get request on "app.js":</li> <br>
+                <img class="aboutEJS" src="Images\EJS\aboutEJS.png" alt="aboutEJS">
+                <br>
+                <li>Include header and footer, boom done.</li>
+              </ol>
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Understanding Node Module Exports</h4>
+            </button>
+            <div class="content">
+<b>How to pass functions and data between files</b>
+<br>
+Intro: <br>
+Example with "let today = new Date();" that's nested in app.js. <br>
+With only a few lines of code it is easy to keep the overview, but as soon as we want to implement more, it gets unstructured and cluttered. <br>
+<br>
+<ol>
+  <li>Create a new file called "date.js" (which can function as a module for the date-code)</li>
+  <li>Copy and paste the code from app.js into date.js:</li> <br>
+  <img class="dateEJS" src="Images\EJS\dateEJS.png" alt="dateEJS">
+  <br>
+  <li>Now wrap the code in a function and set the return to "day" (because day is used in app.js):</li>
+  <br>
+  <img class="functionEJS" src="Images\EJS\functionEJS.png" alt="functionEJS">
+  <br>
+  <br>
+  But how can we use this function somewhere else? <br>
+  ---> NODE.js <br>
+  <br>
+</ol>
+<ol>
+  <li>Require /date.js in app.js like this:</li>
+  <br>
+  <img class="requireEJS" src="Images\EJS\requireEJS.png" alt="requireEJS">
+  <br>
+  But when console logging it, it shows that nothing is exported. <br>
+  In order to get it going, we need to export the function in date.js like this:
+  <br>
+  <img class="moduleExport" src="Images\EJS\moduleExport.png" alt="moduleExport">
+  <br>
+  So "module.exports = getDate()" exports the function and "const date = require (__dirname + "/date.js")" <br>
+  fetches that function. With "date" we can now use that function wherever we want. <br>
+  <br>
+  Example with multiple functions and how to tap into them in app.js: <br>
+  <img class="getdayEJS" src="Images\EJS\getdayEJS.png" alt="getdayEJS"> <br>
+  Tap in: <br>
+  <img class="dategetdayEJS" src="Images\EJS\dategetdayEJS.png" alt="dategetdayEJS">
+</ol>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+  </section>
 
 
 
