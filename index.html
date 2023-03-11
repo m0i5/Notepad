@@ -2469,44 +2469,44 @@
               <h4>Understanding Node Module Exports</h4>
             </button>
             <div class="content">
-<b>How to pass functions and data between files</b>
-<br>
-Intro: <br>
-Example with "let today = new Date();" that's nested in app.js. <br>
-With only a few lines of code it is easy to keep the overview, but as soon as we want to implement more, it gets unstructured and cluttered. <br>
-<br>
-<ol>
-  <li>Create a new file called "date.js" (which can function as a module for the date-code)</li>
-  <li>Copy and paste the code from app.js into date.js:</li> <br>
-  <img class="dateEJS" src="Images\EJS\dateEJS.png" alt="dateEJS">
-  <br>
-  <li>Now wrap the code in a function and set the return to "day" (because day is used in app.js):</li>
-  <br>
-  <img class="functionEJS" src="Images\EJS\functionEJS.png" alt="functionEJS">
-  <br>
-  <br>
-  But how can we use this function somewhere else? <br>
-  ---> NODE.js <br>
-  <br>
-</ol>
-<ol>
-  <li>Require /date.js in app.js like this:</li>
-  <br>
-  <img class="requireEJS" src="Images\EJS\requireEJS.png" alt="requireEJS">
-  <br>
-  But when console logging it, it shows that nothing is exported. <br>
-  In order to get it going, we need to export the function in date.js like this:
-  <br>
-  <img class="moduleExport" src="Images\EJS\moduleExport.png" alt="moduleExport">
-  <br>
-  So "module.exports = getDate()" exports the function and "const date = require (__dirname + "/date.js")" <br>
-  fetches that function. With "date" we can now use that function wherever we want. <br>
-  <br>
-  Example with multiple functions and how to tap into them in app.js: <br>
-  <img class="getdayEJS" src="Images\EJS\getdayEJS.png" alt="getdayEJS"> <br>
-  Tap in: <br>
-  <img class="dategetdayEJS" src="Images\EJS\dategetdayEJS.png" alt="dategetdayEJS">
-</ol>
+              <b>How to pass functions and data between files</b>
+              <br>
+              Intro: <br>
+              Example with "let today = new Date();" that's nested in app.js. <br>
+              With only a few lines of code it is easy to keep the overview, but as soon as we want to implement more, it gets unstructured and cluttered. <br>
+              <br>
+              <ol>
+                <li>Create a new file called "date.js" (which can function as a module for the date-code)</li>
+                <li>Copy and paste the code from app.js into date.js:</li> <br>
+                <img class="dateEJS" src="Images\EJS\dateEJS.png" alt="dateEJS">
+                <br>
+                <li>Now wrap the code in a function and set the return to "day" (because day is used in app.js):</li>
+                <br>
+                <img class="functionEJS" src="Images\EJS\functionEJS.png" alt="functionEJS">
+                <br>
+                <br>
+                But how can we use this function somewhere else? <br>
+                ---> NODE.js <br>
+                <br>
+              </ol>
+              <ol>
+                <li>Require /date.js in app.js like this:</li>
+                <br>
+                <img class="requireEJS" src="Images\EJS\requireEJS.png" alt="requireEJS">
+                <br>
+                But when console logging it, it shows that nothing is exported. <br>
+                In order to get it going, we need to export the function in date.js like this:
+                <br>
+                <img class="moduleExport" src="Images\EJS\moduleExport.png" alt="moduleExport">
+                <br>
+                So "module.exports = getDate()" exports the function and "const date = require (__dirname + "/date.js")" <br>
+                fetches that function. With "date" we can now use that function wherever we want. <br>
+                <br>
+                Example with multiple functions and how to tap into them in app.js: <br>
+                <img class="getdayEJS" src="Images\EJS\getdayEJS.png" alt="getdayEJS"> <br>
+                Tap in: <br>
+                <img class="dategetdayEJS" src="Images\EJS\dategetdayEJS.png" alt="dategetdayEJS">
+              </ol>
 
 
 
