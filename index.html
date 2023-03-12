@@ -2658,9 +2658,66 @@
             </button>
             <div class="content">
               <br>
-              
+              Let's say we wanted another product in our database called «rubber» with the same schema as before (name / price / stock). <br>
+              But this time, it also has reviews in array. Inside that array we have a few 'embedded' documents: <br>
+              <br>
+              <img class="readOperations" src="Images/mongoDB/relationshipArray.png" alt="relationshipArray">
+            </div>
 
 
+            <button type="button" class="collapsible">
+              <h4>MongoDB with Node.js</h4>
+            </button>
+            <div class="content">
+              <br>
+              Since we want to build applications with databases, the purest form of mongoDB above isn't of any real use. <br>
+              So we need to learn how to integrate the mongoDB database with our node.js application. <br>
+              When creating a Node app that needs to connect to mongoDB database, there are two options: <br>
+              <br>
+              - <b>mongoDB native driver</b> <br>
+              - <b>ODM (object document mapper) mongoose, this is the popular way when working with Node.js</b> <br>
+              <br>
+              <br>
+              <br>
+              Goal is, to setup a small project called 'FruitsProject' with a database that contains ratings. <br>
+              At this point, the course is really outdated. The setup is completely different and solutions from the Q&A are needed. <br>
+
+              Step by step: <br>
+              <ol>
+                <li>mkdir FruitsProject > cd into it</li>
+                <li>touch app.js</li>
+                <li>npm init -y (-y to accept all defaults)</li>
+                <li>npm i mongodb</li>
+              </ol>
+              <br>
+              <br>
+              Luckily, user 'Jivhesh' is a godsend and helped restructure the code that it works: <br>
+              In 2023 we need to use <b>async</b> and <b>await</b> because inserMany([]) and findOne({}) don't accept callbacks anymore! <br>
+              <br>
+              Take a close look at his app.js file (in the FruitsProject folder) and comments. If everything is more or less clear, test it like this: <br>
+              <ol>
+                <li>Open the hyperTerminal and tap into the project, let it start running with 'node app.js'</li>
+                <li>Let 'mongod' run in the background in a different tab (to be able to connect)</li>
+                <li>Open up a mongo shell with 'mongosh' and tap into the correct DB</li>
+                <ul>
+                  <li>'mongosh'</li>
+                  <li>'show dbs'</li>
+                  <li>'use fruitsDB'</li>
+                  <li>'show collections'</li>
+                  <li>'db.fruits.find()' to check if it worked</li>
+                </ul>
+              </ol>
+              <br>
+              <b>Note:</b> The code doesn't update the DB's because it only creates the database / collection if it doesn't already exist! <br>
+              <br>
+              <br>
+              <b>Quitting the mongod server:</b>
+              <br>
+              <img class="deleteOperations" src="Images/mongoDB/quitServer.png" alt="quitServer">
+
+
+
+              <br>
             </div>
 
 
