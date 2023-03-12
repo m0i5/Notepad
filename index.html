@@ -2750,6 +2750,30 @@
             <div class="content">
               Again, this part of the course is outdated. But with the help from other students, this is how it can work in 2023: <br>
               <br>
+              How to delete database: <br>
+              Navigate to the database (in this case fruitsDB) and use <b>'db.dropDatabase'</b> <br>
+              <br>
+              Install mongoose: <br>
+              <b>npm i mongoose</b> <br>
+              <br>
+              <br>
+              Manimanohar2001's solution worked well (a lot of changes since no callbacks are accepted). <br>
+              It's stored in 'FruitsProject' as 'app.js'. The old code with the native mongoDB client is stored in 'oldApp.js'. <br>
+              <b>Note:</b> Everytime node app.js is run, it will store those fruits in the DB again. It won't loop through it to check. <br>
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>Reading from your database with mongoose</h4>
+            </button>
+            <div class="content">
+              To read, we can use .find method, but the shown code in the course doesn't work since callbacks aren't supported anymore. <br>
+              The workaround looks like this: <br>
+              <img class="deleteOperations" src="Images/Mongoose/fruitFind.png" alt="fruitFind">
+              <br>
+              <b>Note:</b> //comment out 'Fruit.insertMany' above, so the fruits don't get added again. <br>
+              <br>
+              
 
             </div>
 
