@@ -2541,16 +2541,85 @@
           <div class="collaps-section">
 
             <button type="button" class="collapsible">
-              <h4>Installing MongoDB on Windows / macOS</h4>
+              <h4>Intro / Installing MongoDB on Windows / macOS</h4>
             </button>
             <div class="content">
-            Link here
+              <a href="https://www.youtube.com/watch?v=-bt_y4Loofg">mongoDB explained in 100 sec</a> <br>
+              <br>
+              <a href="https://www.youtube.com/watch?v=NLw7Tln6IeM&t=335s">Easy tutorial by Professor Sadat on how to get it running</a>
             </div>
-            <h3>Humongous amount of quality knowledge in just a 100 seconds</h3> <br>
-<a href="https://www.youtube.com/watch?v=-bt_y4Loofg">mongoDB explained in 100 sec</a> <br>
-<br>
-<br>
-<a href="https://www.youtube.com/watch?v=NLw7Tln6IeM&t=335s">Easy tutorial by Professor Sadat on how to get it running:</a>
+
+            <button type="button" class="collapsible">
+              <h4>mongoDB CRUD Operation in the Shell: <b>C</b>reate</h4>
+            </button>
+            <div class="content">
+
+
+              CRUD = <b>Create, Read, Update, Delete</b> <br>
+
+              First, open the terminal and start it up with <b>«mongod»</b> command. <br>
+              This will start a server similar to a localhost. Leave it as is, because this terminal tab is connected to the mongoDB database and can't be used for something else <br>
+              <br>
+              With the <b>«mongosh»</b> command, we can tap into the mongo-shell. <br>
+              The mongo shell is basically used to interact with the mongoDB databases on our local system using the command line. <br>
+              <br>
+              <br>
+              If at any time you're stuck, just type «help» and it will display all commands. <br>
+              It's recommended to see what db's already exist before starting, so go on an type «show dbs». <br>
+              <br>
+              Quick command summary: <br>
+              <ul>
+                <li>show dbs</li>
+                <li>db (to check in which database we're at)</li>
+                <li>use</li>
+                <li>quit/quit()</li>
+                <li>exit/exit()/.exit</li>
+                <li>cls (to clear the scren like console.clear)</li>
+                <li></li>
+              </ul>
+              <br>
+              <br>
+              <br>
+              How to create the first database: <br>
+              Type «use 'dataBaseName'» in this case 'shopDB' <br>
+              But when checking for db's with «show dbs» it wont show. It's because it's <u>empty</u>. <br>
+              <br>
+              But how can we <b>C</b>reate? <br>
+              <a href="https://www.mongodb.com/docs/manual/crud/">mongoDB docs 'CRUD'</a> <br>
+              <img class="createOperations" src="Images/mongoDB/createOperations.png" alt="insertOne">
+              <br>
+              <br>
+              With typing <b>«db.products.insertOne({_id: 1, name: "Pen", price: 1.20})»</b> in the correct db, it will automatically <u>C</u>create this new DB. <br>
+              <img class="collectionsDB" src="Images/mongoDB/collectionsDB.png" alt="collectionsDB"> <br>
+              <br>
+              This is how easy it is, to add data to mongoDB. In this case, 'insertOne()' was used. Check documentation to use 'insertMany()' <br>
+              <br>
+            </div>
+
+
+            <button type="button" class="collapsible">
+              <h4>mongoDB CRUD Operation in the Shell: <b>R</b>ead</h4>
+            </button>
+            <div class="content">
+              CRUD = <b>Create, Read, Update, Delete</b> <br>
+              <br>
+              <br>
+              <img class="readOperations" src="Images/mongoDB/readOperations.png" alt="readOperations">
+              <br>
+              <img class="readOperations" src="Images/mongoDB/readProducts.png" alt="readOperations"> <br>
+              <br>
+              <a href="https://www.mongodb.com/docs/manual/tutorial/query-documents/#std-label-read-operations-query-argument">Query Operators</a>can be used to query through that database. <br>
+              <br>
+              For example, find me all documents where the name field is equal to 'Pencil': <br>
+              <img class="readOperations" src="Images/mongoDB/readProducts2.png" alt="readProducts2"> <br>
+              <br>
+              Another example with filtering the products, that only items with a price higher <u>({$gt: 1})</u> than 1 are shown: <br>
+              <img class="readOperations" src="Images/mongoDB/readProduct3.png" alt="readProduct3"> <br>
+              <br>
+
+
+
+            </div>
 
 
 
@@ -2560,10 +2629,6 @@
   </section>
 
 
-
-
-
-TEST TEST
 
 
 

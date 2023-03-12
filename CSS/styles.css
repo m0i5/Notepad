@@ -246,11 +246,11 @@ width: 25rem;
   width: 35rem;
 }
 
-.domChallenge1, {
+.domChallenge1,  {
   width: 15rem;
 }
 
-.drumBottons, .clickExample, .higherOrder, .houseKeeper1, .switchStatement, .angelaObjectMethod {
+.drumBottons, .clickExample, .higherOrder, .houseKeeper1, .switchStatement, .angelaObjectMethod, .createOperations, .readOperations, .collectionsDB {
   width: 35rem;
 }
 
@@ -259,7 +259,7 @@ width: 25rem;
 .Postman2, .setupExpress, .setupExpress2, .responseStatusCode, .weatherData, .weatherData2, .getURL, .weatherChallenge, .weatherChallenge2, .weatherIcon,
 .userLocation1, .userLocation2, .sendFile, .formPostrequest, .catchRequest, .bodyParser, .queryCityName, .cssConnection, .appSetup, .dayLogic, .cleanGetDay, .resWrite, .sendFile, .kindOfDay, .kindOfDay2, .ifelseDay,
 .switchDay, .insideEJS, .formData, .getnewItem, .getnewItem, .itemPost, .itemsPush, .sameLine, .forloopList, .scopeFunction, .mainPackage, .expressStatic, .headerEJS, .footerEJS, .dateEJS, .functionEJSk, .requireEJS, .moduleExport,
-.getdayEJS, .dategetdayEJS, 
+.getdayEJS, .dategetdayEJS,
 
 
 {
