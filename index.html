@@ -2853,11 +2853,11 @@
               <br>
               Now one of the first things Angela did, was deleting the old arrays where the items were pushed into. <br>
               Now we need to connect to mongoose: <br>
-              <img class="deleteOperations" src="Images/TodolistV2/connectionMongoose.png" alt=""connectionMongoose>
+              <img class="deleteOperations" src="Images/TodolistV2/connectionMongoose.png" alt="" connectionMongoose>
               <br>
               <br>
               Next, we need a new 'items' schema: <br>
-              <img class="deleteOperations"  src="Images/TodolistV2/itemsSchema.png" alt="itemsSchema"><br>
+              <img class="deleteOperations" src="Images/TodolistV2/itemsSchema.png" alt="itemsSchema"><br>
               <br>
               Now we have the itemsSchema, but we need a mongoose model for that: <br>
               <img class="deleteOperations" src="Images/TodolistV2/itemModel.png" alt="itemModel"> <br>
@@ -2869,7 +2869,7 @@
               The second thing we're passing over to list.ejs is the 'items'-array, which doesn't exist anymore. <br>
               Instead, we want to pass over items that are in our items-collection. <br>
               To do that, we need some default items: <br>
-              <img class="deleteOperations"  src="Images/TodolistV2/newItem.png" alt="newItem"> <br>
+              <img class="deleteOperations" src="Images/TodolistV2/newItem.png" alt="newItem"> <br>
               <br>
               Now the course is outdated, because she uses .insertMany with a callback. <br>
               In the latest version, this command doesn't accept callbacks anymore. So this is how the workaround will look like: <br>
@@ -2906,7 +2906,23 @@
               <img class="deleteOperations" src="Images/TodolistV2/renderName.png" alt="renderName"> <br>
               <br>
               Next, a quick challenge. Change the simple for-loop into a for-each loop: <br>
-              <img class="deleteOperations" src="Images/TodolistV2/forEachLoop.png" alt="forEachLoop">
+              <img class="deleteOperations" src="Images/TodolistV2/forEachLoop.png" alt="forEachLoop"> <br>
+              <br>
+              <br>
+              Now let's tackle all the repeated inserts. <br>
+              We need to find a way to check, if the default items are already in the database. <br>
+              If not, they should be pushed into it. Else, skip. <br>
+              Easy solution with if/else and checking for the length (0 = empty): <br>
+              <img class="deleteOperations" src="Images/TodolistV2/repeatedData.png" alt="repeatedData"> <br>
+              <br>
+              But with this solution, it will simply check if it's empty and pushes default items into it. <br>
+              But it won't actually display anything without reloading the page. <br>
+              So we should redirect to the home-route again, when the it has to push items for new users: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/resRedirect.png" alt="resRedirect"> <br>
+              <br>
+
+
+
 
 
 
