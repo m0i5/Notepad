@@ -2843,6 +2843,43 @@
               <h4>Intro</h4>
             </button>
             <div class="content">
+              <b>First steps:</b><br>
+              <ul>
+                <li>Install everything, create a repository</li>
+                <li>npm i / npm i express / npm i mongoose</li>
+                <li>Require mongoose in app.js (const mongoose = require("mongoose");)</li>
+              </ul>
+              <br>
+              <br>
+              Now one of the first things Angela did, was deleting the old arrays where the items were pushed into. <br>
+              Now we need to connect to mongoose: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/connectionMongoose.png" alt=""connectionMongoose>
+              <br>
+              <br>
+              Next, we need a new 'items' schema: <br>
+              <img class="deleteOperations"  src="Images/TodolistV2/itemsSchema.png" alt="itemsSchema"><br>
+              <br>
+              Now we have the itemsSchema, but we need a mongoose model for that: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/itemModel.png" alt="itemModel"> <br>
+              <br>
+              Next, she deletes the getDate API to have cleaner code. <br>
+              (deleting getDay, require, day.js file etc)
+              <br>
+              <br>
+              The second thing we're passing over to list.ejs is the 'items'-array, which doesn't exist anymore. <br>
+              Instead, we want to pass over items that are in our items-collection. <br>
+              To do that, we need some default items: <br>
+              <img class="deleteOperations"  src="Images/TodolistV2/newItem.png" alt="newItem"> <br>
+              <br>
+              Now the course is outdated, because she uses .insertMany with a callback. <br>
+              In the latest version, this command doesn't accept callbacks anymore. So this is how the workaround will look like: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/insertMany.png" alt="inserMany"><br>
+              <br>
+              So far, it should look like this: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/everythingMongoose.png" alt="everythingMongoose"> <br>
+              <br>
+              
+
 
 
             </div>
