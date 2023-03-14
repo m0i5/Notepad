@@ -2937,7 +2937,79 @@
               <img class="deleteOperations" src="Images/TodolistV2/itemName.png" alt="itemName"> <br>
               <br>
               It wont be rendered yet, but it was added to the DB: <br>
-              <img class="deleteOperations" src="Images/TodolistV2/newItemTerminal.png" alt="newItemTerminal">
+              <img class="deleteOperations" src="Images/TodolistV2/newItemTerminal.png" alt="newItemTerminal"> <br>
+              <br>
+              In order to be displayed, again, simply redirect to home: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/againRedirect.png" alt="againRedirect"> <br>
+              <br>
+
+              <button type="button" class="collapsible">
+                <h4>Deleting Items from our Todolist Database</h4>
+              </button>
+              <div class="content">
+                Inside list.ejs we have a input <b>type="checkbox"</b> and next to it <b>item.name</b> as a paragraph. <br>
+                If we want to send some data when that checkbox gets clicked, then we need again a <b>form</b> and a <b>post-route</b> <br>
+                So let's go ahead and create a new form and wrap that form around 'div class="items"'<br>
+                <img class="deleteOperations" src="Images/TodolistV2/inputForm.png" alt="inputForm"> <br>
+                <br>
+                <br>
+                But with this, the styling is a bit off because in css we defined <b>.form - margin-left: 20px</b> to all our form elements, what we don't want in this case. <br>
+                In order to have the margin applied to all forms connected to item, simply define it like this in css: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/formItem.png" alt="formItem"> <br>
+                <br>
+                <br>
+                The next thing to adress is, where is this form going to post to? <br>
+                To define that, we need to set an <b>action=""</b> and <b>method="post"</b> <br>
+                It's also a 'post method' but route is different. So we create <b>action="/delete"</b> <br>
+                <br>
+                With that set, in app.js we create that route just below app.post("/")... and see if we can console log the inputs. <br>
+                <img class="deleteOperations" src="Images/TodolistV2/consolerLog.png" alt=""> <br>
+                <br>
+                But like this, absolutely nothing happens. Why? <br>
+                The reason is, that inside list.ejs we have that 'button' and it's type is <u>submit</u>, and everytime <br>
+                we have a submit button inside the form, then it's job when it gets pressed is to submit all the data and make the post-request <br>
+                to the defined route (action="/"). <br>
+                Now in this form however, we don't have any way of submitting. But we don't want a button to delete it. <br>
+                It should happen via the checkbox. <br>
+                Here's how to do it: <br>
+                *In addition to just get the form to submit, we also need a way of accessing the checkbox input. To do that, we have to give it a name. <br>
+                <img class="deleteOperations" src="Images/TodolistV2/checkboxSubmit.png" alt="checkboxSubmit"> <br>
+                <br>
+                The name that was set is important, because we can tap into it like this: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/checkboxName.png" alt="checkboxName"> <br>
+                <br>
+                But when checking the value through logging, it says 'on', which isn't really useful. <br>
+                We want the item-name that was checked off. <br>
+                <br>
+                We can assign a value to our checkbox based in the items ID. <br>
+                So inside the checkbox-input we can set a value with EJS tags, reffering to the item-ID: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/itemID.png" alt="itemID"> <br>
+                <br>
+                Remember, when passing newListItems over, we're passing over an array of mongo-documents, each of these <br>
+                items we're looping through has a <b>.name</b>  as well as an <b>._id</b>. <br>
+                So when binding that ID to the value of each of the checkboxes then when it gets checked, I can submit this form <br>
+                and find out which item was actually checked off. <br>
+                Because we now have that ID, we can also delete that item. <br>
+                <br>
+                <br>
+                <br>
+                So inside app.js, instead of console-logging it, we will bind it to a constant called <b>'checkedItemID'</b>. <br>
+                With that, we can use findByIdAndRemove to delete and then redirect: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/deleteItems.png" alt="deleteItems">
+
+
+
+
+
+
+
+
+
+
+
+
+                <br>
+
 
 
 
