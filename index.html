@@ -2878,7 +2878,36 @@
               So far, it should look like this: <br>
               <img class="deleteOperations" src="Images/TodolistV2/everythingMongoose.png" alt="everythingMongoose"> <br>
               <br>
-              
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Rendering Database Items in the Todolist App</h4>
+            </button>
+            <div class="content">
+              How can we use .find like in the commandline to actually send over data to our list? <br>
+              Again, no callbacks are supported and we need a workaround for this section. <br>
+              <br>
+              First challenge, use model.find() to console log all the items stored: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/itemFind.png" alt="itemFind"> <br>
+              <br>
+              But when reloading, it triggers the following error, because it doesn't know what 'items' is <br>
+              that we're trying to pass over, because we deleted that array at the beginning. <br>
+              <img class="deleteOperations" src="Images/TodolistV2/referenceError.png" alt="referenceError"><br>
+              <br>
+              We want to pass over 'foundItems' instead, since we're tapping into it with Item.find(): <br>
+              Now we want to combine the 'res.render' into Item.find(). It should look like this: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/foundItemsRender.png" alt="foundItemsRender"><br>
+              <br>
+              But the first problem is, that the entire item with ID/ObjectID etc. gets rendered, but we just want a name. <br>
+              Second problem is, that everytime app.js, default items will get added again and again. <br>
+              <br>
+              First, tap into .name in the list.ejs file: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/renderName.png" alt="renderName"> <br>
+              <br>
+              Next, a quick challenge. Change the simple for-loop into a for-each loop: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/forEachLoop.png" alt="forEachLoop">
+
 
 
 
