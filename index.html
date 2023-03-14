@@ -2920,9 +2920,24 @@
               So we should redirect to the home-route again, when the it has to push items for new users: <br>
               <img class="deleteOperations" src="Images/TodolistV2/resRedirect.png" alt="resRedirect"> <br>
               <br>
+            </div>
 
-
-
+            <button type="button" class="collapsible">
+              <h4>Adding New Items to our Todolist Database</h4>
+            </button>
+            <div class="content">
+              Now our post-route doesn't know what 'items' is. <br>
+              This part of the code has to be deleted: <br>
+              <img class="deleteOperations"  src="Images/TodolistV2/addingData.png" alt="addingData"> <br>
+              <br>
+              Also, with <b>req.body.newItem;</b> we know that it refers to the input-form on list.ejs <b>type="text"</b> <br>
+              This input should be saved into a const called 'itemName': <br>
+              And then we need to create a new item document based of my model in mongoDB. <br>
+              Then, instead of insertMany we can simple use the mongoose shortcut 'item.save()'. <br>
+              <img class="deleteOperations" src="Images/TodolistV2/itemName.png" alt="itemName"> <br>
+              <br>
+              It wont be rendered yet, but it was added to the DB: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/newItemTerminal.png" alt="newItemTerminal">
 
 
 
