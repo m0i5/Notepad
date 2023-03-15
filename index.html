@@ -2928,7 +2928,7 @@
             <div class="content">
               Now our post-route doesn't know what 'items' is. <br>
               This part of the code has to be deleted: <br>
-              <img class="deleteOperations"  src="Images/TodolistV2/addingData.png" alt="addingData"> <br>
+              <img class="deleteOperations" src="Images/TodolistV2/addingData.png" alt="addingData"> <br>
               <br>
               Also, with <b>req.body.newItem;</b> we know that it refers to the input-form on list.ejs <b>type="text"</b> <br>
               This input should be saved into a const called 'itemName': <br>
@@ -2986,7 +2986,7 @@
                 <img class="deleteOperations" src="Images/TodolistV2/itemID.png" alt="itemID"> <br>
                 <br>
                 Remember, when passing newListItems over, we're passing over an array of mongo-documents, each of these <br>
-                items we're looping through has a <b>.name</b>  as well as an <b>._id</b>. <br>
+                items we're looping through has a <b>.name</b> as well as an <b>._id</b>. <br>
                 So when binding that ID to the value of each of the checkboxes then when it gets checked, I can submit this form <br>
                 and find out which item was actually checked off. <br>
                 Because we now have that ID, we can also delete that item. <br>
@@ -2996,34 +2996,81 @@
                 So inside app.js, instead of console-logging it, we will bind it to a constant called <b>'checkedItemID'</b>. <br>
                 With that, we can use findByIdAndRemove to delete and then redirect: <br>
                 <img class="deleteOperations" src="Images/TodolistV2/deleteItems.png" alt="deleteItems">
-
-
-
-
-
-
-
-
-
-
-
-
                 <br>
+              </div>
+
+
+              <button type="button" class="collapsible">
+                <h4>Creating Custom Lists using Express Route Parameters</h4>
+              </button>
+              <div class="content">
+                Starting off with creating a new get-request: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/customListName.png" alt="customListName"><br>
+                <br>
+                Can be tested via localhost:3000/Home <br>
+                It should console log whatever is typed after /'' <br>
+                <br>
+                <br>
+                But instead of logging it, lets save it into a constant called 'customListName' <br>
+                <img class="deleteOperations" src="Images/TodolistV2/constListName.png" alt="">
+                After that, create a new schema called 'listSchema' just below the item array [item1, item2,...] <br>
+                <img class="deleteOperations" src="Images/TodolistV2/listSchema.png" alt="">
+                So for every new list we create, the list is going to have a 'name:', and it's going to have an array[] <br>
+                of item documents associated with it as well. <br>
+                <br>
+                <br>
+                As always, this also needs a mongoose model: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/listModel.png" alt=""> <br>
+                <br>
+                Now we created the list model based off the listSchema, then we're ready to create new 'List' documents off that model: <br>
+                And we're going to do that when a user tries to access "/customListName"<br>
+                <br>
+                Next step is to create a new list inside app.get("/customListName") and we have to fill in the two fields name/item: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/customRoute.png" alt=""> <br>
+                <br>
+                Problem is, that it will always create new lists, because it's not checking if it's already there. <br>
+                 So the challenge is, to use findOne() to check if the list that the user wants to access, already exists. <br>
+                 <img class="deleteOperations" src="Images/TodolistV2/customSchissdreck.png" alt=""><br>
+                 <br>
+                 But with this, we're not able to add new items to the custom list yet. <br>
+                 When taking a closer look at the 'list.ejs' file, we can see that whenever the submit button is clicked, no matter which list <br>
+                 we're inside, it's <u>always</u> posting to the root route. <br>
+                 What we need to to instead, is to pass over the current list thats being displayed which we have access to ('listTitle' at the top of 'list.ejs' file) <br>
+                 And we need to pass it back, when the form gets triggered. So the perfect place is obviously inside the button with an ejs-tag: <br>
+                 <img class="deleteOperations" src="Images/TodolistV2/buttonTitle.png" alt="buttonTitle"> <br>
+                 <br>
+                 And then, inside app.post:
+                 <img class="deleteOperations"  src="Images/TodolistV2/cconstListName.png" alt=""> <br>
+                 <br>
+                 Also, it needs to be handled differently (with an if-statement) when it comes from the custom list: <br>
+                 No matter which list the item came from, we still need to create it as an new item document.
+                 <img src="" alt=""> <br>
+                 Here we're checking for the list name. If it's today it redirects to root. <br>
+                 If not, then our new item comes from a custom list. In that case, we need to search for that list document in our list collection <br>
+                 in our database and we need to add the item and embedded it into the existing array of items. <br>
+                 In order to do that we're going to use findOne() <br>
+                 <br>
+                 This is the workaround without callbacks: <br>
+                 <img class="deleteOperations" src="Images/TodolistV2/swanekGrossman.png" alt="">
+                 <br>
+                 <br>
+                 <br>
+                 Now we also need to be able to delete items, like in the other lists: <br>
+                 <img class="deleteOperations" src="Images/TodolistV2/deleteCustom.png" alt="">
 
 
 
 
 
-            </div>
 
 
 
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+              </div>
+
+
+
 
 
 
