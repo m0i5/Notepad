@@ -3029,43 +3029,34 @@
                 <img class="deleteOperations" src="Images/TodolistV2/customRoute.png" alt=""> <br>
                 <br>
                 Problem is, that it will always create new lists, because it's not checking if it's already there. <br>
-                 So the challenge is, to use findOne() to check if the list that the user wants to access, already exists. <br>
-                 <img class="deleteOperations" src="Images/TodolistV2/customSchissdreck.png" alt=""><br>
-                 <br>
-                 But with this, we're not able to add new items to the custom list yet. <br>
-                 When taking a closer look at the 'list.ejs' file, we can see that whenever the submit button is clicked, no matter which list <br>
-                 we're inside, it's <u>always</u> posting to the root route. <br>
-                 What we need to to instead, is to pass over the current list thats being displayed which we have access to ('listTitle' at the top of 'list.ejs' file) <br>
-                 And we need to pass it back, when the form gets triggered. So the perfect place is obviously inside the button with an ejs-tag: <br>
-                 <img class="deleteOperations" src="Images/TodolistV2/buttonTitle.png" alt="buttonTitle"> <br>
-                 <br>
-                 And then, inside app.post:
-                 <img class="deleteOperations"  src="Images/TodolistV2/cconstListName.png" alt=""> <br>
-                 <br>
-                 Also, it needs to be handled differently (with an if-statement) when it comes from the custom list: <br>
-                 No matter which list the item came from, we still need to create it as an new item document.
-                 <img src="" alt=""> <br>
-                 Here we're checking for the list name. If it's today it redirects to root. <br>
-                 If not, then our new item comes from a custom list. In that case, we need to search for that list document in our list collection <br>
-                 in our database and we need to add the item and embedded it into the existing array of items. <br>
-                 In order to do that we're going to use findOne() <br>
-                 <br>
-                 This is the workaround without callbacks: <br>
-                 <img class="deleteOperations" src="Images/TodolistV2/swanekGrossman.png" alt="">
-                 <br>
-                 <br>
-                 <br>
-                 Now we also need to be able to delete items, like in the other lists: <br>
-                 <img class="deleteOperations" src="Images/TodolistV2/deleteCustom.png" alt="">
-
-
-
-
-
-
-
-
-
+                So the challenge is, to use findOne() to check if the list that the user wants to access, already exists. <br>
+                <img class="deleteOperations" src="Images/TodolistV2/customSchissdreck.png" alt=""><br>
+                <br>
+                But with this, we're not able to add new items to the custom list yet. <br>
+                When taking a closer look at the 'list.ejs' file, we can see that whenever the submit button is clicked, no matter which list <br>
+                we're inside, it's <u>always</u> posting to the root route. <br>
+                What we need to to instead, is to pass over the current list thats being displayed which we have access to ('listTitle' at the top of 'list.ejs' file) <br>
+                And we need to pass it back, when the form gets triggered. So the perfect place is obviously inside the button with an ejs-tag: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/buttonTitle.png" alt="buttonTitle"> <br>
+                <br>
+                And then, inside app.post:
+                <img class="deleteOperations" src="Images/TodolistV2/cconstListName.png" alt=""> <br>
+                <br>
+                Also, it needs to be handled differently (with an if-statement) when it comes from the custom list: <br>
+                No matter which list the item came from, we still need to create it as an new item document.
+                <img src="" alt=""> <br>
+                Here we're checking for the list name. If it's today it redirects to root. <br>
+                If not, then our new item comes from a custom list. In that case, we need to search for that list document in our list collection <br>
+                in our database and we need to add the item and embedded it into the existing array of items. <br>
+                In order to do that we're going to use findOne() <br>
+                <br>
+                This is the workaround without callbacks: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/swanekGrossman.png" alt="">
+                <br>
+                <br>
+                <br>
+                Now we also need to be able to delete items, like in the other lists: <br>
+                <img class="deleteOperations" src="Images/TodolistV2/deleteCustom.png" alt="">
 
               </div>
 
@@ -3076,81 +3067,81 @@
 
 
 
-  <!-- Testimonials -->
+              <!-- Testimonials -->
 
-  <section class="testimonials" id="HPQuotes">
+              <section class="testimonials" id="HPQuotes">
 
-    <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
+                <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
   Ende des Body platziert werden! -->
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <h2 class="testimonial-text">«MEGA Respect to the man in the ice cream van!»</h2>
-          <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
-          <em>H.P. Baxxter</em>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h2 class="testimonial-text">«MEGA Respect to the man in the ice cream van!»</h2>
+                      <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
+                      <em>H.P. Baxxter</em>
 
-        </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
-          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«How much is the fish?»</h2>
-          <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
+                    </div>
+                    <div class="carousel-item">
+                      <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
+                      <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+                      <em>H.P. Baxxter</em>
+                    </div>
+                    <div class="carousel-item">
+                      <h2 class="testimonial-text">«How much is the fish?»</h2>
+                      <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
+                      <em>H.P. Baxxter</em>
+                    </div>
 
-        <div class="carousel-item">
-          <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
-          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-          <em>H.P. Baxxter</em>
-        </div>
+                    <div class="carousel-item">
+                      <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
+                      <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+                      <em>H.P. Baxxter</em>
+                    </div>
 
-      </div>
+                  </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-
-  </section>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
 
 
+              </section>
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+              <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-  </script>
+
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+              <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
 
 
 
