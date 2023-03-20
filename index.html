@@ -2878,7 +2878,6 @@
               So far, it should look like this: <br>
               <img class="deleteOperations" src="Images/TodolistV2/everythingMongoose.png" alt="everythingMongoose"> <br>
               <br>
-
             </div>
 
             <button type="button" class="collapsible">
@@ -2942,206 +2941,213 @@
               In order to be displayed, again, simply redirect to home: <br>
               <img class="deleteOperations" src="Images/TodolistV2/againRedirect.png" alt="againRedirect"> <br>
               <br>
+            </div>
 
-              <button type="button" class="collapsible">
-                <h4>Deleting Items from our Todolist Database</h4>
-              </button>
-              <div class="content">
-                Inside list.ejs we have a input <b>type="checkbox"</b> and next to it <b>item.name</b> as a paragraph. <br>
-                If we want to send some data when that checkbox gets clicked, then we need again a <b>form</b> and a <b>post-route</b> <br>
-                So let's go ahead and create a new form and wrap that form around 'div class="items"'<br>
-                <img class="deleteOperations" src="Images/TodolistV2/inputForm.png" alt="inputForm"> <br>
-                <br>
-                <br>
-                But with this, the styling is a bit off because in css we defined <b>.form - margin-left: 20px</b> to all our form elements, what we don't want in this case. <br>
-                In order to have the margin applied to all forms connected to item, simply define it like this in css: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/formItem.png" alt="formItem"> <br>
-                <br>
-                <br>
-                The next thing to adress is, where is this form going to post to? <br>
-                To define that, we need to set an <b>action=""</b> and <b>method="post"</b> <br>
-                It's also a 'post method' but route is different. So we create <b>action="/delete"</b> <br>
-                <br>
-                With that set, in app.js we create that route just below app.post("/")... and see if we can console log the inputs. <br>
-                <img class="deleteOperations" src="Images/TodolistV2/consolerLog.png" alt=""> <br>
-                <br>
-                But like this, absolutely nothing happens. Why? <br>
-                The reason is, that inside list.ejs we have that 'button' and it's type is <u>submit</u>, and everytime <br>
-                we have a submit button inside the form, then it's job when it gets pressed is to submit all the data and make the post-request <br>
-                to the defined route (action="/"). <br>
-                Now in this form however, we don't have any way of submitting. But we don't want a button to delete it. <br>
-                It should happen via the checkbox. <br>
-                Here's how to do it: <br>
-                *In addition to just get the form to submit, we also need a way of accessing the checkbox input. To do that, we have to give it a name. <br>
-                <img class="deleteOperations" src="Images/TodolistV2/checkboxSubmit.png" alt="checkboxSubmit"> <br>
-                <br>
-                The name that was set is important, because we can tap into it like this: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/checkboxName.png" alt="checkboxName"> <br>
-                <br>
-                But when checking the value through logging, it says 'on', which isn't really useful. <br>
-                We want the item-name that was checked off. <br>
-                <br>
-                We can assign a value to our checkbox based in the items ID. <br>
-                So inside the checkbox-input we can set a value with EJS tags, reffering to the item-ID: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/itemID.png" alt="itemID"> <br>
-                <br>
-                Remember, when passing newListItems over, we're passing over an array of mongo-documents, each of these <br>
-                items we're looping through has a <b>.name</b> as well as an <b>._id</b>. <br>
-                So when binding that ID to the value of each of the checkboxes then when it gets checked, I can submit this form <br>
-                and find out which item was actually checked off. <br>
-                Because we now have that ID, we can also delete that item. <br>
-                <br>
-                <br>
-                <br>
-                So inside app.js, instead of console-logging it, we will bind it to a constant called <b>'checkedItemID'</b>. <br>
-                With that, we can use findByIdAndRemove to delete and then redirect: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/deleteItems.png" alt="deleteItems">
-                <br>
-              </div>
-
-
-              <button type="button" class="collapsible">
-                <h4>Creating Custom Lists using Express Route Parameters</h4>
-              </button>
-              <div class="content">
-                Starting off with creating a new get-request: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/customListName.png" alt="customListName"><br>
-                <br>
-                Can be tested via localhost:3000/Home <br>
-                It should console log whatever is typed after /'' <br>
-                <br>
-                <br>
-                But instead of logging it, lets save it into a constant called 'customListName' <br>
-                <img class="deleteOperations" src="Images/TodolistV2/constListName.png" alt="">
-                After that, create a new schema called 'listSchema' just below the item array [item1, item2,...] <br>
-                <img class="deleteOperations" src="Images/TodolistV2/listSchema.png" alt="">
-                So for every new list we create, the list is going to have a 'name:', and it's going to have an array[] <br>
-                of item documents associated with it as well. <br>
-                <br>
-                <br>
-                As always, this also needs a mongoose model: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/listModel.png" alt=""> <br>
-                <br>
-                Now we created the list model based off the listSchema, then we're ready to create new 'List' documents off that model: <br>
-                And we're going to do that when a user tries to access "/customListName"<br>
-                <br>
-                Next step is to create a new list inside app.get("/customListName") and we have to fill in the two fields name/item: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/customRoute.png" alt=""> <br>
-                <br>
-                Problem is, that it will always create new lists, because it's not checking if it's already there. <br>
-                So the challenge is, to use findOne() to check if the list that the user wants to access, already exists. <br>
-                <img class="deleteOperations" src="Images/TodolistV2/customSchissdreck.png" alt=""><br>
-                <br>
-                But with this, we're not able to add new items to the custom list yet. <br>
-                When taking a closer look at the 'list.ejs' file, we can see that whenever the submit button is clicked, no matter which list <br>
-                we're inside, it's <u>always</u> posting to the root route. <br>
-                What we need to to instead, is to pass over the current list thats being displayed which we have access to ('listTitle' at the top of 'list.ejs' file) <br>
-                And we need to pass it back, when the form gets triggered. So the perfect place is obviously inside the button with an ejs-tag: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/buttonTitle.png" alt="buttonTitle"> <br>
-                <br>
-                And then, inside app.post:
-                <img class="deleteOperations" src="Images/TodolistV2/cconstListName.png" alt=""> <br>
-                <br>
-                Also, it needs to be handled differently (with an if-statement) when it comes from the custom list: <br>
-                No matter which list the item came from, we still need to create it as an new item document.
-                <img src="" alt=""> <br>
-                Here we're checking for the list name. If it's today it redirects to root. <br>
-                If not, then our new item comes from a custom list. In that case, we need to search for that list document in our list collection <br>
-                in our database and we need to add the item and embedded it into the existing array of items. <br>
-                In order to do that we're going to use findOne() <br>
-                <br>
-                This is the workaround without callbacks: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/swanekGrossman.png" alt="">
-                <br>
-                <br>
-                <br>
-                Now we also need to be able to delete items, like in the other lists: <br>
-                <img class="deleteOperations" src="Images/TodolistV2/deleteCustom.png" alt="">
-
-              </div>
+            <button type="button" class="collapsible">
+              <h4>Deleting Items from our Todolist Database</h4>
+            </button>
+            <div class="content">
+              Inside list.ejs we have a input <b>type="checkbox"</b> and next to it <b>item.name</b> as a paragraph. <br>
+              If we want to send some data when that checkbox gets clicked, then we need again a <b>form</b> and a <b>post-route</b> <br>
+              So let's go ahead and create a new form and wrap that form around 'div class="items"'<br>
+              <img class="deleteOperations" src="Images/TodolistV2/inputForm.png" alt="inputForm"> <br>
+              <br>
+              <br>
+              But with this, the styling is a bit off because in css we defined <b>.form - margin-left: 20px</b> to all our form elements, what we don't want in this case. <br>
+              In order to have the margin applied to all forms connected to item, simply define it like this in css: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/formItem.png" alt="formItem"> <br>
+              <br>
+              <br>
+              The next thing to adress is, where is this form going to post to? <br>
+              To define that, we need to set an <b>action=""</b> and <b>method="post"</b> <br>
+              It's also a 'post method' but route is different. So we create <b>action="/delete"</b> <br>
+              <br>
+              With that set, in app.js we create that route just below app.post("/")... and see if we can console log the inputs. <br>
+              <img class="deleteOperations" src="Images/TodolistV2/consolerLog.png" alt=""> <br>
+              <br>
+              But like this, absolutely nothing happens. Why? <br>
+              The reason is, that inside list.ejs we have that 'button' and it's type is <u>submit</u>, and everytime <br>
+              we have a submit button inside the form, then it's job when it gets pressed is to submit all the data and make the post-request <br>
+              to the defined route (action="/"). <br>
+              Now in this form however, we don't have any way of submitting. But we don't want a button to delete it. <br>
+              It should happen via the checkbox. <br>
+              Here's how to do it: <br>
+              *In addition to just get the form to submit, we also need a way of accessing the checkbox input. To do that, we have to give it a name. <br>
+              <img class="deleteOperations" src="Images/TodolistV2/checkboxSubmit.png" alt="checkboxSubmit"> <br>
+              <br>
+              The name that was set is important, because we can tap into it like this: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/checkboxName.png" alt="checkboxName"> <br>
+              <br>
+              But when checking the value through logging, it says 'on', which isn't really useful. <br>
+              We want the item-name that was checked off. <br>
+              <br>
+              We can assign a value to our checkbox based in the items ID. <br>
+              So inside the checkbox-input we can set a value with EJS tags, reffering to the item-ID: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/itemID.png" alt="itemID"> <br>
+              <br>
+              Remember, when passing newListItems over, we're passing over an array of mongo-documents, each of these <br>
+              items we're looping through has a <b>.name</b> as well as an <b>._id</b>. <br>
+              So when binding that ID to the value of each of the checkboxes then when it gets checked, I can submit this form <br>
+              and find out which item was actually checked off. <br>
+              Because we now have that ID, we can also delete that item. <br>
+              <br>
+              <br>
+              <br>
+              So inside app.js, instead of console-logging it, we will bind it to a constant called <b>'checkedItemID'</b>. <br>
+              With that, we can use findByIdAndRemove to delete and then redirect: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/deleteItems.png" alt="deleteItems">
+              <br>
+            </div>
 
 
+            <button type="button" class="collapsible">
+              <h4>Creating Custom Lists using Express Route Parameters</h4>
+            </button>
+            <div class="content">
+              Starting off with creating a new get-request: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/customListName.png" alt="customListName"><br>
+              <br>
+              Can be tested via localhost:3000/Home <br>
+              It should console log whatever is typed after /'' <br>
+              <br>
+              <br>
+              But instead of logging it, lets save it into a constant called 'customListName' <br>
+              <img class="deleteOperations" src="Images/TodolistV2/constListName.png" alt="">
+              After that, create a new schema called 'listSchema' just below the item array [item1, item2,...] <br>
+              <img class="deleteOperations" src="Images/TodolistV2/listSchema.png" alt="">
+              So for every new list we create, the list is going to have a 'name:', and it's going to have an array[] <br>
+              of item documents associated with it as well. <br>
+              <br>
+              <br>
+              As always, this also needs a mongoose model: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/listModel.png" alt=""> <br>
+              <br>
+              Now we created the list model based off the listSchema, then we're ready to create new 'List' documents off that model: <br>
+              And we're going to do that when a user tries to access "/customListName"<br>
+              <br>
+              Next step is to create a new list inside app.get("/customListName") and we have to fill in the two fields name/item: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/customRoute.png" alt=""> <br>
+              <br>
+              Problem is, that it will always create new lists, because it's not checking if it's already there. <br>
+              So the challenge is, to use findOne() to check if the list that the user wants to access, already exists. <br>
+              <img class="deleteOperations" src="Images/TodolistV2/customSchissdreck.png" alt=""><br>
+              <br>
+              But with this, we're not able to add new items to the custom list yet. <br>
+              When taking a closer look at the 'list.ejs' file, we can see that whenever the submit button is clicked, no matter which list <br>
+              we're inside, it's <u>always</u> posting to the root route. <br>
+              What we need to to instead, is to pass over the current list thats being displayed which we have access to ('listTitle' at the top of 'list.ejs' file) <br>
+              And we need to pass it back, when the form gets triggered. So the perfect place is obviously inside the button with an ejs-tag: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/buttonTitle.png" alt="buttonTitle"> <br>
+              <br>
+              And then, inside app.post:
+              <img class="deleteOperations" src="Images/TodolistV2/cconstListName.png" alt=""> <br>
+              <br>
+              Also, it needs to be handled differently (with an if-statement) when it comes from the custom list: <br>
+              No matter which list the item came from, we still need to create it as an new item document.
+              <img src="" alt=""> <br>
+              Here we're checking for the list name. If it's today it redirects to root. <br>
+              If not, then our new item comes from a custom list. In that case, we need to search for that list document in our list collection <br>
+              in our database and we need to add the item and embedded it into the existing array of items. <br>
+              In order to do that we're going to use findOne() <br>
+              <br>
+              This is the workaround without callbacks: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/swanekGrossman.png" alt="">
+              <br>
+              <br>
+              <br>
+              Now we also need to be able to delete items, like in the other lists: <br>
+              <img class="deleteOperations" src="Images/TodolistV2/deleteCustom.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
 
 
 
-              <!-- Testimonials -->
 
-              <section class="testimonials" id="HPQuotes">
 
-                <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
+
+  <!-- Testimonials -->
+
+  <section class="testimonials" id="HPQuotes">
+
+    <!-- Achtung: Karussell funktioniert nur mit den richtigen <script> Links welche am
   Ende des Body platziert werden! -->
 
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <h2 class="testimonial-text">«MEGA Respect to the man in the ice cream van!»</h2>
-                      <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
-                      <em>H.P. Baxxter</em>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-interval="0" data-bs-pause="hover" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">«MEGA Respect to the man in the ice cream van!»</h2>
+          <img class="testimonial-image" src="Images/scooter.png" alt="scootah">
+          <em>H.P. Baxxter</em>
 
-                    </div>
-                    <div class="carousel-item">
-                      <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
-                      <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-                      <em>H.P. Baxxter</em>
-                    </div>
-                    <div class="carousel-item">
-                      <h2 class="testimonial-text">«How much is the fish?»</h2>
-                      <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
-                      <em>H.P. Baxxter</em>
-                    </div>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«Döp Döp Döp, Dödödöpdöpdöp Dö Döp Döp Döp Dödödöpdöpdöp»</h2>
+          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«How much is the fish?»</h2>
+          <img class="testimonial-image" src="images/scooter3.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
 
-                    <div class="carousel-item">
-                      <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
-                      <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
-                      <em>H.P. Baxxter</em>
-                    </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">«It's nice to be important, but it's more important to be nice.»</h2>
+          <img class="testimonial-image" src="images/scooter2.png" alt="scootah">
+          <em>H.P. Baxxter</em>
+        </div>
 
-                  </div>
+      </div>
 
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-
-
-              </section>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
 
+  </section>
 
 
 
 
-              <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-              <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-                for (i = 0; i < coll.length; i++) {
-                  coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                      content.style.display = "none";
-                    } else {
-                      content.style.display = "block";
-                    }
-                  });
-                }
-              </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
 
 
 
