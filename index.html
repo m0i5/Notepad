@@ -3331,7 +3331,32 @@
                 <li>Insert the following:</li>
               </ol>
               <br>
-              <img class="deleteOperations" src="Images/Wiki-API/insertData.png" alt="">
+              <img class="deleteOperations" src="Images/Wiki-API/insertData.png" alt=""> 
+              <br>
+              <br>
+              Insert the default code: <br>
+              <img class="deleteOperations" src="Images/Wiki-API/defaultCode.png" alt=""> <br>
+              <br>
+              Start by making a connection to mongoDB: <br>
+              <i>mongoose.connect("mongodb://localhost:27017/wikiDB", {useNewUrlParser: true});</i> <br>
+              <br>
+              Create an Article Schema: <br>
+              <i>const articleSchema = { <br>
+                title: String, <br>
+                conent: String <br>
+            }</i> <br>
+            <br>
+            Create an Article Model: <br>
+            <i>const Article = mongoose.model("Article", articleSchema);</i> <br>
+            <br>
+            <br>
+            Everything together: <br>
+            <img class="deleteOperations" src="Images/Wiki-API/schemaAndModel.png" alt=""> <br>
+            <br>
+            
+
+        
+
 
 
             </div>
