@@ -3520,7 +3520,49 @@
               <h4>Getting Set Up</h4>
             </button>
             <div class="content">
+              Setting up and going through the starting files. <br>
+              We have 4 different pages: <br>
+              <ul>
+                <li>Home</li>
+                <li>Register</li>
+                <li>Log In</li>
+                <li>Secrets</li>
+              </ul>
+              <br>
+              Flow is as follows: Home > (Register) > Login > Secrets <br>
+              <br>
+              Starting with Level1 Security(lowest level): <br>
+              Level1 Security is simply creating an account for the user, storing their email and password in the database. <br>
+              In order to create a useraccount and store these pieces of data, we have to create a user-database (mongoose and mongoDB). <br>
+              <br>
+              <br>
+              So first install and require mongoose. <br>
+              And as always: <br>
+              <i>mongoose.connect("mongoDB://localhost:27017/userDB", {useNewUrlParser: true});</i> <br>
+              <br>
+              Now, we need a schema and collection to create the 'userDB': <br>
+              <i>const userSchema = { <br>
+                email: String, <br>
+                password: String <br>
+            };</i> <br>
+            <br>
+            And the model: <br>
+            <i>const User = new mongoose.model("User", userSchema);</i> <br>
+            <br>
+            Now we have a form in 'register.ejs' that makes a POST-request to the '/register' route when hitting the submit button. <br>
+            In order to catch that, we're going to create the register route in app.js : <br>
+            <img class="deleteOperations" src="Images/Authentication/newUserSave.png" alt="">
+            <br>
+            With this, users can register and will see the 'secrets' page, but they can't log in.<br>
+            <br>
+            For them to be able to log in, we have to write the following code: <br>
+            <img class="deleteOperations" src="Images/Authentication/loginUser.png" alt=""> <br>
+            <br>
+            
 
+
+        
+             
 
 
             </div>
