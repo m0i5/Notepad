@@ -3589,10 +3589,65 @@
               The way it works is, that during <i>save</i>, documents are encrypted and then signed. <br>
               During <i>find</i>, documents are authenticated and then decrypted. <br>
               <br>
+
+
+
+            </div>  
+            
+            <button type="button" class="collapsible">
+              <h4>Environment Variables to keep secrets safe</h4>
+            </button>
+            <div class="content">
+              For this part, we're going to use <b>dotenv</b> <a href="https://www.npmjs.com/package/dotenv">Docs</a> <br>
+              <br>
+              Download it > create .env file > move 'const secret = "Thisisourlittlesecret' to '.env' > reformat it like this: <br>
+              'SECRET=Thisisourlittlesecret.' <br>
+              Also, we can test it with API_KEY value: <br>
+              API_KEY=randomrandomrandom
+              <br>
+              And tapp into it with 'console.log(process.env.API_KEY);' (in app.js obviously) <br>
+              <br>
+              Now since we know hot to tap into the SECRET environment file, let's adjust the userSchema: <br>
+              <img class="deleteOperations" src="Images/Authentication/userSchemaPlugin.png" alt=""> <br>
+              <br>
+              Super important: <br>
+              We don't want to commit the .env files to github because it's stupid and dangerous. <br>
+              For this, create a .gitignore file and copy <a href="https://github.com/github/gitignore/blob/main/Node.gitignore">this</a> into the file <br>
+
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Hashing Passwords</h4>
+            </button>
+            <div class="content">
+              When a user registers the password will be 'hashed' and stored in the database. <br>
+              After that, if the user wants to log in, the password that was submitted will also be hashed and <br>
+              compared with the stored 'hash' in the database. If it matches, the user can log in. <br>
+              With this, no passwords will ever be stored in text. <br>
+              <br>
+              'hashed' passwords are pretty much impossible to 'decode' / 'unhash'! <br>
+              <br>
+              So let's implement it: <br>
+              Install md5 (npm i md5) > require it > use it <br>
+              <br>
+              !make sure to delete mongoose.encryption and the plugin from userSchema! <br>
+              <br>
+              Now when a user registers, we have to hash their passwords like this: <br>
+              <img class="deleteOperations" src="Images/Authentication/hashPasswords.png" alt=""> <br>
+              <br>
+              But we also need to figure out what to do with the login step. <br>
+              It's important to understand, that the created hash for that password will always be the same. <br>
+              For example, if the submitted password from a new user is '12345', the hash for '12345' is always the same. <br>
+              So if we console.log(md("12345")); it will always log the same hash. <br>
+              <br>
+              This makes it possible to compare those 'hashes':
+              <img class="deleteOperations" src="Images/Authentication/hashPwLogin.png" alt=""> <br>
+              <br>
               
 
 
-            </div>           
+
+            </div>
 
 
 
