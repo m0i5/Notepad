@@ -3506,7 +3506,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i> Deploying a web application</h1>
+          <h1 class="note-title"><i class="fa-brands border-solid fa-html5 fa-1x"></i> Authentication & Security </h1>
         </div>
       </div>
 
@@ -3643,8 +3643,46 @@
               This makes it possible to compare those 'hashes':
               <img class="deleteOperations" src="Images/Authentication/hashPwLogin.png" alt=""> <br>
               <br>
-              
 
+            </div>
+
+            <button type="button" class="collapsible">
+              <h4>Hashing and Salting</h4>
+            </button>
+            <div class="content">
+              Salting combines passwords with a few numbers and then hashes it. <br>
+              So no matter how simple the password is, it increases it complexity. <br>
+              <br>
+              So even if the password is '12345' for the same user, the 'salt' added makes the hash unique. <br>
+              <br>
+              But with md5, 20'000'000'000 hashes can be created per second. So even with adding 'salt', with the latest GPU <br>
+              you could generate a hash-table within seconds. <br>
+              <br>
+              That's why slower hashing-algorithms like bcrypt are in use. It can only create about 17'000 bcrypt hashes/second. <br>
+              <br>
+              Another method is 'Salt Rounds', it works like this: <br>
+              Round1: 'password' + salt -> hashFunction = hash <br>
+              Round2: hash + sameSalt -> hashFunction = hash2.0 <br>
+              Round3: hash2.0 + sameSalt -> hashFunction = hash3.0 <br>
+              Round4: hash3.0 + sameSalt -> hashFunction = hash4.0 <br>
+              <br>
+              Boom Megasafe!
+              <br>
+              So let's implement bcrypt and salting rounds: <br>
+              <a href="https://www.npmjs.com/package/bcrypt">Doc on NPM bcrypt</a> <br>
+              <br>
+              <br>
+              bcrypt Register Changes: <br>
+              <img class="deleteOperations" src="Images/Authentication/bcryptRegister.png" alt=""> <br>
+              <br>
+              <br>
+              bcrypt Login Changes: <br>
+              <img class="deleteOperations" src="Images/Authentication/bcryptLogin.png" alt=""> <br>
+              <br>
+
+
+
+    
 
 
             </div>
