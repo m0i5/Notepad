@@ -3567,6 +3567,33 @@
 
             </div>
 
+            <button type="button" class="collapsible">
+              <h4>Database Encryption</h4>
+            </button>
+            <div class="content">
+              Lets move on to Lvl2 Security/Authenticaton: <b>Encryption</b> <br>
+              <a href="https://cryptii.com/">Ceasar Cipher (shifting)</a> <br>
+              <br>
+              We're going to work with <a href="https://www.npmjs.com/package/mongoose-encryption">mongoose-encryption</a> <br>
+              <br>
+              First steps: Download 'mongoose-encryption' > require it > change mongoose schema as explained in the docs <br>
+              <br>
+              We will add a .plugin to the userSchema we build, like this: <br>
+              <img class="deleteOperations" src="Images/Authentication/encryptFirst.png" alt=""> <br>
+              <br>
+              But we should only encrypt the passwords, because we will still have to search to the email addresses in our db. <br>
+              For that, we can use 'encryptedFields:['password']' at the end: <br>
+              <img class="deleteOperations" src="Images/Authentication/encryptedFields.png" alt=""> <br>
+              <br>
+              And with this we're pretty much done, we don't have to do anything else in the code. <br>
+              The way it works is, that during <i>save</i>, documents are encrypted and then signed. <br>
+              During <i>find</i>, documents are authenticated and then decrypted. <br>
+              <br>
+              
+
+
+            </div>           
+
 
 
 
