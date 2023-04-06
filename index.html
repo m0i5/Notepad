@@ -3679,10 +3679,51 @@
               bcrypt Login Changes: <br>
               <img class="deleteOperations" src="Images/Authentication/bcryptLogin.png" alt=""> <br>
               <br>
+            </div>
 
 
+            <button type="button" class="collapsible">
+              <h4>Using Passport.js to add cookies and sessions</h4>
+            </button>
+            <div class="content">
+              First, install the following packages via npm:
+              <ul>
+                <li>passport</li>
+                <li>passport-local</li>
+                <li>passport-local-mongoose</li>
+                <li>express-session NOT express-sessions</li>
+              </ul>
+              <br>
+              After that make sure to delete all parts where other authentication tools were required. <br>
+              Also the complete login-route and register (bcrypt.hash). <br>
+              <br>
+              Apparently, in this section it is super important that the new code is placed exactly in the right order. <br>
+              <br>
+              First we setup the 'session': <br>
+              <img class="deleteOperations" src="Images/Authentication/sessionSetup.png" alt="">
+              <br>
+              Next thing to do is initalize and start using 'passport'. In order to use 'passport', the first thing <br>
+              we have to do is initalize it: <br>
+              <img class="deleteOperations" src="Images/Authentication/passportInit.png" alt="">
+              <br>
+              So first we tell the app to use the 'session' package that is required at the beginning and then we set <br>
+              it up with some initial configuration. Next we tell our app to use 'passport' and to initialize the passport package. <br>
+              And to also use 'passport' for dealing with the sessions. <br>
+              <br>
+              After that, we will tap into userSchema with .plugin(passportLocalMongoose) to hash and salt and save the user into our mongoDB database. <br>
+              <img class="deleteOperations" src="Images/Authentication/userSchemaPlugin2.png" alt=""> <br>
+              <br>
+              After enabling it, let's go ahead and use it right below we created 'User' with the mongoose model. <br>
+              Like the documentation states, we should create a strategy to authenticate users and their passwords and also <br>
+              to serialize and deserialize. It should look like this: <br>
+              <img class="deleteOperations" src="Images/Authentication/serializeDeserialize.png" alt=""> <br>
+              <br>
+              Now with everything setup and running, let's setup the post routes /register and /login: <br>
+              
 
-    
+              
+
+
 
 
             </div>
