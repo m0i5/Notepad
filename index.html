@@ -3721,11 +3721,41 @@
               Now with everything setup and running, let's setup the post routes /register and /login: <br>
               <img class="deleteOperations" src="Images/Authentication/registerLogin.png" alt="">
 
+            </div>
 
+            <button type="button" class="collapsible">
+              <h4>OAuth 2.0 & How to implement sign in with google</h4>
+            </button>
+            <div class="content">
+            Example with a new version of a social media platform, where users can log in via facebook. <br>
+            'mega-social' >  'get request to facebook asking for friends-list' > 'facebook posts users to our database' > we compare that data. <br>
+            <br>
+            By using 'OAuth - Open Authorisation' We're able to access pieces of information on these third party websites such as their friends emails or their contacts <br>
+            on gmail but in our case because we're talking about authentication and leveling up the security of our authentication another big benefit involves deligating <br>
+            the task of managing passwords securely to these companies like facebook and google. So as mentioned before every day yet another company gets hacked. <br>
+            And these companies tend to be low tech companies, companies that are not on the lvl like google who are really known for having great devs. <br>
+            But there's way more than just hashing and salting passwords, some companies encrypt their entire database containing the hashed-passwords <br>
+            and having a wide array of complex mathematical solutions to keep their user passwords under lock and key. So as a web-devloper, we could implement all of those <br>
+            those things and dive deep into these edge cases, but we would simply go down the rabbit hole. <br>
+            <br>
+            So why not simply deligate this task to a large company like google. So then every time we log in our user we simply ask them to log in via google and <br>
+            google will then authenticate our users using their own secure methods. <br>
+            But in order to that, we need to learn about 'OAuth' <br>
+            <br>
+            But why OAuth? <br>
+              1. Granular Access Levels <br>
+              > When a user logs in via facebook, we can request specific thigns from their facebook account. For example their email-address. <br>
+              <br>
+              2. Read/Read+Write Access <br>
+              <br>
+              3. Revoke Access <br>
+              > When authenticating with facebook, the user should be able to go to their facebook account and de-authorize the access they granted. <br>
+              <br>
+              <br>
+              But how does it actually work? <br>
+              Step 1 - Set up your app <br>
               
-
-
-
+ 
 
             </div>
 
