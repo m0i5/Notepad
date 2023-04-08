@@ -3779,6 +3779,10 @@
               <img class="deleteOperations" src="Images/Authentication/googleStrategy.png" alt=""> <br>
               There's also a callback at the bottom, but I didn't include it in this screenshot because it has to be re-written (no supported callbacks). <br>
               <br>
+              Make sure that the CLIENT_ID and CLIENT_SECRET is stored in the .env file, because we tap into it in. <br>
+              <br>
+              <br>
+              <br>
               After that, we have to make sure that: <br>
               'passport-google-oauth20' and <br>
               'mongoose-findorcreate' is installed and required. <br>
@@ -3787,16 +3791,27 @@
               <br>
               <br>
               After that, we jump back into the front-end because there's no button to actually sign up via google. <br>
-              
-
-
-              
-
-
-
-              
- 
-
+              When a user clicks on that button, it will trigger a get request to '/auth/google' so let's set that up in app.js: <br>
+              So just below the home route, create the app.get route for '/auth/google'. Inside that callback we will initiate authentication with google. <br>
+              To do that, we're going to use passport. <br>
+              <img class="deleteOperations" src="Images/Authentication/googleAuthenticate.png" alt=""> <br>
+              <br>
+              With that setup, it actually already redirect's to a google-login screen. When when trying to login, it says 'Cannot GET /auth/google/secrets'. <br>
+              So of course, we have to create a route for that as well. <br>
+              <img class="deleteOperations" src="Images/Authentication/googleSecrets.png" alt=""> <br>
+              <br>
+              <br>
+              With this, it triggers the error 'Failed to serialize user into session' <br>
+              It's because we have to 'serialize' and 'deserialize' like it is stated in the <a href="https://www.passportjs.org/concepts/authentication/sessions/">passportjs docs</a> <br>
+              <img class="deleteOperations" src="Images/Authentication/newSerialize.png" alt=""> <br>
+              <br>
+              <br>
+              In the last part, we stilize the button with  <a href="https://lipis.github.io/bootstrap-social/">bootstrap-social</a>: <br>
+              download > drag 'boottrap.social.css' into public css folder > add it into header.ejs > update anchor tag in 'register.ejs' with new bootstrap class 'btn-social' 'btn-google' <br>
+              <br>
+              <br>
+              <br>
+              <br>
             </div>
 
 
