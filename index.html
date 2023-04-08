@@ -3753,7 +3753,47 @@
               <br>
               <br>
               But how does it actually work? <br>
-              Step 1 - Set up your app <br>
+              Step 1 - Set up your app: <br>
+              We have to setup the app in their developer-console and in return we will get an app-id. <br>
+              <br>
+              Step 2 - Redirect to authenticate <br>
+              When our users want to access 'mega-social' we give them the option to authenticate through google or facebook. <br>
+              So when they click on it, it redirects them to google. 
+              <br>
+              Step 3 - User Logs in <br>
+              <br>
+              Step 4 - User grants permissions <br>
+              <br>
+              Step 5 - We will receive an authorisation code <br>
+              <br>
+              Step 6 - Exchange AuthCode for access token (and save it into our DB) <br>
+              <br>
+              We will use <a href="https://www.passportjs.org/packages/passport-google-oauth20/">passport-google-oauth20</a>. <br>
+              <br>
+              Project > select name > anmeldedaten > oatuh-Zustimmungsbildschirm <br>
+              Setup the OAuth-Zustimmungsbildschirm and then create 'Anmeldedaten' <br>
+              <br>
+              After that, it's important to follow the docs: <br>
+              require > passport.use <br>
+              Copy the code and past it just below 'serializeUser'. : <br>
+              <img class="deleteOperations" src="Images/Authentication/googleStrategy.png" alt=""> <br>
+              There's also a callback at the bottom, but I didn't include it in this screenshot because it has to be re-written (no supported callbacks). <br>
+              <br>
+              After that, we have to make sure that: <br>
+              'passport-google-oauth20' and <br>
+              'mongoose-findorcreate' is installed and required. <br>
+              <img class="deleteOperations" src="Images/Authentication/requireFindor.png" alt=""> <br>
+              <img class="deleteOperations" src="Images/Authentication/findorPlugin.png" alt=""> <br>
+              <br>
+              <br>
+              After that, we jump back into the front-end because there's no button to actually sign up via google. <br>
+              
+
+
+              
+
+
+
               
  
 
