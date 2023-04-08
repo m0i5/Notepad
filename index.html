@@ -3816,6 +3816,44 @@
 
 
 
+            <button type="button" class="collapsible">
+            <h4>Letting authenticated users submit</h4>
+            </button>
+            <div class="content">
+              First, create a submit route with 'app.get' <br>
+              Because we only want authenticated users to submit, we can simply copy the cody from /secrets to authenticate: <br>
+              <img class="deleteOperations" src="Images/Authentication/appPost.png" alt=""> <br>
+              <br>
+              <br>
+              But we also need a post-route. And we also want to tap into that submitted-secret and find the user who submitted it. <br>
+              'Passport' saves the users details into the 'req' variable and we can simply test what's saved by console.log: <br>
+              <img class="deleteOperations" src="Images/Authentication/submitSecret.png" alt=""> <br>
+              <br>
+              <img class="deleteOperations" src="Images/Authentication/portMan.png" alt=""> <br>
+              <br>
+              This means, we can find that user through the ID and save the secret they created to that document. <br>
+              But for that, we first need to adjust our schema:<br>
+              'secret: String' <br>
+              <br>
+              <br>
+              So when the user makes that post request, We're going to find that user with 'req.user.id' and then add that 'submittedSecret' to the new secret field in the schema. <br>
+              <img class="deleteOperations" src="Images/Authentication/findUserPost.png" alt=""> <br>
+              <br>
+              Now that we're able to save the secrets, let's render them on the secrets page: <br>
+              <img class="deleteOperations" src="Images/Authentication/findUserPost.png" alt=""> <br>
+              <br>
+              <br>
+              And in secrets.ejs, the static text has to be swapped out with the variable: <br>
+              <img src="" alt="">
+
+
+
+
+
+            </div>
+
+
+
 
 
           </div>
