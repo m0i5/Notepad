@@ -3881,64 +3881,109 @@
               <div class="content">
                 React is a JavaScript library for building user interfaces. <br>
                 It was developed by Facebook and is now maintained by a community of developers. <br>
-                React allows developers to create reusable UI components that can be composed together to build complex applications. <br>
-                React uses a virtual DOM to optimize performance and reduce the need for direct manipulation of the actual DOM. <br>
-                React can be used with other libraries and frameworks, and is often paired with a state management library like Redux. <br>
+                React allows developers to create reusable UI components that can be composed together to build complex
+                applications. <br>
+                React uses a virtual DOM to optimize performance and reduce the need for direct manipulation of the
+                actual DOM. <br>
+                React can be used with other libraries and frameworks, and is often paired with a state management
+                library like Redux. <br>
                 <br>
                 <br>
-                Good example with twitter: When scrolling through tweets, that's the only component which changes and makes a request to the server <br>
-                when loading new tweets. All the other components 'sleep' until you interract with them. This is really good for big and complex projects<br>
+                Good example with twitter: When scrolling through tweets, that's the only component which changes and
+                makes a request to the server <br>
+                when loading new tweets. All the other components 'sleep' until you interract with them. This is really
+                good for big and complex projects<br>
                 The components basically update themselves if needed, without reloading the complete page. <br>
                 <br>
                 <br>
                 <br>
                 <br>
-                First smoll example in Sandbox, that shows the concept of React, with rendering HTML code through JavaScript: <br>
+                First smoll example in Sandbox, that shows the concept of React, with rendering HTML code through
+                JavaScript: <br>
                 <img class="deleteOperations" src="Images/React/First Steps/sandBox.png" alt=""> <br>
                 <br>
                 <br>
-                This explains it pretty well, how 'root' is fetched and then rendered(injected HTML code inside JS). Can also be tested with 'root2': <br>
+                This explains it pretty well, how 'root' is fetched and then rendered(injected HTML code inside JS). Can
+                also be tested with 'root2': <br>
                 <img class="deleteOperations" src="Images/React/First Steps/rootRender.png" alt=""> <br>
                 <br>
- 
-            </div>
 
-            <button type="button" class="collapsible">
-              <h4>Javascript expressions in JSX & ES6 template literals</h4>
-            </button>
-            <div class="content">
-              JSX let's us inject HTML code into JS, but it goes even further. It's also possible to have JS in HTML that's already nested into JS. <br>
-              <img class="deleteOperations" src="Images/React/First Steps/luckyNumber.png" alt=""> <br>
-              <br>
-              Example with a random number (vanilla javascript): <br>
-              <img class="deleteOperations" src="Images/React/First Steps/randomNumber.png" alt="">
-              <br>
-              <br>
-              <br>
-              And the important thing here is, that we're talking about 'Expressions' (js). <br>
-              That means, that a Javascript 'Statement' like <i></i> if (name === Dan){ return 69;} else { return 5;}
-              </i> <br>
-              <br>
-              <br>
-              <br>
-              <a href="https://www.youtube.com/watch?v=WVyCrI1cHi8">Good video explaining expressions vs statements</a>
-              <br>
-              <br>
-              <br>
-              Docs on JS 'Expressions' <br>
-              <a href="https://www.w3schools.com/js/js_statements.asp">Docs on JS 'Statements</a> <br>
-              <br>
-              <br>
-              <br>
-              Also important: We're not limited to 1 curly braces: <br>
-              <img class="deleteOperations" src="Images/React/First Steps/curlyBracesTwo.png" alt=""> <br>
-              <br>
-              <br>
-              
+              </div>
+
+              <button type="button" class="collapsible">
+                <h4>Javascript expressions in JSX & ES6 template literals</h4>
+              </button>
+              <div class="content">
+                JSX let's us inject HTML code into JS, but it goes even further. It's also possible to have JS in HTML
+                that's already nested into JS. <br>
+                <img class="deleteOperations" src="Images/React/First Steps/luckyNumber.png" alt=""> <br>
+                <br>
+                Example with a random number (vanilla javascript): <br>
+                <img class="deleteOperations" src="Images/React/First Steps/randomNumber.png" alt="">
+                <br>
+                <br>
+                <br>
+                And the important thing here is, that we're talking about 'Expressions' (js). <br>
+                That means, that a Javascript 'Statement' like <i></i> if (name === Dan){ return 69;} else { return 5;}
+                </i> <br>
+                <br>
+                <br>
+                <br>
+                <a href="https://www.youtube.com/watch?v=WVyCrI1cHi8">Good video explaining expressions vs
+                  statements</a>
+                <br>
+                <br>
+                <br>
+                Docs on JS 'Expressions' <br>
+                <a href="https://www.w3schools.com/js/js_statements.asp">Docs on JS 'Statements</a> <br>
+                <br>
+                <br>
+                <br>
+                Also important: We're not limited to 1 curly braces: <br>
+                <img class="deleteOperations" src="Images/React/First Steps/curlyBracesTwo.png" alt=""> <br>
+                <br>
+                <br>
+                And in ES6 we have something called 'Template Literals' <b>{`${fName}`}</b> <br>
+                <img class="deleteOperations" src="Images/React/First Steps/templateLiterals.png" alt=""> <br>
+                <br>
+                But for this task, it's just overkill and unneccessary complicated code. <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <b>Important:</b> In the newer React versions, 'ReactDOM.render' isn't supported anymore! Instead use
+                <br>
+                'createRoot' and save everything into constants, like this: <br>
+                <img class="deleteOperations" src="Images/React/First Steps/createRoot.png" alt=""> <br>
+                <br>
+              </div>
+
+              <button type="button" class="collapsible">
+                <h4>JSX attributes & styling react elements</h4>
+              </button>
+              <div class="content">
+                Since we're working with HTML-Elements, CSS can be defined and added wia classes (className). <br>
+                But when using classes, it's super important to use camelCases, so it works with js. <br>
+                <br>
+                Just remember <b>className</b> to stylize. <br>
+                <br>
+                <br>
+                Another example with saving the image to a constant: <br>
+                <img class="deleteOperations" src="Images/React/First Steps/randomPic.png" alt=""> <br>
+                <br>
+                <img class="deleteOperations" src="Images/React/First Steps/grayScale.png" alt="">
+                <br>
+                <br>
+                <br>
+
+            
 
 
 
               </div>
+
+
 
 
 
