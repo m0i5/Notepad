@@ -4329,6 +4329,33 @@
                 <h4>Mapping data to Components</h4>
               </button>
               <div class="content">
+                When creating bigger projects, we should really consider mapping data, because the 'Card' like down below, will become too repetitive: 
+                <img class="deleteOperations" src="Images/React/DevTools/mappingData.png" alt=""> <br>
+                <br>
+                <br>
+                <br>
+                So instead of creating card after card, with using '.map' function we can handle the 'contacts.js' array easily. <br>
+                My 'contacts' array contains 2 items and each of these are javascript objects with the same properties but different values. <br>
+                <br>
+                So instead, in 'app.jsx' we can tap into the 'contacts'-array (don't forget to import it!) with calling the .map function: <br>
+                <b>'contacts.map()'</b> <br>
+                Inside .map<b>()</b> it expects an actual function. So in this case we're calling a function and passing a (function). <br>
+                <br>
+                And this is the fundament of functional-programming. Where instead of passing values inside the code, we're passing functions into functions, even into functions. <br>
+                <br>
+                So what functionality we want for each 'contacts'? <br>
+                Let's create a new function called 'createCard()': <br>
+                <img class="deleteOperations" src="Images/React/DevTools/createCard.png" alt=""> <br>
+                <br>
+                So when this function is called, it passes over the value of a single 'contact', that's why it is <b>contact</b> and <b>NOT contactS</b> <br>
+                This means, it goes through each 'contacts' objects and of course, each of those have properties like id, name, imgURL etc. <br>
+                That's why if we tap into 'contact.name', it looks for each object with a 'name' property. <br>
+                <br>
+                <br>
+                Now we're going to pass the entire 'createCard' function into the 'App' function like this: <br>
+                <img class="deleteOperations" src="Images/React/DevTools/appCreateCard.png" alt=""> <br>
+                <br>
+                
 
 
               </div>
