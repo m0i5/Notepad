@@ -4363,7 +4363,63 @@
                 a card with the above defined values. <br>
                 <br>
                 <br>
-                
+                <br>
+                Inside the console, there is a Warning telling us: <br>
+                <i>Each child in a list should have a unique 'key' prop.</i> <br>
+                <br>
+                Because the .map(createCard) function loops through the objects inside the array, each object should contain a unique property. <br>
+                That's why we set a unique 'id' for each object and pass it in 'key={contact.id}'. <br>
+                <br>
+
+
+
+
+
+              </div>
+
+              <button type="button" class="collapsible">
+                <h4>Mapping data to Components Practice</h4>
+              </button>
+              <div class="content">
+                <a href="https://codesandbox.io/s/mapping-components-practice-6fkfr?fontsize=14">Starting file</a> <br>
+                <br>
+                <br>
+                Use createRoot to root.render instead of ReactDOM render. <br>
+                Goal is to extract the repeated parts of the App into a Entry component. <br>
+                Use props to make the Entry component render different data. <br>
+                Import the emojipedia constant. <br>
+                Map through the emojipedia array and render Entry components. <br>
+                <br>
+                <br>
+                Emojipedia has 3 entries, so createEntry gets called 3 times. <br>
+                Each time, it passes 1 item from the emojipedia array as a var called 'emotrick'. <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                Final code: <br>
+                <br>
+                index.js: <br>
+                <img class="deleteOperations" src="Images/React/DevTools/indexjsFinal.png" alt=""> <br>
+                <br>
+                <br>
+                Entry.jsx: <br>
+                <img class="deleteOperations" src="Images/React/DevTools/entryJsx.png" alt=""> <br>
+                <br>
+                <br>
+                App.jsx: <br>
+                <img class="deleteOperations" src="Images/React/DevTools/appJsx.png" alt=""> <br>
+                <br>
+                <br>
+                Data: <br>
+                <img class="deleteOperations" src="Images/React/DevTools/emojipediaJS.png" alt=""> <br>
+                <br>
+                <br>
+
+                <b><i>B00M</i></b> 
+
+
+
 
 
 
