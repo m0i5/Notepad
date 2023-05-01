@@ -4682,6 +4682,65 @@
                 <h4>React Hooks - useState</h4>
               </button>
               <div class="content">
+                Take a look at the <a href="https://codesandbox.io/s/testground-wd3vs?fontsize=14&hidenavigation=1&theme=dark">Starter Code</a> and fork it. <br>
+                <br>
+                Goal is, to change the 'state' of the h1 '0' every time we click on '+'. (+1+1+1+1..)<br>
+                <br>
+                <br>
+                Step by step: <br>
+                1. change the hard-coded '0' to a variable called 'count'. <br>
+                2. Next thing we want is, that whenever the '+ button' is clicked, that a function() is called. <br>
+                <img class="stateTrick" src="Images/React/State/increaseHook.png" alt="">
+                <br>
+                <br>
+                Now we want the count to change each time we click on '+'. <br>
+                It's easy solvable with adding 'count++' to our increase() function, but it won't actually render the latest count. <br>
+                We need to hook that value. <br>
+                <br>
+                But first, let's clean it up to render root and move it to 'App.jsx': <br>
+                <img class="deleteOperations" src="Images/React/State/appHook.png" alt=""> <br>
+                <br>
+                <br>
+                Super important to understand 'Destructuring', in order to 'useState' in a better way afterwards: <br>
+                <img class="deleteOperations" src="Images/React/State/destructuringExample.png" alt=""> <br>
+                <br>
+                <br>
+                <br>
+                Now, because useState(69); has two values, one is '69' and the second one is a function, we can tap into that: <br>
+                <img class="stateTrick" src="Images/React/State/addCount.png" alt=""> <br>
+                <br>
+                <br>
+                Challenge, add a button that decreases the value by 1. <br>
+                <img class="stateTrick" src="Images/React/State/decreaseCount.png" alt=""> <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <b>To recap:</b><br>
+                In this section we're introducing this concept of state in order to have to interactivity in our app. And <br>
+                what we're trying to achieve is for our website to able to update dynamicly reflecting the updated state. <br>
+                Now the state comes from this 'useState'-hook (fromt react module). Now when 'useState(0)' is called, we need <br>
+                to define an initial value. And then we get to use this value inside the destructured array '[count, setCount]'. <br>
+                <br>
+                So we're putting that value of 'count' inside our h1 and then we get to trigger the 'setCount' which is the function <br>
+                to update the value of 'count'. And we do that when the user clicks on the '+' button. And we set it to the current value of 'count + 1'. <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                Challenge: <br>
+                <a href="https://codesandbox.io/s/usestate-hook-practice-k0g69?fontsize=14&hidenavigation=1&theme=dark">Starting Files</a> <br>
+                <br>
+                <br>
+                Goal is to be able to press the 'get time' to get the latest timestamp. <br>
+                After that, use 'setInterval(xx, 1000)' to update it every second. <br>
+                <br>
+                <br>
+                <a href="https://codesandbox.io/s/usestate-hook-practice-forked-dlqyjl?file=/src/components/App.jsx">Final Code</a><br>
+                <br>
+                <br>
+
+
 
 
 

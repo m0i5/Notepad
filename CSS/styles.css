@@ -267,6 +267,11 @@ width: 25rem;
 }
 
 
+.stateTrick {
+  width: 50rem;
+}
+
+
 /* ---------- Karussell ---------- */
 
 .active, .testimonials{
