@@ -4839,7 +4839,38 @@
               <img class="deleteOperations" src="Images/React/Forms/secondExample.png" alt=""> <br>
               <br>
               <br>
+              <br>
+              <br>
+              Since we now have the value of what's typed. How would it look like if we want to display that value next to our h1 'hello'? <br>
+              For that we of course need states. <br>
+              <br>
+              1. Go ahead and create a new constant. <br>
+              Let's destructure the output of our 'useState' to hold two things: <b> name & the function 'setName'</b> which is going to help me update that 'name' constant. <br>
+              <img class="stateTrick" src="Images/React/Forms/useState.png" alt=""> <br>
+              <br>
+              Now we can use that constant 'name' down below in our h1 element. <br>
+              <img class="stateTrick" src="Images/React/Forms/setName.png" alt=""> <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              In HTML the element themselves are responsible for handling their own state. For example, you might <br>
+              remember that there's an attribute called 'value' and this corresponse to what is currently inside the input. <br>
+              Now in HTML this value is normally handled by the input property and sets it to whatever is typed in, but in react <br>
+              what we should really do is set the value to the variable that comes from 'event.target.value'. <br>
+              In our case that would of course be this thing 'name'. This way we have one single source of truth which is the state of 'name'. <br>
+              So whenever we use it inside other components or when we have it as the value of the input they're all corresponding to the same thing. <br>
+              <br>
+              In react lingo this is called <a href="https://blog.logrocket.com/controlled-vs-uncontrolled-components-in-react/">Controlled component</a> <br>
+              <br>
+              <br>
               
+
+
+
+            
+
+
               
 
 
