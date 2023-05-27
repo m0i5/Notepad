@@ -1,2 +1,2 @@
-Another notepad. But so far only with raw, pure, hardcore HTML and a few lines of CSS. 
+Another notepad. But  only with raw, pure, hardcoded HTML and a few lines of CSS. 
 Does a notepad need anything else? I doubt it. 
